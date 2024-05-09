@@ -1,6 +1,6 @@
 import React, { useMemo, useState } from 'react'
 import { Container, Grid, Paper, Image, Text, Title, AspectRatio, Badge, Button, Transition } from '@mantine/core'
-import { projectData, Project, techIcons } from './projectData'
+import { projectData, Project, techIcons } from '../../lib/projectData'
 import ProjectModal from './projectModal'
 import TechFilterBadges from './smol/techFilter'
 import { DiTerminal } from 'react-icons/di'

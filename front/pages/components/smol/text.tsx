@@ -9,7 +9,7 @@ import { GlitchPass } from 'three/examples/jsm/postprocessing/GlitchPass.js'
 import { UnrealBloomPass } from 'three/examples/jsm/postprocessing/UnrealBloomPass.js'
 import { FontLoader } from 'three/examples/jsm/loaders/FontLoader.js'
 import { TextGeometry } from 'three/examples/jsm/geometries/TextGeometry.js'
-import Button from './scene/BUTTON'
+import Button from '../../../lib/scene/BUTTON'
 import {
 	WebGLRenderer,
 	Scene,
@@ -33,7 +33,7 @@ import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js'
 import Stats from 'three/addons/libs/stats.module.js'
 import { GUI } from 'dat.gui'
 import * as CANNON from 'cannon-es'
-import { Config, initialConfig as InitialSceneConfig } from './scene/config'
+import { Config, initialConfig as InitialSceneConfig } from '../../../lib/scene/config'
 
 export class ThreeCanvas {
 	private composer!: EffectComposer

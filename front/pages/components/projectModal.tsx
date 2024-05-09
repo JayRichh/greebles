@@ -12,8 +12,8 @@ import {
 	Container,
 	useMantineTheme,
 } from '@mantine/core'
-import { Project } from './projectData'
-import { ChallengeDetail, LearningDetail } from './projectData'
+import { Project } from '../../lib/projectData'
+import { ChallengeDetail, LearningDetail } from '../../lib/projectData'
 
 interface ProjectModalProps {
 	project: Project

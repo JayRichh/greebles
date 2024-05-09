@@ -3,7 +3,7 @@ import { Button, Badge, Transition } from '@mantine/core'
 import { FaFilter, FaTimes } from 'react-icons/fa'
 import { DiTerminal } from 'react-icons/di'
 import { useClickOutside } from '@mantine/hooks'
-import { techIcons } from '../projectData'
+import { techIcons } from '../../../lib/projectData'
 
 interface TechFilterBadgesProps {
 	selectedTech: string[]
