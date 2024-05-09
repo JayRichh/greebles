@@ -692,3 +692,5 @@ export class ThreeCanvas {
 		kiwiFolder.open()
 	}
 }
+
+export default ThreeCanvas
