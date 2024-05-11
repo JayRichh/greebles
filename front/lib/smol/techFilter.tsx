@@ -3,7 +3,7 @@ import { Button, Badge, Transition } from '@mantine/core'
 import { FaFilter, FaTimes } from 'react-icons/fa'
 import { DiTerminal } from 'react-icons/di'
 import { useClickOutside } from '@mantine/hooks'
-import { techIcons } from '../../../lib/projectData'
+import { techIcons } from '../projectData'
 
 interface TechFilterBadgesProps {
 	selectedTech: string[]
@@ -55,7 +55,6 @@ const TechFilterBadges: React.FC<TechFilterBadgesProps> = ({ selectedTech, handl
 					display: 'flex',
 					alignItems: 'center',
 				}}
-
 				onMouseOver={(e) => {
 					e.currentTarget.style.backgroundColor = 'black'
 					e.currentTarget.style.color = 'white'
@@ -75,7 +74,7 @@ const TechFilterBadges: React.FC<TechFilterBadgesProps> = ({ selectedTech, handl
 						style={{
 							...styles,
 							position: 'absolute',
-							top: '-75%',
+							top: '-55%',
 							left: '0.5rem',
 							margin: '0 -5rem 0 5rem',
 							maxWidth: '70%',

@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from 'react'
 import { Text, Container } from '@mantine/core'
 import classes from './Hero.module.css'
-import { ThreeCanvas } from './smol/text'
+import { ThreeCanvas } from '../../lib/smol/text'
 import { useRouter } from 'next/router'
 const Hero: React.FC = () => {
 	const canvasRef = useRef<HTMLCanvasElement>(null)

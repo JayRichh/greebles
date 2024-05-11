@@ -2,7 +2,7 @@ import React, { useMemo, useState } from 'react'
 import { Container, Grid, Paper, Image, Text, Title, AspectRatio, Badge, Button, Transition } from '@mantine/core'
 import { projectData, Project, techIcons } from '../../lib/projectData'
 import ProjectModal from './projectModal'
-import TechFilterBadges from './smol/techFilter'
+import TechFilterBadges from '../../lib/smol/techFilter'
 import { DiTerminal } from 'react-icons/di'
 
 export const ProjectsGrid = () => {
@@ -53,32 +53,37 @@ export const ProjectsGrid = () => {
 	}, [selectedTech])
 
 	const cards = filteredProjects.map((project) => ( // extract
-		<Grid.Col span={{ xs: 12, sm: 12, md: 6, lg: 6, xl: 6 }} style={{ marginBottom: '20px' }} key={project.title}>
-			<Paper
-				shadow="md"
-				radius="md"
-				style={{
-					height: '100%',
-					display: 'flex',
-					flexDirection: 'column',
-					position: 'relative',
-					overflow: 'hidden',
-					backgroundColor: 'rgba(255, 255, 255, 0.8)',
-					border: '1px solid rgba(0, 0, 0, 0.1)',
-					boxShadow: '0 4px 12px rgba(0, 0, 0, 0.1)',
-					transition: 'transform 0.15s cubic-bezier(0.25, 0.46, 0.45, 0.94)',
-					transformOrigin: 'center',
-				}}
-				className="card"
-				onMouseOver={(e) => {
-					e.currentTarget.style.transform = 'scale(1.02)'
-					e.currentTarget.style.zIndex = '2'
-				}}
-				onMouseOut={(e) => {
-					e.currentTarget.style.transform = 'scale(1)'
-					e.currentTarget.style.zIndex = '1'
-				}}
-			>
+<Grid.Col
+  span={{ xs: 12, sm: 12, md: 6, lg: 6, xl: 6 }}
+  style={{ marginBottom: '20px' }}
+  key={project.title}
+>
+  <Paper
+    shadow="md"
+    radius="md"
+    style={{
+      height: '100%',
+      display: 'flex',
+      flexDirection: 'column',
+      position: 'relative',
+      overflow: 'hidden',
+      backgroundColor: 'rgba(255, 255, 255, 0.8)',
+      border: '1px solid rgba(0, 0, 0, 0.1)',
+      boxShadow: '0 4px 12px rgba(0, 0, 0, 0.1)',
+      transition: 'transform 0.15s cubic-bezier(0.25, 0.46, 0.45, 0.94)',
+      transformOrigin: 'center',
+      minHeight: '300px',
+    }}
+    className="card"
+    onMouseOver={(e) => {
+      e.currentTarget.style.transform = 'scale(1.02)';
+      e.currentTarget.style.zIndex = '2';
+    }}
+    onMouseOut={(e) => {
+      e.currentTarget.style.transform = 'scale(1)';
+      e.currentTarget.style.zIndex = '1';
+    }}
+  >
 				<AspectRatio ratio={14 / 9} style={{ width: '100%', position: 'relative', flexShrink: 0 }}>
 					<Image
 						src={project.imgUrl || 'https://via.placeholder.com/1920x1080'}
@@ -344,11 +349,32 @@ export const ProjectsGrid = () => {
 	))
 
 	return (
-		<Container size="lg" my="xl" style={{ maxWidth: '1170px', padding: '0 16px' }}>
+		<Container
+			size="lg"
+			my="xl"
+			style={{
+				maxWidth: '1170px',
+				padding: '0 16px',
+				minWidth: '1170px',
+			}}
+		>
 			<TechFilterBadges selectedTech={selectedTech} handleTechFilter={handleTechFilter} />
-			<Grid gutter="xl">{cards}</Grid>
+			<Grid gutter="xl" style={{ minHeight: '400px' }}>
+				{cards.length > 0 ? (
+					cards
+				) : (
+					<Transition mounted={cards.length === 0} transition="slide-down" duration={400} timingFunction="ease">
+						{(styles) => (
+							<Grid.Col span={12} style={{ ...styles, textAlign: 'center', padding: '20px' }}>
+								No projects found. Please try a different filter.
+							</Grid.Col>
+						)}
+					</Transition>
+				)}
+			</Grid>
 			{selectedProject && <ProjectModal project={selectedProject} opened={opened} onClose={closeModal} />}
 		</Container>
+
 	)
 }
 

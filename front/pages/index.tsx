@@ -4,7 +4,7 @@ import Hero from './components/Hero'
 import Projects from './code'
 import About from './about'
 import NotFound from './404'
-import { ThreeCanvas } from './components/smol/text'
+import { ThreeCanvas } from '../lib/smol/text'
 
 type RouteComponents = {
 	[key: string]: React.ComponentType<any>
