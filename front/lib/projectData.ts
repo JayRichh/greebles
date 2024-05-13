@@ -120,185 +120,7 @@ export const techIcons: TechIcons = {
 
 export const projectData: Project[] = [
 	{
-		title: 'Portfolio with Interactive Hero',
-		description:
-			'An engaging portfolio website that showcases my projects, skills, and experience through an interactive 3D hero page.',
-		imgUrl: '/project-img1.png',
-		repoUrl: 'https://github.com/JayRichh/portfolio',
-		liveUrl: 'https://jayrichh.com',
-		details: {
-			title: 'Portfolio',
-			description:
-				'My personal portfolio website offers an interactive 3D hero page that showcases my projects, skills, and experience. The hero page uses CANNON.js and Three.js to create an immersive and interactive experience.',
-			technologies: ['Next.js', 'React', 'Three.js', 'Tailwind CSS', 'TypeScript', 'CANNON.js'],
-			features: [
-				{
-					title: 'Immersive Hero Page with CANNON.js',
-					text: 'The hero page of the portfolio website showcases an interactive 3D scene powered by CANNON.js physics engine. Visitors can interact with the dynamic elements, creating an engaging and memorable experience.',
-					image: '/project-img2.png',
-				},
-				{
-					title: 'Realistic Physics Simulations',
-					text: 'Leveraging the CANNON.js physics engine, the hero page incorporates realistic physics simulations, enabling visitors to interact with objects in a lifelike manner. This adds an extra layer of immersion and interactivity to the website.',
-					image: '/project-img3.png',
-				},
-				{
-					title: 'Seamless Three.js Integration',
-					text: 'The hero page seamlessly integrates CANNON.js physics with Three.js rendering, creating a visually stunning and physically accurate 3D environment. This combination allows for smooth animations and real-time interactions.',
-					image: '/project-img4.png',
-				},
-				{
-					title: 'Modular Scene Management',
-					text: 'The SceneManager.ts file demonstrates a modular approach to managing the 3D scene, encapsulating the setup of the camera, lights, and main object group. This clean and organized structure enhances maintainability and extensibility.',
-					image: '/project-img5.png',
-				},
-				{
-					title: 'Responsive Design',
-					text: 'The hero page adapts to different screen sizes and devices, ensuring an optimal viewing experience for all visitors. The camera and scene elements dynamically adjust to maintain the desired composition and layout.',
-					image: '/project-img6.png',
-				},
-			],
-			challenges: [
-				{
-					title: 'CANNON.js and Three.js Integration',
-					text: 'Integrating CANNON.js physics engine with Three.js rendering to create a seamless and interactive 3D experience on the hero page.',
-					image: '',
-				},
-				{
-					title: 'Hero Page Performance Optimization',
-					text: 'Optimizing the performance of the hero page to ensure smooth interactions and animations, especially on resource-constrained devices.',
-					image: '',
-				},
-			],
-			learnings: [
-				{
-					title: '3D Graphics and Physics Simulations',
-					points: [
-						{
-							text: 'Developed expertise in leveraging Three.js and WebGL to create stunning 3D graphics and immersive environments within a web browser.',
-							image: '',
-						},
-						{
-							text: 'Integrated CANNON.js physics engine to simulate realistic physics interactions and collisions, enhancing the interactivity and realism of the 3D scene.',
-							image: '',
-						},
-						{
-							text: 'Optimized 3D models, textures, and shaders to achieve optimal performance and smooth rendering across different devices and browsers.',
-							image: '/project-img7.png',
-						},
-					],
-				},
-			],
-			additionalImages: ['/project-img1.png', '/project-img2.png', '/project-img3.png'],
-		},
-	},
-	{
-		title: '3D Multiplayer Mini-Game',
-		description:
-			'An immersive 3D multiplayer mini-game environment where visitors can explore, interact, and engage with others in real-time.',
-		imgUrl: '/project-img3.png',
-		repoUrl: 'https://github.com/JayRichh/portfolio',
-		liveUrl: 'https://jayrichh.com/minigame',
-		details: {
-			title: '3D Multiplayer Mini-Game',
-			description:
-				'The mini-game provides an interactive 3D environment powered by the Rapier physics engine, where visitors can interact with elements and other users in real-time.',
-			technologies: [
-				'Next.js',
-				'React',
-				'TypeScript',
-				'Tailwind CSS',
-				'Three.js',
-				'WebSockets',
-				'Node.js',
-				'Rapier Physics Engine',
-			],
-			features: [
-				{
-					title: '3D Multiplayer Mini-Game Environment',
-					text: 'An immersive 3D mini-game environment where visitors can explore, interact with various elements, and engage with other users in real-time to discover information about my projects, skills, and experience.',
-					image: '/project-img4.png',
-				},
-				{
-					title: 'Real-time Networked Multiplayer Experience',
-					text: 'Visitors can join a shared virtual world and interact with other users in real-time, thanks to the robust WebSocket-based networking system that ensures seamless synchronization and minimal latency.',
-					image: '/project-img5.png',
-				},
-				{
-					title: 'Physics-based Interactions',
-					text: 'Realistic physics simulations powered by the Rapier physics engine, enabling dynamic and engaging interactions within the game environment.',
-					image: '/project-img6.png',
-				},
-				{
-					title: 'Smooth Performance and Optimization',
-					text: 'Careful optimization techniques and efficient resource management to ensure smooth performance across different devices and network conditions.',
-					image: '/project-img7.png',
-				},
-			],
-			challenges: [
-				{
-					title: 'Engaging 3D Mini-Game Design',
-					text: 'Designing and implementing an engaging and visually appealing 3D mini-game environment that seamlessly integrates portfolio content.',
-					image: '',
-				},
-				{
-					title: 'Performance Optimization for Mini-Game',
-					text: 'Optimizing performance and ensuring smooth gameplay experience across different devices and hardware configurations.',
-					image: '',
-				},
-				{
-					title: 'Real-time Networking Implementation',
-					text: 'Implementing real-time networking and synchronization for multiplayer interactions and shared virtual world experiences.',
-					image: '',
-				},
-				{
-					title: 'Balancing Interactivity and Content',
-					text: 'Balancing the level of interactivity and gamification with the primary goal of showcasing my projects, skills, and experience effectively.',
-					image: '',
-				},
-			],
-			learnings: [
-				{
-					title: 'Real-time Multiplayer Networking',
-					points: [
-						{
-							text: 'Implemented real-time multiplayer functionality using WebSockets, enabling seamless communication and synchronization between clients and the server.',
-							image: '',
-						},
-						{
-							text: 'Designed efficient network protocols and data serialization techniques to minimize latency and ensure smooth gameplay experience for all players.',
-							image: '',
-						},
-						{
-							text: 'Handled client-side prediction and server reconciliation to compensate for network delays and maintain a responsive and fair multiplayer environment.',
-							image: '',
-						},
-					],
-				},
-				{
-					title: 'Game Development Best Practices',
-					points: [
-						{
-							text: 'Employed modular and component-based architecture to create a maintainable and extensible codebase for the mini-game.',
-							image: '',
-						},
-						{
-							text: 'Implemented efficient game loop and update mechanisms to ensure smooth and consistent gameplay across different frame rates and devices.',
-							image: '',
-						},
-						{
-							text: 'Utilized object pooling and resource management techniques to optimize memory usage and minimize garbage collection overhead.',
-							image: '',
-						},
-					],
-				},
-			],
-			additionalImages: ['/project-img1.png', '/project-img2.png', '/project-img3.png'],
-		},
-	},
-
-	{
-		title: 'Off The Floor Website',
+		title: 'Off The Floor',
 		description:
 			'A modern and dynamic business website created using Vue3 and TypeScript, featuring responsive design and tailored functionalities to promote aerial arts classes.',
 		imgUrl: '/otf1.png',
@@ -313,12 +135,12 @@ export const projectData: Project[] = [
 				{
 					title: 'Dynamic Routing with Vue Router',
 					text: 'Dynamic routing with Vue Router enabling seamless page transitions and state management without reloading the page.',
-					image: '/otf2.png',
+					image: '/otf4.png',
 				},
 				{
 					title: 'Responsive Web Design',
 					text: 'Responsive web design implemented using Bootstrap for consistent user experience across various devices and screen sizes.',
-					image: '/otf3.png',
+					image: '/otf2.png',
 				},
 				{
 					title: 'Vue3 Composition API',
@@ -334,12 +156,7 @@ export const projectData: Project[] = [
 					title: 'Interactive Carousels',
 					text: 'Interactive elements like carousels for testimonials and classes, implemented with Vue3-carousel and customized with detailed CSS for a unique look.',
 					image: '/otf3.png',
-				},
-				{
-					title: 'Sophisticated Contact Form',
-					text: 'Sophisticated contact form with Vue3 reactivity features, ensuring instant UI updates and validations.',
-					image: '/otf5.png',
-				},
+				}
 			],
 			challenges: [
 				{
@@ -440,12 +257,12 @@ export const projectData: Project[] = [
 				{
 					title: 'Code Snippet Management',
 					text: "Code snippet management which utilizes Vue's reactivity system to provide live search results as the user types, backed by local storage to persist data across sessions.",
-					image: '/afbuddy3.png',
+					image: '/afbuddy4.png',
 				},
 				{
 					title: 'Geolocation Spoofing',
 					text: 'Geolocation spoofing implemented with a dedicated Vue component that binds input fields to Vuex store, enabling instant updates across the extension without page reloads.',
-					image: '/afbuddy4.png',
+					image: '/afbuddy7.png',
 				},
 				{
 					title: 'User Agent Switching',
@@ -460,7 +277,7 @@ export const projectData: Project[] = [
 				{
 					title: 'Theme Selector',
 					text: 'Theme selector that applies selected themes dynamically to the Monaco editor and other parts of the UI, using CSS variables and Vuex for state management to ensure theme preferences are maintained across the extension.',
-					image: '/afbuddy7.png',
+					image: '/afbuddy3.png',
 				},
 			],
 			challenges: [
@@ -544,7 +361,7 @@ export const projectData: Project[] = [
 	{
 		title: 'Chat with DALL-E Integration',
 		description:
-			"An innovative chat application that combines real-time messaging with the ability to generate and manipulate images directly in the chat using OpenAI's DALL-E.",
+			"Chat application that combines real-time messaging with the ability to generate and manipulate images directly in the chat using OpenAI's DALL-E.",
 		imgUrl: '/chat1.png',
 		repoUrl: 'https://github.com/JayRichh/chat',
 		liveUrl: 'https://jaychat.onrender.com/',
@@ -567,17 +384,17 @@ export const projectData: Project[] = [
 				{
 					title: 'Image Editing and Variation',
 					text: 'Supports advanced image manipulation features, including editing specific parts of an image and generating variations of an existing image.',
-					image: '/chat2.png',
+					image: '',
 				},
 				{
 					title: 'Responsive Design',
 					text: 'Ensures that the chat application is accessible and functional on various devices, providing a consistent user experience across platforms.',
-					image: '/chat1.png',
+					image: '',
 				},
 				{
 					title: 'Seamless Mode Switching',
 					text: 'Users can seamlessly switch between standard chat mode and DALL-E mode to generate or edit images, enhancing the interactive experience.',
-					image: '/chat2.png',
+					image: '',
 				},
 			],
 			challenges: [
@@ -588,7 +405,7 @@ export const projectData: Project[] = [
 				},
 				{
 					title: 'API Rate Limiting',
-					text: 'Managing API usage to stay within the rate limits imposed by OpenAI, ensuring that the application remains efficient and cost-effective.',
+					text: 'Managing API usage to stay within the rate limits imposed by OpenAI.',
 					image: '',
 				},
 				{
@@ -648,189 +465,309 @@ export const projectData: Project[] = [
 	},
 	{
 		title: 'The Odin Project',
-		description: 'A collection of projects and learnings from my journey through The Odin Project curriculum.',
-		imgUrl: '/project-img7.png',
+		description:
+			'A comprehensive collection of projects and learnings from my journey through The Odin Project curriculum, showcasing my growth and skill development as a web developer.',
+		imgUrl: '/top10.png',
 		repoUrl: 'https://github.com/JayRichh/the-odin-project',
 		liveUrl: '',
 		details: {
 			title: 'The Odin Project - Learning Journey',
 			description:
-				'This project represents my learning journey through The Odin Project curriculum. It encompasses a wide range of projects and exercises that have helped me develop my web development skills.',
-			technologies: ['HTML', 'CSS', 'JavaScript', 'React', 'Node.js', 'Express', 'MongoDB'],
+				'This project represents my learning journey through The Odin Project curriculum, encompassing a wide range of projects and exercises that have helped me develop my web development skills.',
+			technologies: [
+				'HTML',
+				'CSS',
+				'JavaScript',
+				'React',
+				'Node.js',
+				'Express',
+				'MongoDB',
+				'Firebase',
+				'Jest',
+				'Webpack',
+			],
 			features: [
 				{
-					title: 'Diverse Collection of Projects',
-					text: 'A diverse collection of projects covering various web development concepts',
-					image: '/project-img1.png',
+					title: 'Todo App',
+					text: 'A feature-rich todo application built with React and Firebase. Utilizes Firebase Realtime Database for data persistence and synchronization. Implements task creation, editing, deletion, and categorization. Includes user authentication and authorization using Firebase Authentication.',
+					image: '/top3.png',
 				},
 				{
-					title: 'Detailed Documentation',
-					text: 'Detailed documentation and reflections on each project',
-					image: '/project-img2.png',
-				},
-				{
-					title: 'Progression Path',
-					text: 'Progression from basic HTML/CSS projects to complex full-stack applications',
-					image: '/project-img3.png',
-				},
-				{
-					title: 'Emphasis on Best Practices',
-					text: 'Emphasis on best practices, clean code, and problem-solving skills',
-					image: '/project-img4.png',
-				},
-			],
-			challenges: [
-				{
-					title: 'Understanding New Concepts and Technologies',
-					text: 'Understanding and applying new concepts and technologies',
-					image: '',
-				},
-				{
-					title: 'Debugging and Troubleshooting',
-					text: 'Debugging and troubleshooting complex issues',
-					image: '',
-				},
-				{
-					title: 'Designing Efficient Algorithms',
-					text: 'Designing and implementing efficient algorithms and data structures',
-					image: '',
-				},
-				{
-					title: 'Project Scope and Motivation',
-					text: 'Managing project scope and maintaining motivation throughout the learning process',
-					image: '',
-				},
-			],
-			learnings: [
-				{
-					title: 'Web Development Fundamentals',
-					points: [
-						{
-							text: 'Gained a solid understanding of HTML structure and semantic elements, enabling the creation of well-organized and accessible web pages.',
-							image: '',
-						},
-						{
-							text: 'Mastered CSS styling techniques, including responsive layouts, flexbox, and grid systems, to create visually appealing and adaptive user interfaces.',
-							image: '',
-						},
-						{
-							text: 'Developed proficiency in vanilla JavaScript, including DOM manipulation, event handling, and asynchronous programming using promises and async/await.',
-							image: '',
-						},
-					],
-				},
-				{
-					title: 'Full-stack JavaScript Development',
-					points: [
-						{
-							text: 'Acquired expertise in building dynamic and interactive user interfaces using React, leveraging components, state management, and lifecycle methods.',
-							image: '',
-						},
-						{
-							text: 'Learned server-side development with Node.js and Express, creating RESTful APIs, handling HTTP requests, and integrating with databases.',
-							image: '',
-						},
-						{
-							text: 'Implemented authentication and authorization mechanisms, including user registration, login, and secure password hashing.',
-							image: '/project-img5.png',
-						},
-					],
-				},
-				{
-					title: 'Databases and Persistence',
-					points: [
-						{
-							text: 'Gained hands-on experience with MongoDB, a NoSQL database, to store and retrieve data efficiently.',
-							image: '',
-						},
-						{
-							text: 'Designed and implemented data models and schemas to structure and organize application data.',
-							image: '',
-						},
-						{
-							text: 'Performed CRUD operations using Mongoose, an Object-Document Mapper (ODM), to interact with the database from the Node.js application.',
-							image: '',
-						},
-					],
-				},
-				{
-					title: 'Problem Solving and Collaboration',
-					points: [
-						{
-							text: 'Developed strong problem-solving skills by tackling complex coding challenges and finding efficient solutions.',
-							image: '',
-						},
-						{
-							text: 'Collaborated with other developers through pair programming and code reviews, learning best practices and improving code quality.',
-							image: '',
-						},
-						{
-							text: 'Engaged in the open-source community by contributing to projects and participating in discussions on forums and chat channels.',
-							image: '',
-						},
-					],
-				},
-			],
-			additionalImages: ['/project-img6.png', '/project-img7.png', '/project-img1.png', '/project-img2.png'],
-		},
-	},
-	{
-		title: 'Elf Game',
-		description:
-			'An interactive game where players hunt for elves in a virtual environment, using Vue.js for the frontend and Node.js with Express for the backend.',
-		imgUrl: '/project-img4.png',
-		repoUrl: 'https://github.com/JayRichh/Elf',
-		liveUrl: '',
-		details: {
-			title: 'Elf Game',
-			description:
-				'Elf Game offers a fun and interactive environment where players click on elves to accumulate points, backed by a robust backend API for managing game state, player scores, and high scores.',
-			technologies: ['Vue.js', 'Node.js', 'Express', 'MongoDB', 'Mongoose'],
-			features: [
-				{
-					title: 'Interactive Gameplay',
-					text: 'Players interact with a game board to locate and click elves, which are dynamically generated within the game area.',
+					title: 'Calculator App',
+					text: 'A fully functional calculator application developed using HTML, CSS, and JavaScript. Supports basic arithmetic operations, decimal handling, and keyboard input. Implements a responsive design and follows accessibility best practices.',
 					image: '/project-img5.png',
 				},
 				{
-					title: 'Real-Time Score Updates',
-					text: 'Using MongoDB, the game updates player scores in real-time, ensuring a competitive and engaging experience.',
-					image: '/project-img6.png',
+					title: 'Restaurant Website',
+					text: 'A dynamic restaurant website built with HTML, CSS, and JavaScript. Features tabbed browsing for easy navigation and a responsive layout that adapts to different screen sizes. Incorporates interactive elements such as image sliders and smooth scrolling.',
+					image: '/project-img4.png',
 				},
 				{
-					title: 'Responsive Game Design',
-					text: 'The game interface adapts to different screen sizes and resolutions, providing an optimal gaming experience on both desktop and mobile devices.',
+					title: 'Tic-Tac-Toe Game',
+					text: 'A classic tic-tac-toe game implemented using HTML, CSS, and JavaScript. Utilizes a modular architecture with separate files for game logic and UI rendering. Includes a responsive grid layout and supports both human vs. human and human vs. computer gameplay.',
+					image: '/project-img10.png',
+				},
+				{
+					title: 'Etch-a-Sketch',
+					text: 'An interactive drawing application built with HTML, CSS, and JavaScript. Allows users to create pixelated art by hovering over a dynamically generated grid. Provides options for adjusting grid size, color, and eraser functionality. Utilizes DOM manipulation and event handling.',
+					image: '/top9.png',
+				},
+				{
+					title: 'Elf Game',
+					text: 'An interactive game built with Vue.js and Node.js, where players search for elves in a virtual environment. Utilizes MongoDB for real-time score updates and leaderboard management. Features a responsive game design that adapts to different screen sizes and devices.',
+					image: ''
+					},
+				{
+					title: 'Blog Application',
+					text: 'A full-stack blog application developed using React, Node.js, Express, and MongoDB. Implements CRUD functionality for blog posts and user management. Utilizes RESTful API architecture and JWT-based authentication. Incorporates rich text editing capabilities and markdown support.',
 					image: '/project-img7.png',
+				},
+				{
+					title: 'CV Builder',
+					text: 'A CV builder application built with React and TypeScript. Allows users to input their personal information, work experience, education, and skills. Generates a professional-looking CV in PDF format. Utilizes React hooks and context API for state management.',
+					image: '/top7.png',
+				},
+				{
+					title: 'Weather App',
+					text: 'A weather application developed using HTML, CSS, JavaScript, and the OpenWeatherMap API. Retrieves and displays real-time weather data based on user location or search input. Implements error handling and loading states. Utilizes Promises and Fetch API for asynchronous data fetching.',
+					image: '/top10.png',
 				},
 			],
 			challenges: [
 				{
-					title: 'State Management',
-					text: 'Managing the state of the game across different clients in real-time presented challenges, particularly in synchronizing the positions of the elves and player interactions.',
+					title: 'State Management in React',
+					text: 'Managing state efficiently in larger React applications, ensuring proper data flow and synchronization between components. Solved by utilizing state management libraries like Redux or the Context API.',
 					image: '',
 				},
 				{
-					title: 'Performance Optimization',
-					text: 'Optimizing the game for performance was crucial, especially to handle multiple players interacting with the game simultaneously without lag.',
+					title: 'Asynchronous Data Fetching',
+					text: 'Handling asynchronous data fetching and managing loading states effectively. Addressed by using Promises, async/await, and libraries like Axios for making API requests.',
+					image: '',
+				},
+				{
+					title: 'CSS Layout and Responsiveness',
+					text: 'Creating responsive layouts that adapt to different screen sizes and devices. Overcame by leveraging CSS flexbox, grid, and media queries, along with responsive design principles.',
+					image: '',
+				},
+				{
+					title: 'Backend API Development',
+					text: 'Designing and implementing robust backend APIs using Node.js and Express. Tackled by following RESTful principles, handling authentication and authorization, and utilizing middleware for request validation and error handling.',
+					image: '',
+				},
+				{
+					title: 'Testing and Debugging',
+					text: 'Writing comprehensive unit tests and debugging complex issues. Addressed by using testing frameworks like Jest and Mocha, and utilizing browser developer tools and debugging techniques.',
 					image: '',
 				},
 			],
 			learnings: [
 				{
-					title: 'Vue.js and Node.js Integration',
+					title: 'Front-end Development',
 					points: [
 						{
-							text: 'Gained valuable experience in integrating Vue.js with Node.js and Express to handle real-time data updates and state management efficiently.',
+							text: 'Mastered HTML5 semantic elements and accessibility best practices.',
 							image: '',
 						},
 						{
-							text: 'Developed a deeper understanding of MongoDB for real-time, high-volume data handling and optimization to support game dynamics.',
+							text: 'Gained proficiency in CSS3 layout techniques, responsive design, and CSS preprocessors like Sass.',
+							image: '',
+						},
+						{
+							text: 'Became skilled in JavaScript ES6+ features, DOM manipulation, and asynchronous programming.',
+							image: '',
+						},
+						{
+							text: 'Acquired expertise in React, including component lifecycle, hooks, and state management.',
+							image: '',
+						},
+					],
+				},
+				{
+					title: 'Back-end Development',
+					points: [
+						{
+							text: 'Learned server-side development with Node.js and Express, creating RESTful APIs and handling database integration.',
+							image: '',
+						},
+						{
+							text: 'Gained knowledge of database design, data modeling, and querying using MongoDB and Mongoose.',
+							image: '',
+						},
+						{
+							text: 'Implemented authentication and authorization mechanisms, including JWT and session-based authentication.',
+							image: '',
+						},
+						{
+							text: 'Acquired experience in server deployment, scaling, and performance optimization.',
+							image: '',
+						},
+					],
+				},
+				{
+					title: 'Testing and Debugging',
+					points: [
+						{
+							text: 'Developed skills in writing unit tests using frameworks like Jest and Mocha.',
+							image: '',
+						},
+						{
+							text: 'Learned debugging techniques using browser developer tools and Node.js debugging tools.',
+							image: '',
+						},
+						{
+							text: 'Gained knowledge of test-driven development (TDD) and integration testing.',
+							image: '',
+						},
+					],
+				},
+				{
+					title: 'Version Control and Collaboration',
+					points: [
+						{
+							text: 'Mastered Git version control, including branching, merging, and resolving conflicts.',
+							image: '',
+						},
+						{
+							text: 'Collaborated with other developers using GitHub, participating in code reviews and pull requests.',
+							image: '',
+						},
+						{
+							text: 'Learned agile development methodologies and project management tools like Trello and Jira.',
+							image: '',
+						},
+					],
+				},
+				{
+					title: 'Web Performance and Optimization',
+					points: [
+						{
+							text: 'Acquired knowledge of web performance optimization techniques, including minification, bundling, and lazy loading.',
+							image: '',
+						},
+						{
+							text: 'Learned about browser rendering optimization, critical rendering path, and performance metrics.',
+							image: '',
+						},
+						{
+							text: 'Implemented caching strategies and content delivery networks (CDNs) for faster content delivery.',
+							image: '',
+						},
+					],
+				},
+				{
+					title: 'Continuous Learning and Problem Solving',
+					points: [
+						{
+							text: 'Developed a growth mindset and embraced continuous learning throughout the curriculum.',
+							image: '',
+						},
+						{
+							text: 'Enhanced problem-solving skills by tackling complex coding challenges and seeking optimal solutions.',
+							image: '',
+						},
+						{
+							text: 'Learned to break down large problems into smaller, manageable tasks and iterate on solutions.',
 							image: '',
 						},
 					],
 				},
 			],
-			additionalImages: ['/project-img1.png', '/project-img2.png', '/project-img3.png'],
+			additionalImages: ['/top8.png', '/afbuddy7.png', '/project-img4.png'],
 		},
 	},
+	// {
+	// 	title: 'Portfolio Website with Interactive Elements',
+	// 	description:
+	// 		'A portfolio website that showcases my projects, skills, and experience through interactive features and a mini-game, demonstrating my abilities in web development and creating engaging user experiences.',
+	// 	imgUrl: '/project-img1.png',
+	// 	repoUrl: 'https://github.com/JayRichh/portfolio',
+	// 	liveUrl: 'https://jayrichh.com',
+	// 	details: {
+	// 		title: 'Portfolio Website',
+	// 		description:
+	// 			'My personal portfolio website includes an interactive hero page and a multiplayer mini-game, highlighting my proficiency in web development, 3D graphics, physics simulations, and real-time networking. The website aims to provide visitors with an immersive and memorable experience while presenting my work and capabilities.',
+	// 		technologies: ['Next.js', 'React', 'Three.js', 'Tailwind CSS', 'TypeScript', 'WebSockets', 'Node.js'],
+	// 		features: [
+	// 			{
+	// 				title: 'Interactive Hero Page',
+	// 				text: 'The hero page features an interactive 3D scene that responds to user input, creating an engaging and dynamic introduction to the portfolio. Visitors can interact with various elements and explore the scene, adding a layer of immersion and interest.',
+	// 				image: '/project-img2.png',
+	// 			},
+	// 			{
+	// 				title: 'Physics-based Interactions',
+	// 				text: 'Both the hero page and the mini-game incorporate physics simulations to enhance the sense of realism and interactivity. Objects behave in a lifelike manner, responding to user interactions and collisions, creating a more engaging and believable experience.',
+	// 				image: '/project-img3.png',
+	// 			},
+	// 			{
+	// 				title: 'Multiplayer Mini-Game',
+	// 				text: 'The portfolio includes a multiplayer mini-game that allows visitors to interact and collaborate with each other in real-time. Players can explore a shared virtual environment, compete in challenges, and engage in social experiences, adding an extra layer of interactivity and fun to the website.',
+	// 				image: '/project-img4.png',
+	// 			},
+	// 			{
+	// 				title: 'Responsive Design',
+	// 				text: 'The portfolio website is built with a responsive design approach, ensuring that it adapts seamlessly to different screen sizes and devices. Whether accessed on a desktop computer, tablet, or mobile phone, the website maintains its visual appeal, functionality, and performance.',
+	// 				image: '/project-img5.png',
+	// 			},
+	// 		],
+	// 		challenges: [
+	// 			{
+	// 				title: 'Integration of Technologies',
+	// 				text: 'One of the main challenges in developing the portfolio website was integrating various technologies and libraries seamlessly. Ensuring smooth communication and synchronization between the front-end and back-end components, as well as optimizing the performance of 3D graphics and physics simulations, required careful planning and implementation.',
+	// 				image: '',
+	// 			},
+	// 			{
+	// 				title: 'Performance Optimization',
+	// 				text: 'Optimizing the performance of the website and mini-game was crucial to provide a smooth and responsive user experience. This involved techniques such as asset optimization, efficient rendering, and minimizing resource usage to ensure fast loading times and smooth interactions across different devices and network conditions.',
+	// 				image: '',
+	// 			},
+	// 			{
+	// 				title: 'Balancing Interactivity and Content',
+	// 				text: 'Striking the right balance between interactive elements and the presentation of projects, skills, and experience was another challenge. The goal was to create an engaging and immersive experience without overwhelming visitors or detracting from the main purpose of showcasing my work and abilities.',
+	// 				image: '',
+	// 			},
+	// 		],
+	// 		learnings: [
+	// 			{
+	// 				title: '3D Graphics and Physics',
+	// 				points: [
+	// 					{
+	// 						text: 'Developing the portfolio website provided valuable experience in creating immersive 3D environments and incorporating realistic physics simulations. I learned techniques for modeling, texturing, and animating 3D assets, as well as optimizing their performance for web-based delivery.',
+	// 						image: '',
+	// 					},
+	// 					{
+	// 						text: 'I gained knowledge in using libraries like Three.js and physics engines to create interactive and dynamic scenes that respond to user input and simulate real-world behavior. This involved learning about scene management, camera controls, lighting, and rendering optimizations.',
+	// 						image: '/project-img6.png',
+	// 					},
+	// 				],
+	// 			},
+	// 			{
+	// 				title: 'Multiplayer Networking',
+	// 				points: [
+	// 					{
+	// 						text: 'Implementing the multiplayer mini-game required diving into real-time networking concepts and technologies. I learned about WebSockets and how to establish bi-directional communication between clients and servers to enable real-time interactions and updates.',
+	// 						image: '',
+	// 					},
+	// 					{
+	// 						text: 'I gained experience in designing and implementing network protocols, handling data synchronization, and optimizing network performance to minimize latency and ensure a smooth multiplayer experience. This involved techniques such as client-side prediction, interpolation, and handling network interruptions gracefully.',
+	// 						image: '',
+	// 					},
+	// 				],
+	// 			},
+	// 			{
+	// 				title: 'Web Development Best Practices',
+	// 				points: [
+	// 					{
+	// 						text: 'Throughout the development of the portfolio website, I reinforced my understanding of web development best practices. This included creating modular and reusable code components, following a clean and maintainable architecture, and using version control effectively.',
+	// 						image: '',
+	// 					},
+	// 					{
+	// 						text: 'I also gained valuable insights into performance optimization techniques, such as lazy loading, code splitting, and caching strategies, to ensure fast loading times and efficient resource utilization. Accessibility and cross-browser compatibility were also key considerations in the development process.',
+	// 						image: '',
+	// 					},
+	// 				],
+	// 			},
+	// 		],
+	// 		additionalImages: ['/project-img7.png', '/project-img8.png', '/project-img9.png'],
+	// 	},
+	// },
 ]

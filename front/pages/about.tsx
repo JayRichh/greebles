@@ -5,12 +5,12 @@ import { PieChart, Pie, Tooltip, ResponsiveContainer, Cell, Legend } from 'recha
 import { useMediaQuery } from '@mantine/hooks'
 
 const data = [
-	{ name: 'TypeScript', value: 38.51 },
-	{ name: 'JavaScript', value: 37.41 },
-	{ name: 'Vue', value: 10.66 },
-	{ name: 'CSS', value: 6.6 },
-	{ name: 'HTML', value: 4.3 },
-	{ name: 'SCSS', value: 2.52 },
+	{ name: 'TypeScript', value: 48.17 },
+	{ name: 'JavaScript', value: 31.26 },
+	{ name: 'Vue', value: 8.86 },
+	{ name: 'CSS', value: 6.05 },
+	{ name: 'HTML', value: 3.57 },
+	{ name: 'SCSS', value: 2.1 },
 ]
 
 const COLORS = ['#A3B1F7', '#FDBBA9', '#C1E5D7', '#F2E1C1', '#F7D6E0', '#B9C0DA']

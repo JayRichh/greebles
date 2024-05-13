@@ -14,9 +14,13 @@ import {
 	SyncSizeSystem,
 	CameraFollowSystem,
 	AnimationSystem,
+	SleepCheckSystem,
 	DestroySystem,
+	ChatSystem,
 } from './ecs/system'
 import { Entity } from '@shared/entity/Entity'
+
+import { Hud } from './hud'
 
 export class Game {
 	private static instance: Game
@@ -30,13 +34,16 @@ export class Game {
 	private syncRotationSystem: SyncRotationSystem
 	private syncColorSystem: SyncColorSystem
 	private syncSizeSystem: SyncSizeSystem
-	private websocketManager: WebSocketManager
+	public websocketManager: WebSocketManager
 	private animationSystem: AnimationSystem
 	private destroySystem: DestroySystem
 	public loadManager: LoadManager
 	private inputManager: InputManager
 	public renderer: Renderer
 	// public camera: Camera
+	private sleepCheckSystem: SleepCheckSystem
+	private chatSystem: ChatSystem
+	public hud: Hud
 
 	private constructor() {
 		this.cameraFollowSystem = new CameraFollowSystem()

@@ -4,8 +4,8 @@
  * It provides methods to deserialize and serialize the rotation data for network transmission.
  */
 import {
+  SerializedComponent,
   SerializedComponentType,
-  SerializedRotationComponent,
 } from "../network/server/serialized.js";
 import { NetworkComponent } from "../network/NetworkComponent.js";
 
@@ -35,4 +35,11 @@ export class RotationComponent extends NetworkComponent {
       w: Number(this.w.toFixed(2)),
     };
   }
+}
+
+export interface SerializedRotationComponent extends SerializedComponent {
+  x: number;
+  y: number;
+  z: number;
+  w: number;
 }

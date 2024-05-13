@@ -40,12 +40,33 @@ export class EntityManager {
   }
 
   /**
+   * Get entities by type
+   * @param entities Array of entities to search
+   * @param type The type of entities to retrieve
+   * @returns An array of entities with the specified type
+   */
+  static getEntitiesByType(entities: Entity[], type: SerializedEntityType): Entity[] {
+    return entities.filter((entity) => entity.type === type);
+  }
+
+  /**
+   * Get the first entity with a specific type
+   * @param entities Array of entities to search
+   * @param type The type of entity to retrieve
+   * @returns The first entity with the specified type, or undefined if not found
+   */
+  static getFirstEntityByType(entities: Entity[], type: SerializedEntityType): Entity | undefined {
+    return entities.find((entity) => entity.type === type);
+  }
+
+  /**
    * Get an entity by id
+   * @param entities Array of entities to search
    * @param id The id of the entity to retrieve
    * @returns The entity with the specified id, or undefined if not found
    */
-  getEntityById(id: number): Entity | undefined {
-    return this.entities.find((entity) => entity.id === id);
+  static getEntityById(entities: Entity[], id: number): Entity | undefined {
+    return entities.find((entity) => entity.id === id);
   }
 
   /**
@@ -69,5 +90,16 @@ export class EntityManager {
       this.entities.splice(index, 1);
     }
   }
-}
 
+  /**
+   * Remove an entity by id
+   * @param id The id of the entity to remove
+   */
+  removeEntityById(id: number): void {
+    const index = this.entities.findIndex((entity) => entity.id === id);
+    console.log("Removing entity", id, "from EntityManager");
+    if (index !== -1) {
+      this.entities.splice(index, 1);
+    }
+  }
+}

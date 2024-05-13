@@ -1,6 +1,6 @@
 import { EntityManager } from "../../shared/entity/EntityManager.js";
 import { Cube } from "./ecs/entity/Cube.js";
-import { EventDestroyedComponent } from "../../shared/component/events/EventDestroyedComponent.js";
+import {EventDestroyedComponent} from "../../shared/component/events/EventDestroyed.js";
 import { config } from "../../shared/network/config.js";
 import { NetworkDataComponent } from "./ecs/component/NetworkDataComponent.js";
 import { AnimationSystem } from "./ecs/system/AnimationSystem.js";

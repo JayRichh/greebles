@@ -7,22 +7,13 @@ import { InputMessage } from '@shared/network/client/input'
 // import { clamp, smoothDamp } from '@/lib/utils'
 
 export class CameraFollowSystem {
-	private lastLookAtPosition: THREE.Vector3
-
-	private phi = 0 // Horizontal angle around the y-axis
-	private theta = Math.PI / 4 // Initial vertical angle, set to 45 degrees
-	private radius = 10 // Distance from the character
-	private phiVelocity = 0 // Velocity for smoothDamp
-	private thetaVelocity = 0 // Velocity for smoothDamp
-
+	private lastLookAtPosition: THREE.Vector3 | undefined
 	constructor(
 		private positionLerpFactor = 0.05,
 		private rotationLerpFactor = 0.05,
 		private angle = 0,
 		private rotationSpeed = 0.01
-	) {
-		this.lastLookAtPosition = new THREE.Vector3()
-	}
+	) {}
 
 	update(dt: number, entities: Entity[], input: InputMessage) {
 		for (const entity of entities) {

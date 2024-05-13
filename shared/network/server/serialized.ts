@@ -1,4 +1,3 @@
-// SNAPSHOT
 import { ServerMessage } from "./base";
 export enum SerializedComponentType {
   NONE = 0,
@@ -8,7 +7,12 @@ export enum SerializedComponentType {
   COLOR = 4,
   DESTROYED = 5,
   SINGLE_SIZE = 6,
-  MESH = 7,
+
+  // Used for animations mostly
+  STATE = 7,
+
+  CHAT_LIST = 8,
+  CHAT_MESSAGE = 9,
 }
 
 export enum SerializedEntityType {
@@ -16,6 +20,18 @@ export enum SerializedEntityType {
   CUBE = 2,
   WORLD = 3,
   SPHERE = 4,
+  CHAT = 5,
+  EVENT = 6,
+}
+
+export enum SerializedStateType {
+  IDLE = "Idle",
+  WALK = "Walk",
+  RUN = "Run",
+  JUMP = "Jump",
+  ATTACK = "Attack",
+  FALL = "Fall",
+  DEATH = "Death",
 }
 
 export interface SerializedComponent {
@@ -29,35 +45,6 @@ export interface SerializedEntity {
   // Components
   c: SerializedComponent[];
 }
-
-export interface SerializedPositionComponent extends SerializedComponent {
-  x: number;
-  y: number;
-  z: number;
-}
-
-export interface SerializedRotationComponent extends SerializedComponent {
-  x: number;
-  y: number;
-  z: number;
-  w: number;
-}
-
-export interface SerializedSizeComponent extends SerializedComponent {
-  width: number;
-  height: number;
-  depth: number;
-}
-
-export interface SerializedSingleSizeComponent extends SerializedComponent {
-  size: number;
-}
-
-export interface SerializedColorComponent extends SerializedComponent {
-  color: string;
-}
-
-export interface SerializedDestroyedComponent extends SerializedComponent {}
 
 export interface SnapshotMessage extends ServerMessage {
   e: Array<SerializedEntity>;

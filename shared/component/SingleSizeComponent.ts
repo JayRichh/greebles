@@ -10,8 +10,8 @@
  * @param {number} size - The size of the entity.
  */
 import {
+  SerializedComponent,
   SerializedComponentType,
-  SerializedSingleSizeComponent,
 } from "../network/server/serialized.js";
 
 import { NetworkComponent } from "../network/NetworkComponent.js";
@@ -22,11 +22,14 @@ export class SingleSizeComponent extends NetworkComponent {
   }
   deserialize(data: SerializedSingleSizeComponent): void {
     this.size = data.size;
-    console.log("Deserializing single size component", this.size);
   }
   serialize(): SerializedSingleSizeComponent {
     return {
       size: Number(this.size.toFixed(2)),
     };
   }
+}
+
+export interface SerializedSingleSizeComponent extends SerializedComponent {
+  size: number;
 }

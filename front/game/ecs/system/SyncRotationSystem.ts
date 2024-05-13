@@ -17,7 +17,6 @@ export class SyncRotationSystem {
 					rotationComponent.w
 				)
 
-				// Interpolate rotation using slerp (spherical linear interpolation)
 				meshComponent.mesh.quaternion.slerp(targetQuaternion, interpolationFactor)
 			}
 		}

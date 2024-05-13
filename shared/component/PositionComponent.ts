@@ -1,11 +1,6 @@
-/**
- * Represents a position component for an entity in the game world.
- * The position component is responsible for storing and serializing the x, y, and z coordinates of an entity.
- * It is a part of the NetworkComponent hierarchy, which means it can be serialized and deserialized for network communication.
- */
 import {
+  SerializedComponent,
   SerializedComponentType,
-  SerializedPositionComponent,
 } from "../network/server/serialized.js";
 import { NetworkComponent } from "../network/NetworkComponent.js";
 
@@ -30,4 +25,10 @@ export class PositionComponent extends NetworkComponent {
       z: Number(this.z.toFixed(2)),
     };
   }
+}
+
+export interface SerializedPositionComponent extends SerializedComponent {
+  x: number;
+  y: number;
+  z: number;
 }

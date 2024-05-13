@@ -67,14 +67,8 @@ const ProjectModal: React.FC<ProjectModalProps> = ({ project, opened, onClose })
 		<Transition mounted={opened} transition="fade" duration={400} timingFunction="ease">
 			{(styles) => (
 				<div style={styles}>
-					<Modal
-						opened={opened}
-						onClose={onClose}
-						size="80%"
-						centered
-						withCloseButton={false}
-					>
-								<ScrollArea scrollbarSize={12} scrollHideDelay={500} type="scroll" offsetScrollbars>
+					<Modal opened={opened} onClose={onClose} size="80%" centered withCloseButton={false}>
+						<ScrollArea scrollbarSize={12} scrollHideDelay={500} type="scroll" offsetScrollbars>
 							<div style={{ padding: '32px', maxWidth: '900px', margin: '0 auto' }}>
 								<Grid gutter="md">
 									<Grid.Col span={12}>
