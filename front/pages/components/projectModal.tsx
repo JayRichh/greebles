@@ -18,7 +18,7 @@ import { ChallengeDetail, LearningDetail } from '../../lib/projectData';
 import { useMediaQuery } from '@mantine/hooks';
 
 interface ProjectModalProps {
-  project: Project;
+  project: Project | null; // Make project prop nullable
   opened: boolean;
   onClose: () => void;
 }
@@ -67,13 +67,13 @@ const ProjectModal: React.FC<ProjectModalProps> = ({ project, opened, onClose })
     </Grid>
   );
 
-  const modalContent = (
+  const modalContent = project ? (
     <ScrollArea scrollbarSize={12} scrollHideDelay={500} type="scroll" offsetScrollbars>
       <div style={{ padding: isMobile ? '16px' : '32px', maxWidth: '900px', margin: '0 auto' }}>
         <Grid gutter="md">
           <Grid.Col span={12}>
             <Image
-              src={project.imgUrl || 'https://via.placeholder.com/1920x1080'}
+              src={project?.imgUrl || 'https://via.placeholder.com/1920x1080'}
               alt={`Screenshot of ${project.title}`}
               style={{ width: '100%', borderRadius: '4px', marginBottom: '20px' }}
             />
@@ -142,10 +142,12 @@ const ProjectModal: React.FC<ProjectModalProps> = ({ project, opened, onClose })
         </Grid>
       </div>
     </ScrollArea>
+  ) : (
+    renderSkeleton()
   );
 
   return isMobile ? (
-    <Drawer opened={opened} onClose={onClose} size="100%" padding="sm" title={project.title}>
+    <Drawer opened={opened} onClose={onClose} size="100%" padding="sm" title={project?.title || 'Loading'}>
       {modalContent}
     </Drawer>
   ) : (
