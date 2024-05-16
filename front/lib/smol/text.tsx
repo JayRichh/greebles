@@ -223,11 +223,10 @@ export class ThreeCanvas {
       -100,
       1000
     )
-
-    this.camera.position.set(this.config.camera_pos_x, this.config.camera_pos_y + 5, this.config.camera_pos_z)
+    this.camera.position.set(this.config.camera_pos_x, this.config.camera_pos_y + 7, this.config.camera_pos_z) // Raise camera slightly on y-axis
 
     // Ensuring the camera looks at the center of the scene
-    this.camera.lookAt(this.scene.position)
+    this.camera.lookAt(new THREE.Vector3(this.scene.position.x, this.scene.position.y + 7, this.scene.position.z))
 
     // Update projection matrix during initialization and on window resize
     this.updateProjectionMatrix()
