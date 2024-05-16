@@ -129,7 +129,6 @@ class Button {
       (Math.random() - 0.5) * 0.1   // Random rotation around z-axis
     ));
 
-
     this.props.scene.add(this.button);
 
     const textGeometry = new TextGeometry(text, {
@@ -207,7 +206,7 @@ class Button {
       this.ropeSegments[0],
       new CANNON.Vec3(0, segmentLength / 2, 0),
       shelfBody,
-      new CANNON.Vec3(offset.x, offset.y, offset.z)
+      new CANNON.Vec3(offset.x, offset.y - 1, offset.z) // Lower the connection point
     );
     this.props.world.addConstraint(topConstraint);
 
