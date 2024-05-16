@@ -1,6 +1,6 @@
 import Rapier from "../../../physics/rapier.js";
 import { Entity } from "../../../../../shared/entity/Entity.js";
-import { EventTrimeshComponent } from "../../component/events/EventTrimeshComponent.js";
+import { EventTrimesh } from "../../component/events/EventTrimesh.js";
 import {
   DRACOLoader,
   GLTF,
@@ -38,29 +38,30 @@ export class TrimeshSystem {
     const loadPromises: Promise<void>[] = [];
 
     for (const entity of entities) {
-      const eventTrimeshComponent = entity.getComponent(EventTrimeshComponent);
+      const eventTrimeshComponent = entity.getComponent(EventTrimesh);
       if (eventTrimeshComponent) {
-        console.log(entity.id, "geometry");
-
         const loadPromise = this.loadGLTFModel(eventTrimeshComponent.filePath)
           .then(async (gltf: GLTF) => {
             if (gltf) {
+              console.log("Loading map", eventTrimeshComponent.filePath);
               // Iterate over all child objects in the GLTF scene
               gltf.scene.traverse((child) => {
                 if (child instanceof THREE.Mesh) {
                   const mesh = child as THREE.Mesh;
                   const indices = mesh.geometry.index?.array;
                   const vertices = mesh.geometry.attributes.position.array;
-
                   // Scale factor for the vertices
-                  const scale = 1; // Adjust as needed
+                  const scale = mesh.getWorldScale(mesh.scale);
 
                   // Create a new Float32Array to hold the scaled vertices
                   const scaledVertices = new Float32Array(vertices.length);
 
                   // Scale the vertices
-                  for (let i = 0; i < vertices.length; i++) {
-                    scaledVertices[i] = vertices[i] * scale;
+                  for (let i = 0; i < vertices.length; i += 3) {
+                    // Scale each coordinate individually
+                    scaledVertices[i] = vertices[i] * scale.x;
+                    scaledVertices[i + 1] = vertices[i + 1] * scale.y;
+                    scaledVertices[i + 2] = vertices[i + 2] * scale.z;
                   }
 
                   // Create the trimesh collider for the current mesh
@@ -89,7 +90,7 @@ export class TrimeshSystem {
                     trimeshDesc,
                     world.createRigidBody(rigidBody)
                   );
-                  console.log("Created trimesh");
+                  console.log("Created trimesh for", mesh.name);
                 }
               });
             }
@@ -99,7 +100,7 @@ export class TrimeshSystem {
           });
 
         loadPromises.push(loadPromise);
-        entity.removeComponent(EventTrimeshComponent);
+        entity.removeComponent(EventTrimesh);
       }
     }
 

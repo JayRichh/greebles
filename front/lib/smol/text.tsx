@@ -9,7 +9,9 @@ import { GlitchPass } from 'three/examples/jsm/postprocessing/GlitchPass.js'
 import { UnrealBloomPass } from 'three/examples/jsm/postprocessing/UnrealBloomPass.js'
 import { FontLoader } from 'three/examples/jsm/loaders/FontLoader.js'
 import { TextGeometry } from 'three/examples/jsm/geometries/TextGeometry.js'
-import Button from '../scene/BUTTON'
+import Button, {createButtons} from '../scene/ButtMoit'
+import { TextureLoader } from 'three';
+
 import {
 	WebGLRenderer,
 	Scene,
@@ -67,7 +69,7 @@ export class ThreeCanvas {
 	private clickCooldown: boolean = false
 	public static dispose: () => void
 	private stats: Stats
-	private button: Button | null = null
+	private buttons: Button[] = [];
 	private shelf: THREE.Object3D | null = null
 	private router: any
 	constructor(
@@ -88,7 +90,11 @@ export class ThreeCanvas {
 	}
 
 	public dispose(): void {
-		this.button?.dispose()
+		if (Array.isArray(this.buttons)) {
+			this.buttons?.forEach(button => {
+				button.dispose();
+			});
+		}
 		this.renderer.dispose()
 		this.gui.destroy()
 		this.world.bodies.forEach((body) => this.world.removeBody(body))
@@ -107,7 +113,7 @@ export class ThreeCanvas {
 	}
 
 	private async init(): Promise<void> {
-		this.renderer = new THREE.WebGLRenderer({ canvas: this.canvas, antialias: true })
+		this.renderer = new THREE.WebGLRenderer({ canvas: this.canvas, antialias: true, alpha: true })
 		this.renderer.setPixelRatio(window.devicePixelRatio)
 		this.renderer.domElement.style.position = 'absolute'
 		this.renderer.setSize(window.innerWidth, window.innerHeight)
@@ -122,7 +128,18 @@ export class ThreeCanvas {
 		document.body.appendChild(this.renderer.domElement)
 
 		this.scene = new THREE.Scene()
-		this.scene.background = new THREE.Color(this.config.scene_background_color)
+
+		// Load backdrop texture and set as scene background
+		const textureLoader = new TextureLoader()
+		textureLoader.load('backdrop.avif', (texture) => {
+			texture.encoding = THREE.sRGBEncoding // Normalize texture
+			let background = new THREE.Mesh(
+				new THREE.PlaneGeometry(window.innerWidth, window.innerHeight),
+				new THREE.MeshBasicMaterial({ map: texture, transparent: true })
+			)
+			background.position.z = -100 // Move background back in the scene
+			this.scene.add(background)
+		})
 
 		this.mainGroup = new THREE.Object3D()
 		this.scene.add(this.mainGroup)
@@ -149,18 +166,20 @@ export class ThreeCanvas {
 		this.mainGroup.add(this.clicker)
 
 		await this.create3DText()
+		const font = await this.fontLoader.loadAsync(this.fontUrl);
+    const props = {
+      scene: this.scene,
+      camera: this.camera,
+      renderer: this.renderer,
+      world: this.world,
+      shelf: this.shelf!,
+      font: font,
+      router: this.router,
+    };
 
-		const font = await this.fontLoader.loadAsync(this.fontUrl)
-		const props = {
-			scene: this.scene,
-			camera: this.camera,
-			renderer: this.renderer,
-			world: this.world,
-			shelf: this.shelf!,
-			font: font,
-			router: this.router,
-		}
-		this.button = new Button(props as any)
+    // Create multiple buttons
+    this.buttons = createButtons(props);
+
 		// await this.createKiwiBird();
 		this.renderLoop()
 	}
@@ -332,7 +351,7 @@ export class ThreeCanvas {
 			const spaceWidth = 0.5 // Define the width of the space between words
 
 			words.forEach((word, wordIndex) => {
-				const letters = [...word]
+				const letters = Array.from(word)
 				letters.forEach((letter, letterIndex) => {
 					const letterGeom = new TextGeometry(letter, {
 						font: font,
@@ -405,56 +424,59 @@ export class ThreeCanvas {
 	}
 	private renderLoop(): void {
 		const animate = () => {
-			requestAnimationFrame(animate)
-
-			const deltaTime = this.clock.getDelta()
-
-			this.world.step(1 / 60, deltaTime, 3)
-			this.mixers.forEach((mixer) => mixer.update(deltaTime))
-
-			this.controls.update()
-
+			requestAnimationFrame(animate);
+	
+			const deltaTime = this.clock.getDelta();
+	
+			this.world.step(1 / 60, deltaTime, 3);
+			this.mixers.forEach((mixer) => mixer.update(deltaTime));
+	
+			this.controls.update();
+	
+			// Update buttons and their ropes
+			this.buttons?.forEach((button) => {
+				button.update();
+			});
+	
 			// Then update the Three.js graphics according to the physics
 			this.mainGroup.children.forEach((line: THREE.Object3D) => {
 				line.children.forEach((letter: THREE.Object3D) => {
-					const letterMesh = letter as THREE.Mesh
+					const letterMesh = letter as THREE.Mesh;
 					if (letterMesh.userData.body) {
-						letterMesh.position.copy(letterMesh.userData.body.position as unknown as THREE.Vector3)
-						letterMesh.quaternion.copy(letterMesh.userData.body.quaternion as unknown as THREE.Quaternion)
+						letterMesh.position.copy(letterMesh.userData.body.position as unknown as THREE.Vector3);
+						letterMesh.quaternion.copy(letterMesh.userData.body.quaternion as unknown as THREE.Quaternion);
 					}
-				})
-			})
-
+				});
+			});
+	
 			this.mainGroup.traverse((object: any) => {
 				if (object.userData.physicsBody) {
-					object.position.copy(object.userData.physicsBody.position as unknown as THREE.Vector3)
-					object.quaternion.copy(object.userData.physicsBody.quaternion as unknown as THREE.Quaternion)
+					object.position.copy(object.userData.physicsBody.position as unknown as THREE.Vector3);
+					object.quaternion.copy(object.userData.physicsBody.quaternion as unknown as THREE.Quaternion);
 				}
-			})
-
+			});
+	
 			this.boundingBoxes.forEach((bbox, object) => {
 				if (object.userData.physicsBody) {
-					object.position.copy(object.userData.physicsBody.position as unknown as THREE.Vector3)
-					object.quaternion.copy(object.userData.physicsBody.quaternion as unknown as THREE.Quaternion)
-					bbox.update()
+					object.position.copy(object.userData.physicsBody.position as unknown as THREE.Vector3);
+					object.quaternion.copy(object.userData.physicsBody.quaternion as unknown as THREE.Quaternion);
+					bbox.update();
 				}
-			})
-
-			let clickerOpacity = 0
+			});
+	
+			let clickerOpacity = 0;
 			if (this.clicker.material) {
-				const clickerMaterial = this.clicker.material as THREE.MeshPhongMaterial
-				clickerOpacity += ((Math.sin(deltaTime * 2) + 1) / 2) * 0.01
-				clickerOpacity = Math.min(clickerOpacity, 1)
-				clickerMaterial.opacity = clickerOpacity
-				clickerMaterial.transparent = true
-				clickerMaterial.needsUpdate = true
+				const clickerMaterial = this.clicker.material as THREE.MeshPhongMaterial;
+				clickerOpacity += ((Math.sin(deltaTime * 2) + 1) / 2) * 0.01;
+				clickerOpacity = Math.min(clickerOpacity, 1);
+				clickerMaterial.opacity = clickerOpacity;
+				clickerMaterial.transparent = true;
+				clickerMaterial.needsUpdate = true;
 			}
-			this.button?.update()
-			this.controls.update()
-			this.renderer.render(this.scene, this.camera)
-			this.stats.update()
-		}
-
+	
+			this.renderer.render(this.scene, this.camera);
+			this.stats.update();
+		};
 		animate()
 	}
 

@@ -1,7 +1,6 @@
-import Rapier from "../../physics/rapier.js";
 import { Component } from "../../../../shared/component/Component.js";
 
-export class PlayerComponent extends Component {
+export class RandomizeComponent extends Component {
   constructor(entityId: number) {
     super(entityId);
   }

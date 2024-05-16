@@ -27,10 +27,6 @@ export class NetworkDataComponent extends Component implements Serializable {
     return this.components;
   }
 
-  hasComponents(): boolean {
-    return this.components.length > 0;
-  }
-
   removeComponent(componentType: typeof NetworkComponent) {
     this.components = this.components.filter(
       (c) => !(c instanceof componentType)

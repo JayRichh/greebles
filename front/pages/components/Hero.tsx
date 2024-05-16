@@ -16,6 +16,9 @@ const Hero: React.FC = () => {
 				if (threeCanvas) {
 					threeCanvas.dispose()
 				}
+				if (canvasRef.current) {
+					canvasRef.current.remove()
+				}
 			}
 		}
 	}, [])
@@ -24,10 +27,10 @@ const Hero: React.FC = () => {
 		<Container className={classes.wrapper}>
 			<div className={classes.inner}>
 				<div className="page" style={{ display: 'none' }}>
-					<div style={{ color: '#627254' }}>Jayden Richardson</div>
+					<div style={{ color: '#627254' }}>Jayden . Richardson</div>
 					<div style={{ color: '#76885B' }}>Web Developer</div>
 				</div>
-				<canvas ref={canvasRef} /> {/* 3D canvas */}
+				<canvas ref={canvasRef} />
 			</div>
 		</Container>
 	)

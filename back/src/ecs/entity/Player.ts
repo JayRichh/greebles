@@ -2,15 +2,23 @@ import { PositionComponent } from "../../../../shared/component/PositionComponen
 import { RotationComponent } from "../../../../shared/component/RotationComponent.js";
 import { Entity } from "../../../../shared/entity/Entity.js";
 import { EntityManager } from "../../../../shared/entity/EntityManager.js";
-import { SerializedEntityType } from "../../../../shared/network/server/serialized.js";
+import {
+  SerializedEntityType,
+  SerializedStateType,
+} from "../../../../shared/network/server/serialized.js";
 import Rapier from "../../physics/rapier.js";
 import { InputComponent } from "../component/InputComponent.js";
 import { NetworkDataComponent } from "../component/NetworkDataComponent.js";
 import { PhysicsBodyComponent } from "../component/PhysicsBodyComponent.js";
 import { PhysicsColliderComponent } from "../component/PhysicsColliderComponent.js";
-import { PlayerComponent } from "../component/PlayerComponent.js";
 import { WebSocketComponent } from "../component/WebsocketComponent.js";
 import { PhysicsSystem } from "../system/physics/PhysicsSystem.js";
+import { StateComponent } from "../../../../shared/component/StateComponent.js";
+import { EventSystem } from "../system/events/EventSystem.js";
+import { EventChatMessage } from "../component/events/EventChatMessage.js";
+import { PlayerComponent } from "../component/tag/PlayerComponent.js";
+import { SingleSizeComponent } from "../../../../shared/component/SingleSizeComponent.js";
+import { GroundCheckComponent } from "../component/GroundedComponent.js";
 
 export class Player {
   entity: Entity;
@@ -21,11 +29,16 @@ export class Player {
     initialY: number,
     initialZ: number
   ) {
-    console.log("New player created !");
     const world = PhysicsSystem.getInstance().world;
     this.entity = EntityManager.getInstance().createEntity(
       SerializedEntityType.PLAYER
     );
+
+    const sizeComponent = new SingleSizeComponent(
+      this.entity.id,
+      1 + Math.random()
+    );
+    this.entity.addComponent(sizeComponent);
 
     this.entity.addComponent(new WebSocketComponent(this.entity.id, ws));
 
@@ -45,6 +58,14 @@ export class Player {
 
     this.entity.addComponent(new InputComponent(this.entity.id));
 
+    this.entity.addComponent(new GroundCheckComponent(this.entity.id));
+
+    const stateComponent = new StateComponent(
+      this.entity.id,
+      SerializedStateType.IDLE
+    );
+    this.entity.addComponent(stateComponent);
+
     this.createRigidBody(world);
     this.createCollider(world);
 
@@ -52,16 +73,22 @@ export class Player {
     const networkDataComponent = new NetworkDataComponent(
       this.entity.id,
       this.entity.type,
-      [positionComponent, rotationComponent]
+      [positionComponent, rotationComponent, sizeComponent, stateComponent]
     );
-
     this.entity.addComponent(networkDataComponent);
+
+    EventSystem.getInstance().addEvent(
+      new EventChatMessage(
+        this.entity.id,
+        "🖥️ [SERVER]",
+        `Player ${this.entity.id} joined at ${new Date().toLocaleString()}`
+      )
+    );
   }
 
   getPosition() {
     return this.entity.getComponent(PositionComponent)!;
   }
-
   createRigidBody(world: Rapier.World) {
     const { x, y, z } = this.getPosition();
     // Rigidbody
@@ -85,15 +112,24 @@ export class Player {
       return;
     }
 
-    let colliderDesc = Rapier.ColliderDesc.capsule(0.5, 1);
+    const sizeComponent = this.entity.getComponent(SingleSizeComponent);
+    if (!sizeComponent) {
+      console.error("Size component doesn't exist on Player.");
+      return;
+    }
+
+    let colliderDesc = Rapier.ColliderDesc.capsule(
+      sizeComponent.size / 2,
+      sizeComponent.size
+    );
     // Adjust the friction to control sliding
-    colliderDesc.setFriction(0.2); // Adjust the value as needed
+    // colliderDesc.setFriction(0.2); // Adjust the value as needed
 
     // Set the friction combine rule to control how friction is combined with other contacts
     colliderDesc.setFrictionCombineRule(Rapier.CoefficientCombineRule.Max);
 
     // Set restitution to control how bouncy the player is when colliding with surfaces
-    colliderDesc.setRestitution(0.0); // Adjust the value as needed
+    // colliderDesc.setRestitution(0.0); // Adjust the value as needed
 
     // Set the restitution combine rule to control how restitution is combined with other contacts
     colliderDesc.setRestitutionCombineRule(Rapier.CoefficientCombineRule.Max);

@@ -1,7 +1,6 @@
 import { WebSocketComponent } from "../../component/WebsocketComponent.js";
 import { Entity } from "../../../../../shared/entity/Entity.js";
-
-import { pack, unpack } from "msgpackr";
+import { pack } from "msgpackr";
 import { WebsocketSystem } from "./WebsocketSystem.js";
 import * as jsondiffpatch from "jsondiffpatch";
 import {
@@ -16,15 +15,8 @@ export class NetworkSystem {
   private websocketSystem: WebsocketSystem;
   private deltaPatcher = jsondiffpatch.create();
 
-  private constructor() {
+  constructor() {
     this.websocketSystem = new WebsocketSystem();
-  }
-
-  public static getInstance(): NetworkSystem {
-    if (!NetworkSystem.instance) {
-      NetworkSystem.instance = new NetworkSystem();
-    }
-    return NetworkSystem.instance;
   }
 
   private serialize(entities: Entity[], serializeAll: boolean) {
@@ -70,6 +62,7 @@ export class NetworkSystem {
     }
 
     // Then we send delta snapshot
+    debugger;
     const serializedEntities = this.serialize(entities, false);
     const snapshotMessage = this.buildSnapshotMessage(serializedEntities);
     this.broadcast(entities, snapshotMessage);
