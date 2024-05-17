@@ -247,7 +247,7 @@ export const projectData: Project[] = [
 			title: 'AF Buddy',
 			description:
 				'AF Buddy integrates a suite of tools into a single Chrome extension to assist developers in testing and developing web applications. It features dynamic UI components built with Vue.js, leveraging Vuex for state management and GSAP for smooth animations.',
-			technologies: ['Vue.js', 'JavaScript', 'CSS', 'Vuex', 'GSAP'],
+			technologies: ['Vue3', 'JavaScript', 'CSS', 'GSAP'],
 			features: [
 				{
 					title: 'Dynamic Navigation Bar',
@@ -475,11 +475,11 @@ export const projectData: Project[] = [
 			description:
 				'This project represents my learning journey through The Odin Project curriculum, encompassing a wide range of projects and exercises that have helped me develop my web development skills.',
 			technologies: [
+				'React',
+				'JavaScript',
+				'Node.js',
 				'HTML',
 				'CSS',
-				'JavaScript',
-				'React',
-				'Node.js',
 				'Express',
 				'MongoDB',
 				'Firebase',
@@ -688,7 +688,7 @@ export const projectData: Project[] = [
 				'My personal portfolio website includes an interactive hero page and a multiplayer mini-game, highlighting my proficiency in web development, 3D graphics, physics simulations, and real-time networking. The website aims to provide visitors with an immersive and memorable experience while presenting my work and capabilities.',
 			technologies: [
 				'Next.js',
-				'React',
+				'React	',
 				'Three.js',
 				'Tailwind CSS',
 				'TypeScript',
@@ -778,6 +778,95 @@ export const projectData: Project[] = [
 				},
 			],
 			additionalImages: ['/main1.png', '/main2.png', '/main3.png', '/main4.png'],
+		},
+	},
+	{
+		title: 'ReStyled | Wardrobe Styling with Stripe Integration',
+		description:
+			'A MERN stack application integrated with Stripe for marketplace and checkout functionalities. It allows users to digitize their wardrobe, create and save outfits, and manage their style.',
+		imgUrl: '/wardrobe.png',
+		repoUrl: 'https://github.com/JayRichh/wardrobe-app',
+		liveUrl: '',
+		details: {
+			title: 'Wardrobe App',
+			description:
+				'Wardrobe App is a full-stack application that allows users to manage their wardrobe digitally. It features a marketplace integrated with Stripe for secure transactions, user authentication, and a style builder for creating and saving detailed outfits.',
+			technologies: ['React', 'Node.js', 'Express', 'MongoDB', 'Stripe', 'Tailwind CSS', 'JavaScript'],
+			features: [
+				{
+					title: 'Stripe Integration',
+					text: 'Secure marketplace and checkout functionalities using Stripe integration for seamless transactions.',
+					image: '',
+				},
+				{
+					title: 'Digital Wardrobe Management',
+					text: 'Allows users to upload, categorize, and manage their clothing items digitally.',
+					image: '',
+				},
+				{
+					title: 'Style Builder',
+					text: 'Create and save detailed outfits using a user-friendly style builder interface.',
+					image: '',
+				},
+				{
+					title: 'User Authentication',
+					text: 'Secure user authentication and authorization mechanisms for personalized user experience.',
+					image: '',
+				},
+				{
+					title: 'Responsive Design',
+					text: 'Ensures accessibility and usability across various devices with responsive design.',
+					image: '',
+				},
+			],
+			challenges: [
+				{
+					title: 'Payment Integration',
+					text: 'Integrating Stripe for secure and efficient payment processing posed challenges related to handling sensitive user information.',
+				},
+				{
+					title: 'Complex State Management',
+					text: 'Managing the state of user data, wardrobe items, and outfits efficiently across the application.',
+				},
+				{
+					title: 'Responsive Design Implementation',
+					text: 'Ensuring a consistent and responsive user interface across different devices and screen sizes.',
+				},
+				{
+					title: 'Data Security',
+					text: 'Implementing robust security measures to protect user data and payment information.',
+				},
+			],
+			learnings: [
+				{
+					title: 'Full-Stack Development',
+					points: [
+						{
+							text: 'Gained in-depth knowledge of developing and integrating a full-stack application using the MERN stack.',
+						},
+						{
+							text: 'Learned to handle payment gateways and ensure secure transactions within a web application.',
+						},
+					],
+				},
+				{
+					title: 'State Management',
+					points: [
+						{
+							text: 'Enhanced understanding of state management in React using Context API and other state management libraries.',
+						},
+					],
+				},
+				{
+					title: 'Security Best Practices',
+					points: [
+						{
+							text: 'Learned to implement security best practices for user authentication and data protection.',
+						},
+					],
+				},
+			],
+			additionalImages: ['', '', ''],
 		},
 	},
 ]

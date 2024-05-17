@@ -18,11 +18,11 @@
 .featuredImage,
 .dynamicImage,
 .galleryImage {
-	width: 100%;
+	max-width: 100%;
 	height: auto;
 	border-radius: 4px;
 	margin-top: 10px;
-	object-fit: contain;
+	object-fit: scale-down;
 }
 
 .dynamicImage {

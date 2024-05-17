@@ -19,7 +19,7 @@ export class WebSocketManager {
 		// Check the NODE_ENV environment variable
 		const isProduction = process.env.NEXT_PUBLIC_NODE_ENV === 'production'
 		// Set the serverUrl based on the environment
-		this.serverUrl = isProduction ? 'wss://soraprompts.store' : 'ws://localhost:8001'
+		this.serverUrl = isProduction ? 'te' : 'ws://localhost:8001'
 
 		this.addMessageHandler(ServerMessageType.FIRST_CONNECTION, (message) => {
 			const connectionMessage = message as ConnectionMessage
