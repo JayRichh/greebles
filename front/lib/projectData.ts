@@ -156,7 +156,7 @@ export const projectData: Project[] = [
 					title: 'Interactive Carousels',
 					text: 'Interactive elements like carousels for testimonials and classes, implemented with Vue3-carousel and customized with detailed CSS for a unique look.',
 					image: '/otf3.png',
-				}
+				},
 			],
 			challenges: [
 				{
@@ -515,8 +515,8 @@ export const projectData: Project[] = [
 				{
 					title: 'Elf Game',
 					text: 'An interactive game built with Vue.js and Node.js, where players search for elves in a virtual environment. Utilizes MongoDB for real-time score updates and leaderboard management. Features a responsive game design that adapts to different screen sizes and devices.',
-					image: ''
-					},
+					image: '',
+				},
 				{
 					title: 'Blog Application',
 					text: 'A full-stack blog application developed using React, Node.js, Express, and MongoDB. Implements CRUD functionality for blog posts and user management. Utilizes RESTful API architecture and JWT-based authentication. Incorporates rich text editing capabilities and markdown support.',
@@ -675,99 +675,109 @@ export const projectData: Project[] = [
 			additionalImages: ['/top8.png', '/afbuddy7.png', '/project-img4.png'],
 		},
 	},
-	// {
-	// 	title: 'Portfolio Website with Interactive Elements',
-	// 	description:
-	// 		'A portfolio website that showcases my projects, skills, and experience through interactive features and a mini-game, demonstrating my abilities in web development and creating engaging user experiences.',
-	// 	imgUrl: '/project-img1.png',
-	// 	repoUrl: 'https://github.com/JayRichh/portfolio',
-	// 	liveUrl: 'https://jayrichh.com',
-	// 	details: {
-	// 		title: 'Portfolio Website',
-	// 		description:
-	// 			'My personal portfolio website includes an interactive hero page and a multiplayer mini-game, highlighting my proficiency in web development, 3D graphics, physics simulations, and real-time networking. The website aims to provide visitors with an immersive and memorable experience while presenting my work and capabilities.',
-	// 		technologies: ['Next.js', 'React', 'Three.js', 'Tailwind CSS', 'TypeScript', 'WebSockets', 'Node.js'],
-	// 		features: [
-	// 			{
-	// 				title: 'Interactive Hero Page',
-	// 				text: 'The hero page features an interactive 3D scene that responds to user input, creating an engaging and dynamic introduction to the portfolio. Visitors can interact with various elements and explore the scene, adding a layer of immersion and interest.',
-	// 				image: '/project-img2.png',
-	// 			},
-	// 			{
-	// 				title: 'Physics-based Interactions',
-	// 				text: 'Both the hero page and the mini-game incorporate physics simulations to enhance the sense of realism and interactivity. Objects behave in a lifelike manner, responding to user interactions and collisions, creating a more engaging and believable experience.',
-	// 				image: '/project-img3.png',
-	// 			},
-	// 			{
-	// 				title: 'Multiplayer Mini-Game',
-	// 				text: 'The portfolio includes a multiplayer mini-game that allows visitors to interact and collaborate with each other in real-time. Players can explore a shared virtual environment, compete in challenges, and engage in social experiences, adding an extra layer of interactivity and fun to the website.',
-	// 				image: '/project-img4.png',
-	// 			},
-	// 			{
-	// 				title: 'Responsive Design',
-	// 				text: 'The portfolio website is built with a responsive design approach, ensuring that it adapts seamlessly to different screen sizes and devices. Whether accessed on a desktop computer, tablet, or mobile phone, the website maintains its visual appeal, functionality, and performance.',
-	// 				image: '/project-img5.png',
-	// 			},
-	// 		],
-	// 		challenges: [
-	// 			{
-	// 				title: 'Integration of Technologies',
-	// 				text: 'One of the main challenges in developing the portfolio website was integrating various technologies and libraries seamlessly. Ensuring smooth communication and synchronization between the front-end and back-end components, as well as optimizing the performance of 3D graphics and physics simulations, required careful planning and implementation.',
-	// 				image: '',
-	// 			},
-	// 			{
-	// 				title: 'Performance Optimization',
-	// 				text: 'Optimizing the performance of the website and mini-game was crucial to provide a smooth and responsive user experience. This involved techniques such as asset optimization, efficient rendering, and minimizing resource usage to ensure fast loading times and smooth interactions across different devices and network conditions.',
-	// 				image: '',
-	// 			},
-	// 			{
-	// 				title: 'Balancing Interactivity and Content',
-	// 				text: 'Striking the right balance between interactive elements and the presentation of projects, skills, and experience was another challenge. The goal was to create an engaging and immersive experience without overwhelming visitors or detracting from the main purpose of showcasing my work and abilities.',
-	// 				image: '',
-	// 			},
-	// 		],
-	// 		learnings: [
-	// 			{
-	// 				title: '3D Graphics and Physics',
-	// 				points: [
-	// 					{
-	// 						text: 'Developing the portfolio website provided valuable experience in creating immersive 3D environments and incorporating realistic physics simulations. I learned techniques for modeling, texturing, and animating 3D assets, as well as optimizing their performance for web-based delivery.',
-	// 						image: '',
-	// 					},
-	// 					{
-	// 						text: 'I gained knowledge in using libraries like Three.js and physics engines to create interactive and dynamic scenes that respond to user input and simulate real-world behavior. This involved learning about scene management, camera controls, lighting, and rendering optimizations.',
-	// 						image: '/project-img6.png',
-	// 					},
-	// 				],
-	// 			},
-	// 			{
-	// 				title: 'Multiplayer Networking',
-	// 				points: [
-	// 					{
-	// 						text: 'Implementing the multiplayer mini-game required diving into real-time networking concepts and technologies. I learned about WebSockets and how to establish bi-directional communication between clients and servers to enable real-time interactions and updates.',
-	// 						image: '',
-	// 					},
-	// 					{
-	// 						text: 'I gained experience in designing and implementing network protocols, handling data synchronization, and optimizing network performance to minimize latency and ensure a smooth multiplayer experience. This involved techniques such as client-side prediction, interpolation, and handling network interruptions gracefully.',
-	// 						image: '',
-	// 					},
-	// 				],
-	// 			},
-	// 			{
-	// 				title: 'Web Development Best Practices',
-	// 				points: [
-	// 					{
-	// 						text: 'Throughout the development of the portfolio website, I reinforced my understanding of web development best practices. This included creating modular and reusable code components, following a clean and maintainable architecture, and using version control effectively.',
-	// 						image: '',
-	// 					},
-	// 					{
-	// 						text: 'I also gained valuable insights into performance optimization techniques, such as lazy loading, code splitting, and caching strategies, to ensure fast loading times and efficient resource utilization. Accessibility and cross-browser compatibility were also key considerations in the development process.',
-	// 						image: '',
-	// 					},
-	// 				],
-	// 			},
-	// 		],
-	// 		additionalImages: ['/project-img7.png', '/project-img8.png', '/project-img9.png'],
-	// 	},
-	// },
+	{
+		title: 'Portfolio Website with Interactive Elements',
+		description:
+			'A portfolio website that showcases my projects, skills, and experience through interactive features and a mini-game, demonstrating my abilities in web development and creating engaging user experiences.',
+		imgUrl: '/main1.png',
+		repoUrl: 'https://github.com/JayRichh/portfolio',
+		liveUrl: 'https://jayrichh.com',
+		details: {
+			title: 'Portfolio Website',
+			description:
+				'My personal portfolio website includes an interactive hero page and a multiplayer mini-game, highlighting my proficiency in web development, 3D graphics, physics simulations, and real-time networking. The website aims to provide visitors with an immersive and memorable experience while presenting my work and capabilities.',
+			technologies: [
+				'Next.js',
+				'React',
+				'Three.js',
+				'Tailwind CSS',
+				'TypeScript',
+				'WebSockets',
+				'Node.js',
+				'CANNON.js',
+				'Rapier Physics Engine',
+			],
+			features: [
+				{
+					title: 'Interactive Hero Page',
+					text: 'The hero page features an interactive 3D scene that responds to user input, creating an engaging and dynamic introduction to the portfolio. Visitors can interact with various elements and explore the scene, adding a layer of immersion and interest.',
+					image: '/main2.png',
+				},
+				{
+					title: 'Physics-based Interactions',
+					text: 'Both the hero page and the mini-game incorporate physics simulations using CANNON.js and Rapier Physics Engine to enhance the sense of realism and interactivity. Objects behave in a lifelike manner, responding to user interactions and collisions, creating a more engaging and believable experience.',
+					image: '/main3.png',
+				},
+				{
+					title: 'Multiplayer Mini-Game',
+					text: 'The portfolio includes a multiplayer mini-game that allows visitors to interact and collaborate with each other in real-time. Players can explore a shared virtual environment, compete in challenges, and engage in social experiences, adding an extra layer of interactivity and fun to the website.',
+					image: '/main4.png',
+				},
+				{
+					title: 'Responsive Design',
+					text: 'The portfolio website is built with a responsive design approach, ensuring that it adapts seamlessly to different screen sizes and devices. Whether accessed on a desktop computer, tablet, or mobile phone, the website maintains its visual appeal, functionality, and performance.',
+					image: '/main1.png',
+				},
+			],
+			challenges: [
+				{
+					title: 'Integration of Technologies',
+					text: 'One of the main challenges in developing the portfolio website was integrating various technologies and libraries seamlessly. Ensuring smooth communication and synchronization between the front-end and back-end components, as well as optimizing the performance of 3D graphics and physics simulations, required careful planning and implementation.',
+					image: '',
+				},
+				{
+					title: 'Performance Optimization',
+					text: 'Optimizing the performance of the website and mini-game was crucial to provide a smooth and responsive user experience. This involved techniques such as asset optimization, efficient rendering, and minimizing resource usage to ensure fast loading times and smooth interactions across different devices and network conditions.',
+					image: '',
+				},
+				{
+					title: 'Balancing Interactivity and Content',
+					text: 'Striking the right balance between interactive elements and the presentation of projects, skills, and experience was another challenge. The goal was to create an engaging and immersive experience without overwhelming visitors or detracting from the main purpose of showcasing my work and abilities.',
+					image: '',
+				},
+			],
+			learnings: [
+				{
+					title: '3D Graphics and Physics',
+					points: [
+						{
+							text: 'Developing the portfolio website provided valuable experience in creating immersive 3D environments and incorporating realistic physics simulations. I learned techniques for modeling, texturing, and animating 3D assets, as well as optimizing their performance for web-based delivery.',
+							image: '',
+						},
+						{
+							text: 'I gained knowledge in using libraries like Three.js, CANNON.js, and Rapier Physics Engine to create interactive and dynamic scenes that respond to user input and simulate real-world behavior. This involved learning about scene management, camera controls, lighting, and rendering optimizations.',
+							image: '/main3.png',
+						},
+					],
+				},
+				{
+					title: 'Multiplayer Networking',
+					points: [
+						{
+							text: 'Implementing the multiplayer mini-game required diving into real-time networking concepts and technologies. I learned about WebSockets and how to establish bi-directional communication between clients and servers to enable real-time interactions and updates.',
+							image: '',
+						},
+						{
+							text: 'I gained experience in designing and implementing network protocols, handling data synchronization, and optimizing network performance to minimize latency and ensure a smooth multiplayer experience. This involved techniques such as client-side prediction, interpolation, and handling network interruptions gracefully.',
+							image: '',
+						},
+					],
+				},
+				{
+					title: 'Web Development Best Practices',
+					points: [
+						{
+							text: 'Throughout the development of the portfolio website, I reinforced my understanding of web development best practices. This included creating modular and reusable code components, following a clean and maintainable architecture, and using version control effectively.',
+							image: '',
+						},
+						{
+							text: 'I also gained valuable insights into performance optimization techniques, such as lazy loading, code splitting, and caching strategies, to ensure fast loading times and efficient resource utilization. Accessibility and cross-browser compatibility were also key considerations in the development process.',
+							image: '',
+						},
+					],
+				},
+			],
+			additionalImages: ['/main1.png', '/main2.png', '/main3.png', '/main4.png'],
+		},
+	},
 ]

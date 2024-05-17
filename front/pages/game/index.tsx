@@ -26,9 +26,5 @@ export default function TestServer() {
 		initializeGame()
 	}, [])
 
-	return (
-		<>
-			{isLoading ? <LoadingScreen /> : <GameHud chatList={chat} sendMessage={game?.hud.sendMessageToServer!} />}
-		</>
-	)
+	return <>{isLoading ? <LoadingScreen /> : <GameHud chatList={chat} sendMessage={game?.hud.sendMessageToServer!} />}</>
 }

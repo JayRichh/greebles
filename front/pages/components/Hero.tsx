@@ -27,8 +27,8 @@ const Hero: React.FC = () => {
 		<Container className={classes.wrapper}>
 			<div className={classes.inner}>
 				<div className="page" style={{ display: 'none' }}>
-					<div style={{ color: '#627254' }}>Jayden			Richardson</div> { /* U+0009 CHARACTER TABULATION */}
-					<div style={{ color: '#76885B' }}>Web			Developer</div>
+					<div style={{ color: '#627254' }}>Jayden Richardson</div> {/* U+0009 CHARACTER TABULATION */}
+					<div style={{ color: '#76885B' }}>Web Developer</div>
 				</div>
 				<canvas ref={canvasRef} />
 			</div>
