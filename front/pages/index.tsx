@@ -36,57 +36,88 @@ export default function Home() {
 	return (
 		<div style={{ height: '100%', width: '100%', padding: '0', margin: '0', overflow: 'auto' }}>
 			<NextSeo
-				title="Portfolio Website with Interactive Elements"
-				description="A portfolio website that showcases my projects, skills, and experience through interactive features and a mini-game, demonstrating my abilities in web development and creating engaging user experiences."
-				openGraph={{
-					title: 'Portfolio Website with Interactive Elements',
-					description:
-						'A portfolio website that showcases my projects, skills, and experience through interactive features and a mini-game, demonstrating my abilities in web development and creating engaging user experiences.',
-					images: [
-						{
-							url: '/project-img1.png',
-							width: 800,
-							height: 600,
-							alt: 'Portfolio Project Image',
-							type: 'image/png',
-						},
-						{
-							url: '/project-img2.png',
-							width: 1200,
-							height: 630,
-							alt: 'Interactive Hero Page',
-							type: 'image/png',
-						},
-						{
-							url: '/project-img3.png',
-							width: 1200,
-							height: 630,
-							alt: 'Physics-based Interactions',
-							type: 'image/png',
-						},
-						{
-							url: '/project-img4.png',
-							width: 1200,
-							height: 630,
-							alt: 'Multiplayer Mini-Game',
-							type: 'image/png',
-						},
-						{
-							url: '/project-img5.png',
-							width: 1200,
-							height: 630,
-							alt: 'Responsive Design',
-							type: 'image/png',
-						},
-					],
-					siteName: 'JayRichh Portfolio',
-				}}
-				twitter={{
-					handle: '@JayRichh',
-					site: '@JayRichh',
-					cardType: 'summary_large_image',
-				}}
-			/>
+  title="Jayden Richardson | Portfolio"
+  description="Explore Jayden Richardson's portfolio featuring a diverse range of projects including web development, interactive features, and mini-games."
+  canonical="https://www.jayrichhportfolio.com"
+  openGraph={{
+    url: 'https://www.jayrichhportfolio.com',
+    title: 'Jayden Richardson | Portfolio',
+    description: 'Discover the innovative projects by Jayden Richardson, including web applications, interactive designs, and fun mini-games.',
+    images: [
+      {
+        url: '/chat1.png',
+        width: 800,
+        height: 600,
+        alt: 'OpenAI API Chat',
+        type: 'image/png',
+      },
+      {
+        url: '/afbuddy3.png',
+        width: 1200,
+        height: 630,
+        alt: 'Chrome Extension',
+        type: 'image/png',
+      },
+      {
+        url: '/project-img3.png',
+        width: 1200,
+        height: 630,
+        alt: 'Physics-based Interactions',
+        type: 'image/png',
+      },
+      {
+        url: '/project-img4.png',
+        width: 1200,
+        height: 630,
+        alt: 'Multiplayer Mini-Game',
+        type: 'image/png',
+      },
+      {
+        url: '/project-img5.png',
+        width: 1200,
+        height: 630,
+        alt: 'Responsive Design',
+        type: 'image/png',
+      },
+    ],
+    siteName: 'JayRichh Portfolio',
+  }}
+  twitter={{
+    handle: '@jayrichh',
+    site: '@jayrichh',
+    cardType: 'summary_large_image',
+  }}
+  additionalMetaTags={[
+    {
+      name: 'keywords',
+      content: 'Jayden Richardson, software developer, interactive portfolio, web development, game development, tech innovations'
+    },
+    {
+      httpEquiv: 'x-ua-compatible',
+      content: 'IE=edge; chrome=1'
+    },
+    {
+      name: 'author',
+      content: 'Jayden Richardson'
+    },
+    {
+      name: 'robots',
+      content: 'index, follow'
+    },
+    {
+      name: 'theme-color',
+      content: '#317EFB'
+    },
+    {
+      name: 'viewport',
+      content: 'width=device-width, initial-scale=1.0'
+    },
+    {
+      name: 'description',
+      content: 'Jayden Richardson’s official portfolio showcasing a wide range of projects in web development, game development, and interactive design.'
+    }
+  ]}
+/>
 			{CurrentComponent ? <CurrentComponent /> : <p>Loading...</p>}
 		</div>
 	)

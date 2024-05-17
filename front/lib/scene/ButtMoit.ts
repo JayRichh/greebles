@@ -206,7 +206,7 @@ class Button {
       this.ropeSegments[0],
       new CANNON.Vec3(0, segmentLength / 2, 0),
       shelfBody,
-      new CANNON.Vec3(offset.x, offset.y , offset.z) // Lower the connection point, no dont lower it that breaks things
+      new CANNON.Vec3(offset.x, offset.y - 0.5, offset.z) // Lower the connection point
     );
     this.props.world.addConstraint(topConstraint);
 
