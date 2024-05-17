@@ -162,62 +162,62 @@ class Button {
     this.props.world.addBody(this.buttonBody);
   }
 
-	private createHolder(offset: THREE.Vector3): void {
-		const ropeSegments = 20;
-		const ropeLength = 2;
-		const segmentLength = ropeLength / ropeSegments;
-	
-		const ropeGeometry = new THREE.BufferGeometry();
-		const ropePositions = new Float32Array((ropeSegments + 1) * 3);
-		ropeGeometry.setAttribute('position', new THREE.BufferAttribute(ropePositions, 3));
-		const ropeMaterial = new THREE.LineBasicMaterial({ color: 0x000000 });
-		this.rope = new THREE.Line(ropeGeometry, ropeMaterial);
-		this.props.scene.add(this.rope);
-	
-		for (let i = 0; i <= ropeSegments; i++) {
-			const segmentPosition = new CANNON.Vec3(offset.x, offset.y - i * segmentLength, offset.z);
-	
-			const mass = i === ropeSegments ? 0.1 : 1;
-			const ropeSegment = new CANNON.Body({
-				mass: mass,
-				shape: new CANNON.Sphere(0.15),
-				position: segmentPosition,
-				linearDamping: 0.8,
-				angularDamping: 0.8,
-			});
-			this.props.world.addBody(ropeSegment);
-			this.ropeSegments.push(ropeSegment);
-	
-			if (i > 0) {
-				const constraint = new CANNON.PointToPointConstraint(
-					ropeSegment,
-					new CANNON.Vec3(0, segmentLength / 2, 0),
-					this.ropeSegments[i - 1],
-					new CANNON.Vec3(0, -segmentLength / 2, 0)
-				);
-				constraint.collideConnected = false;
-				this.props.world.addConstraint(constraint);
-				this.ropeConstraints.push(constraint);
-			}
-		}
-	
-		const shelfBody = this.props.shelf.userData.shelfBody as CANNON.Body;
-		const topConstraint = new CANNON.PointToPointConstraint(
-			this.ropeSegments[0],
-			new CANNON.Vec3(0, segmentLength / 2, 0),
-			shelfBody,
-			new CANNON.Vec3(offset.x, offset.y - 1.2, offset.z) // Lower the connection point slightly more
-		);
-		this.props.world.addConstraint(topConstraint);
-	
-		const bottomConstraint = new CANNON.PointToPointConstraint(
-			this.ropeSegments[this.ropeSegments.length - 1],
-			new CANNON.Vec3(0, -segmentLength / 2, 0),
-			this.buttonBody,
-			new CANNON.Vec3(0, 0.5, 0)
-		);
-		this.props.world.addConstraint(bottomConstraint);
-	}
+  private createHolder(offset: THREE.Vector3): void {
+    const ropeSegments = 20;
+    const ropeLength = 2;
+    const segmentLength = ropeLength / ropeSegments;
+
+    const ropeGeometry = new THREE.BufferGeometry();
+    const ropePositions = new Float32Array((ropeSegments + 1) * 3);
+    ropeGeometry.setAttribute('position', new THREE.BufferAttribute(ropePositions, 3));
+    const ropeMaterial = new THREE.LineBasicMaterial({ color: 0x000000 });
+    this.rope = new THREE.Line(ropeGeometry, ropeMaterial);
+    this.props.scene.add(this.rope);
+
+    for (let i = 0; i <= ropeSegments; i++) {
+      const segmentPosition = new CANNON.Vec3(offset.x, offset.y - i * segmentLength, offset.z);
+
+      const mass = i === ropeSegments ? 0.1 : 1;
+      const ropeSegment = new CANNON.Body({
+        mass: mass,
+        shape: new CANNON.Sphere(0.15),
+        position: segmentPosition,
+        linearDamping: 0.8,
+        angularDamping: 0.8,
+      });
+      this.props.world.addBody(ropeSegment);
+      this.ropeSegments.push(ropeSegment);
+
+      if (i > 0) {
+        const constraint = new CANNON.PointToPointConstraint(
+          ropeSegment,
+          new CANNON.Vec3(0, segmentLength / 2, 0),
+          this.ropeSegments[i - 1],
+          new CANNON.Vec3(0, -segmentLength / 2, 0)
+        );
+        constraint.collideConnected = false;
+        this.props.world.addConstraint(constraint);
+        this.ropeConstraints.push(constraint);
+      }
+    }
+
+    const shelfBody = this.props.shelf.userData.shelfBody as CANNON.Body;
+    const topConstraint = new CANNON.PointToPointConstraint(
+      this.ropeSegments[0],
+      new CANNON.Vec3(0, segmentLength / 2, 0),
+      shelfBody,
+      new CANNON.Vec3(offset.x, offset.y , offset.z) // Lower the connection point, no dont lower it that breaks things
+    );
+    this.props.world.addConstraint(topConstraint);
+
+    const bottomConstraint = new CANNON.PointToPointConstraint(
+      this.ropeSegments[this.ropeSegments.length - 1],
+      new CANNON.Vec3(0, -segmentLength / 2, 0),
+      this.buttonBody,
+      new CANNON.Vec3(0, 0.5, 0)
+    );
+    this.props.world.addConstraint(bottomConstraint);
+  }
 
   public update(): void {
     if (this.button && this.buttonBody) {

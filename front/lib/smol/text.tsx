@@ -132,14 +132,15 @@ export class ThreeCanvas {
     // Load backdrop texture and set as scene background
     const textureLoader = new TextureLoader()
     textureLoader.load('backdrop.avif', (texture) => {
-      texture.encoding = THREE.sRGBEncoding // Normalize texture
+      // texture.encoding = THREE.sRGBEncoding; // Normalize texture
       let background = new THREE.Mesh(
         new THREE.PlaneGeometry(window.innerWidth, window.innerHeight),
-        new THREE.MeshBasicMaterial({ map: texture, transparent: true })
+        new THREE.MeshBasicMaterial({ map: texture, transparent: true, toneMapped: false })
       )
-      background.position.z = -100 // Move background back in the scene
-      this.scene.add(background)
+      background.position.z = -100; // Move background back in the scene
+      this.scene.add(background);
     })
+
 
     this.mainGroup = new THREE.Object3D()
     this.scene.add(this.mainGroup)
@@ -183,6 +184,24 @@ export class ThreeCanvas {
     this.renderLoop()
   }
 
+  private orbitControls(): void {
+    this.controls = new OrbitControls(this.camera, this.renderer.domElement)
+    this.controls.enableDamping = true
+    this.controls.enabled = false
+    this.controls.enablePan = false
+    this.controls.enableRotate = false
+    this.controls.enableZoom = false
+
+    // Add parallax effect
+    document.addEventListener('mousemove', (event) => {
+      const parallaxX = (event.clientX / window.innerWidth) * 2 - 1
+      const parallaxY = (event.clientY / window.innerHeight) * 2 - 1
+
+      this.camera.position.x += (parallaxX - this.camera.position.x) * 0.05
+      this.camera.position.y += (-parallaxY - this.camera.position.y) * 0.05
+      this.camera.lookAt(this.scene.position)
+    })
+  }
 
   private createStats(): void {
     this.stats.showPanel(0)
@@ -191,49 +210,30 @@ export class ThreeCanvas {
     document.body.appendChild(this.stats.dom)
   }
 
-	private setupCamera(): void {
-		const aspect = window.innerWidth / window.innerHeight;
-		const frustumSize = this.config.view_size;
-		const frustumHalfHeight = frustumSize / 2;
-		const frustumHalfWidth = frustumHalfHeight * aspect;
-	
-		this.camera = new THREE.OrthographicCamera(
-			-frustumHalfWidth,
-			frustumHalfWidth,
-			frustumHalfHeight,
-			-frustumHalfHeight,
-			-100,
-			1000
-		);
-	
-		this.camera.position.set(this.config.camera_pos_x, this.config.camera_pos_y + 5.5, this.config.camera_pos_z); // Raise camera slightly on y-axis
-	
-		// Ensuring the camera looks at the center of the scene
-		this.camera.lookAt(this.scene.position);
-	
-		// Update projection matrix during initialization and on window resize
-		this.updateProjectionMatrix();
-		window.addEventListener('resize', this.updateProjectionMatrix.bind(this));
-	}
-	
-	private orbitControls(): void {
-		this.controls = new OrbitControls(this.camera, this.renderer.domElement);
-		this.controls.enableDamping = true;
-		this.controls.enabled = false; // Disable OrbitControls
-		this.controls.enablePan = false;
-		this.controls.enableRotate = false;
-		this.controls.enableZoom = false;
-	
-		// Add parallax effect
-		document.addEventListener('mousemove', (event) => {
-			const parallaxX = (event.clientX / window.innerWidth) * 2 - 1;
-			const parallaxY = (event.clientY / window.innerHeight) * 2 - 1;
-	
-			this.camera.position.x += (parallaxX - this.camera.position.x) * 0.05;
-			this.camera.position.y += (-parallaxY - this.camera.position.y) * 0.05;
-			this.camera.lookAt(this.scene.position);
-		});
-	}
+  private setupCamera(): void {
+    const aspect = window.innerWidth / window.innerHeight
+    const frustumSize = this.config.view_size
+    const frustumHalfHeight = frustumSize / 2
+    const frustumHalfWidth = frustumHalfHeight * aspect
+
+    this.camera = new THREE.OrthographicCamera(
+      -frustumHalfWidth,
+      frustumHalfWidth,
+      frustumHalfHeight,
+      -frustumHalfHeight,
+      -100,
+      1000
+    )
+
+    this.camera.position.set(this.config.camera_pos_x, this.config.camera_pos_y + 5, this.config.camera_pos_z)
+
+    // Ensuring the camera looks at the center of the scene
+    this.camera.lookAt(this.scene.position)
+
+    // Update projection matrix during initialization and on window resize
+    this.updateProjectionMatrix()
+    window.addEventListener('resize', this.updateProjectionMatrix.bind(this))
+  }
 
   private updateProjectionMatrix(): void {
     const aspect = window.innerWidth / window.innerHeight

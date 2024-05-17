@@ -4,7 +4,6 @@ import GameHud from '@/components/GameHud'
 import LoadingScreen from '@/components/LoadingScreen'
 import { ChatListComponent } from '@shared/component/ChatComponent'
 import { Chat } from '@/game/ecs/entity/Chat'
-import { NextSeo } from 'next-seo'
 
 export default function TestServer() {
 	const [isLoading, setIsLoading] = useState(true)
