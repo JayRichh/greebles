@@ -115,6 +115,7 @@ dd {
 body {
 	min-height: 100vh;
 	max-width: 100vw;
+	min-width: 100vw;
 	overflow-x: hidden;
 	text-rendering: optimizeSpeed;
 	line-height: 1.5;

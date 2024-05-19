@@ -35,7 +35,7 @@ export default function App({ Component, pageProps }: AppProps) {
 				className="app-shell"
 				styles={(theme) => ({
 					root: {
-						minWidth: '450px',
+						minWidth: '100vw',
 					},
 					main: {
 						height: '100vh',
