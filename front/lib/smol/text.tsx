@@ -86,10 +86,9 @@ export class ThreeCanvas {
 			this.stats = new Stats()
 		}
 		this.config = InitialSceneConfig
-
-			;(async () => {
-				if (this.canvas) await this.init()
-			})()
+		;(async () => {
+			if (this.canvas) await this.init()
+		})()
 	}
 
 	public dispose(): void {
@@ -124,7 +123,6 @@ export class ThreeCanvas {
 		}
 		this.renderer?.domElement.remove()
 	}
-
 
 	private async init(): Promise<void> {
 		this.renderer = new THREE.WebGLRenderer({ canvas: this.canvas, antialias: true, alpha: true })

@@ -3,6 +3,7 @@ import { Container, Text, Paper, Button, Group, Title, ScrollArea } from '@manti
 import Link from 'next/link'
 import ProjectsGrid from './components/projectCards'
 import { FaGithub } from 'react-icons/fa'
+import { useMediaQuery } from '@mantine/hooks'
 
 const StyledText = (props: { children: React.ReactNode }) => (
 	<Text
@@ -36,10 +37,11 @@ const Projects = () => {
 				<Paper
 					shadow="md"
 					style={{
-						padding: '2.5rem',
+						padding: useMediaQuery('(max-width: 768px)')? '2rem' : '2.5rem',
+						paddingTop: '0',
 						borderRadius: '12px',
 						width: 'auto',
-						margin: '2rem 2rem 0 2rem',
+						margin: !useMediaQuery('(max-width: 768px)')? '2rem 2rem 0 2rem' : '2rem 0 0 0',
 						backgroundColor: 'rgba(255, 255, 255, 0.8)',
 						border: '1px solid rgba(0, 0, 0, 0.1)',
 						boxShadow: '0 4px 12px rgba(0, 0, 0, 0.1)',
