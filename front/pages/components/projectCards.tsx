@@ -87,8 +87,8 @@ export const ProjectsGrid = () => {
 					<div
 						style={{
 							position: 'absolute',
-							top: '65%',
-							height: '40%',
+							top: useMediaQuery('(max-width: 600px)') ? '10%' : '65%',
+							height: useMediaQuery('(max-width: 600px)') ? '100%' : '30%',
 							width: '100%',
 							background: 'rgba(255, 255, 255, 0.6)',
 							backdropFilter: 'blur(10px)',

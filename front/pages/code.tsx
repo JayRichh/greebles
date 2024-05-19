@@ -26,6 +26,7 @@ const Projects = () => {
 				size="xl"
 				style={{
 					maxWidth: '1200px',
+					minWidth: useMediaQuery('(max-width: 768px)') ? '100vw' : 'auto',
 					minHeight: '100vh',
 					display: 'flex',
 					flexDirection: 'column',
