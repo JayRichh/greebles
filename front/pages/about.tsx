@@ -74,6 +74,7 @@ const About: React.FC = () => {
 						fontWeight: '400',
 						lineHeight: '1.2',
 						letterSpacing: '0.02em',
+						marginTop: useMediaQuery('(min-width: 728px)') ? '0.5rem' : '3rem',
 					}}
 				>
 					Hi, I'm Jayden
@@ -176,7 +177,7 @@ const About: React.FC = () => {
 					</Grid.Col>
 				</Grid>
 			</Paper>
-			<Link href="/" passHref>
+			<Link href="/code" passHref>
 				<Button
 					variant="outline"
 					style={{

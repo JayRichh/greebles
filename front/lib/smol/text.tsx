@@ -68,7 +68,7 @@ export class ThreeCanvas {
 	private clicker!: THREE.Mesh
 	private clickCooldown: boolean = false
 	public static dispose: () => void
-	private stats: Stats
+	private stats: Stats | null = null
 	private buttons: Button[] = []
 	private shelf: THREE.Object3D | null = null
 	private router: any
@@ -82,11 +82,14 @@ export class ThreeCanvas {
 		this.onClick = this.onClick.bind(this)
 		this.onMouseMove = this.onMouseMove.bind(this)
 		this.updateClickerAnimation = this.updateClickerAnimation.bind(this)
-		this.stats = new Stats()
+		if (!/Mobi|Android/i.test(navigator.userAgent)) {
+			this.stats = new Stats()
+		}
 		this.config = InitialSceneConfig
-		;(async () => {
-			await this.init()
-		})()
+
+			;(async () => {
+				if (this.canvas) await this.init()
+			})()
 	}
 
 	public dispose(): void {
@@ -95,22 +98,33 @@ export class ThreeCanvas {
 				button.dispose()
 			})
 		}
-		this.renderer.dispose()
-		this.gui.destroy()
-		this.world.bodies.forEach((body) => this.world.removeBody(body))
-		this.world.bodies = []
-		this.scene.remove(this.mainGroup)
-		this.mainGroup.children.forEach((line) => {
+		this.renderer?.dispose()
+		this.gui?.destroy()
+		if (this.world?.bodies && Array.isArray(this.world.bodies)) {
+			this.world.bodies.forEach((body) => this.world.removeBody(body))
+		}
+		this.scene?.remove(this.mainGroup)
+		this.mainGroup?.children.forEach((line) => {
 			line.children.forEach((letter) => {
 				const letterMesh = letter as Mesh
 				if (letterMesh.userData.body) {
-					this.world.removeBody(letterMesh.userData.body)
+					this.world?.removeBody(letterMesh.userData.body)
 				}
 			})
 		})
-		this.mainGroup.children = []
-		this.renderer.domElement.remove()
+		if (this.mainGroup) {
+			this.mainGroup.children.forEach((line) => {
+				line.children.forEach((letter) => {
+					const letterMesh = letter as Mesh
+					if (letterMesh.userData.body) {
+						this.world?.removeBody(letterMesh.userData.body)
+					}
+				})
+			})
+		}
+		this.renderer?.domElement.remove()
 	}
+
 
 	private async init(): Promise<void> {
 		this.renderer = new THREE.WebGLRenderer({ canvas: this.canvas, antialias: true, alpha: true })
@@ -203,10 +217,12 @@ export class ThreeCanvas {
 	}
 
 	private createStats(): void {
-		this.stats.showPanel(0)
-		this.stats.dom.style.position = 'absolute'
-		this.stats.dom.style.top = '0'
-		document.body.appendChild(this.stats.dom)
+		if (this.stats) {
+			this.stats.showPanel(0)
+			this.stats.dom.style.position = 'absolute'
+			this.stats.dom.style.top = '0'
+			document.body.appendChild(this.stats.dom)
+		}
 	}
 
 	private setupCamera(): void {
@@ -472,7 +488,9 @@ export class ThreeCanvas {
 			}
 
 			this.renderer.render(this.scene, this.camera)
-			this.stats.update()
+			if (this.stats) {
+				this.stats.update()
+			}
 		}
 		animate()
 	}

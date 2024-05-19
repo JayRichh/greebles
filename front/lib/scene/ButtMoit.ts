@@ -30,9 +30,11 @@ class Button {
 		private color: number,
 		private offset: THREE.Vector3
 	) {
-		this.createButton(text, color, offset)
-		this.createHolder(offset)
-		this.setupEventListeners()
+		if (this.props?.shelf?.userData) {
+			this.createButton(text, color, offset)
+			this.createHolder(offset)
+			this.setupEventListeners()
+		}
 	}
 
 	private setupEventListeners(): void {
@@ -208,22 +210,26 @@ class Button {
 			}
 		}
 
-		const shelfBody = this.props.shelf.userData.shelfBody as CANNON.Body
-		const topConstraint = new CANNON.PointToPointConstraint(
-			this.ropeSegments[0],
-			new CANNON.Vec3(0, segmentLength / 2, 0),
-			shelfBody,
-			new CANNON.Vec3(offset.x, offset.y - 0.5, offset.z) // Lower the connection point
-		)
-		this.props.world.addConstraint(topConstraint)
+		const shelfBody = this.props.shelf.userData?.shelfBody as CANNON.Body
+		if (shelfBody) {
+			const topConstraint = new CANNON.PointToPointConstraint(
+				this.ropeSegments[0],
+				new CANNON.Vec3(0, segmentLength / 2, 0),
+				shelfBody,
+				new CANNON.Vec3(offset.x, offset.y - 0.5, offset.z) // Lower the connection point
+			)
+			this.props.world.addConstraint(topConstraint)
 
-		const bottomConstraint = new CANNON.PointToPointConstraint(
-			this.ropeSegments[this.ropeSegments.length - 1],
-			new CANNON.Vec3(0, -segmentLength / 2, 0),
-			this.buttonBody,
-			new CANNON.Vec3(0, 0.5, 0)
-		)
-		this.props.world.addConstraint(bottomConstraint)
+			const bottomConstraint = new CANNON.PointToPointConstraint(
+				this.ropeSegments[this.ropeSegments.length - 1],
+				new CANNON.Vec3(0, -segmentLength / 2, 0),
+				this.buttonBody,
+				new CANNON.Vec3(0, 0.5, 0)
+			)
+			this.props.world.addConstraint(bottomConstraint)
+		} else {
+			console.error('shelfBody is not defined on the shelf userData')
+		}
 	}
 
 	public update(): void {
