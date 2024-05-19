@@ -284,7 +284,7 @@ export const ProjectsGrid = () => {
                             justifyContent: 'space-between',
                             height: '100%',
                             alignItems: 'flex-end',
-                            flexWrap: 'nowrap',
+                            flexWrap: 'wrap',
                         }}
                     >
                         <div style={{ display: 'flex', alignItems: 'start', flexWrap: 'nowrap' }}>
@@ -377,7 +377,7 @@ export const ProjectsGrid = () => {
             size="lg"
             my="xl"
             style={{
-                maxWidth: '100%',
+                maxWidth: '100vw',
                 width: 'auto',
                 minWidth: '100%',
                 minHeight: '100vh',
