@@ -50,7 +50,7 @@ const About: React.FC = () => {
 				flexDirection: 'column',
 				justifyContent: 'center',
 				alignItems: 'center',
-				padding: '4rem 2rem',
+				padding: useMediaQuery('(min-width: 728px)') ? '2rem 2rem' : '4rem 0rem',
 			}}
 		>
 			<Paper
