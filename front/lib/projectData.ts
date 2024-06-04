@@ -116,9 +116,110 @@ export const techIcons: TechIcons = {
 	OpenAI: { icon: FaRobot, color: '#7B7B7B', docLink: 'https://openai.com' },
 	'Styled-Components': { icon: SiStyledcomponents, color: '#DB7093', docLink: 'https://styled-components.com' },
 	Mongoose: { icon: SiMongodb, color: '#47A248', docLink: 'https://mongoosejs.com' },
+	'p5.js': { icon: DiJavascript1, color: '#F7DF1E', docLink: 'https://p5js.org' }, 
+	'WebGL Earth': { icon: SiThreedotjs, color: '#000000', docLink: 'http://www.webglearth.com' }, 
 }
 
 export const projectData: Project[] = [
+		{
+			title: 'CodePens',
+			description: 'A collection of interactive and visually captivating sketches created with p5.js and three.js. These sketches explore mathematical patterns, physics simulations, and interactive elements.',
+			imgUrl: '/path/to/image.png',
+			repoUrl: 'https://codepen.io/yourusername',
+			liveUrl: 'https://codepen.io/yourusername/pen/example',
+			details: {
+				title: 'CodePen Visualizations',
+				description: 'A series of CodePen projects showcasing interactive visualizations and animations using p5.js and three.js.',
+				technologies: ['p5.js', 'three.js', 'JavaScript', 'WebGL'],
+				features: [
+					{
+						title: 'Fibonacci Spiral',
+						text: 'A mesmerizing visual representation of a Fibonacci spiral in a galaxy-like formation. Includes adjustable parameters for node size, distance, color, and zoom speed.',
+						image: '/path/to/fib_spiral_image.png',
+					},
+					{
+						title: 'Matrix Rainfall Effect',
+						text: 'An animated Matrix-style rainfall effect with customizable parameters including character density, replacement probability, color, and font.',
+						image: '/path/to/matrix_rainfall_image.png',
+					},
+					{
+						title: 'Plane Curves Visualization',
+						text: 'Interactive visualization of various plane curves including Hypotrochoid, Epitrochoid, Lissajous, Rose Curve, and Spirograph. Customize parameters like radii, frequencies, and number of circles, with real-time updates through a GUI.',
+						image: '/path/to/plane_curves_image.png',
+					},
+					{
+						title: 'Third Person Controls',
+						text: 'An example of third-person controls in the three.js JavaScript library, featuring a 3D model that can be controlled interactively.',
+						image: '/path/to/third_person_controls_image.png',
+					},
+					{
+						title: 'Interactive Map Visualization',
+						text: 'An interactive map visualization of Omega 365 Advantage holiday house locations worldwide, using jQuery, Bootstrap, and WebGL Earth.',
+						image: '/path/to/interactive_map_image.png',
+					},
+					{
+						title: 'Coulomb’s Law Simulation',
+						text: 'A Coulomb’s law simulation that visualizes the forces between charged particles. Includes features like teleportation, bounds enforcement, and various physics principles.',
+						image: '/path/to/coulombs_law_image.png',
+					},
+				],
+				challenges: [
+					{
+						title: 'Performance Optimization',
+						text: 'Ensuring smooth performance for interactive and computationally intensive sketches, particularly when rendering large numbers of particles or complex animations.',
+					},
+					{
+						title: 'Cross-Browser Compatibility',
+						text: 'Ensuring that all visualizations work consistently across different browsers and devices.',
+					},
+					{
+						title: 'Dynamic Parameter Adjustments',
+						text: 'Implementing real-time parameter adjustments via GUI without causing performance degradation or crashes.',
+					},
+				],
+				learnings: [
+					{
+						title: 'Advanced p5.js Techniques',
+						points: [
+							{
+								text: 'Learned to create complex and interactive visualizations using p5.js, leveraging its capabilities for real-time graphics and animations.',
+							},
+							{
+								text: 'Gained expertise in handling user inputs and dynamically adjusting visualization parameters.',
+							},
+						],
+					},
+					{
+						title: 'Three.js and 3D Graphics',
+						points: [
+							{
+								text: 'Developed skills in three.js for creating 3D graphics and animations, including implementing controls and physics simulations.',
+							},
+							{
+								text: 'Learned to optimize 3D scenes for performance and responsiveness.',
+							},
+						],
+					},
+					{
+						title: 'Interactive GUI Implementation',
+						points: [
+							{
+								text: 'Gained experience in integrating interactive GUI elements for real-time parameter adjustments using libraries like dat.GUI.',
+							},
+						],
+					},
+				],
+				additionalImages: [
+					'/path/to/fib_spiral_image.png',
+					'/path/to/matrix_rainfall_image.png',
+					'/path/to/plane_curves_image.png',
+					'/path/to/third_person_controls_image.png',
+					'/path/to/interactive_map_image.png',
+					'/path/to/coulombs_law_image.png',
+				],
+			},
+		},
+	
 	{
 		title: 'Off The Floor',
 		description:
