@@ -125,7 +125,7 @@ export const projectData: Project[] = [
 			title: 'CodePens',
 			description: 'A collection of interactive and visually captivating sketches created with p5.js and three.js. These sketches explore mathematical patterns, physics simulations, and interactive elements.',
 			imgUrl: '/path/to/image.png',
-			repoUrl: 'https://codepen.io/yourusername',
+			repoUrl: 'https://codepen.io/jayrichh',
 			liveUrl: 'https://codepen.io/yourusername/pen/example',
 			details: {
 				title: 'CodePen Visualizations',

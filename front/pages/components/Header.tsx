@@ -4,7 +4,7 @@ import { ChevronDown, ExternalLink } from 'lucide-react'
 import Image from 'next/image'
 import Link from 'next/link'
 import classes from './Header.module.css'
-import { FaGithub, FaTwitter, FaDiscord, FaLinkedin, FaEnvelope } from 'react-icons/fa'
+import { FaGithub, FaTwitter, FaDiscord, FaLinkedin, FaEnvelope, FaCodepen } from 'react-icons/fa'
 import { TbLink } from 'react-icons/tb'
 
 const links = [
@@ -21,9 +21,10 @@ const links = [
 		),
 		links: [
 			{ link: 'https://github.com/JayRichh', label: 'GitHub', icon: <FaGithub size={12} /> },
-			{ link: 'discord.com', label: 'Discord', icon: <FaDiscord size={12} /> },
+			// { link: 'https://discord.com', label: 'Discord', icon: <FaDiscord size={12} /> },
 			{ link: 'https://www.linkedin.com/in/jaydenrichardson', label: 'LinkedIn', icon: <FaLinkedin size={12} /> },
 			{ link: 'mailto:jayrich.dev@gmail.com', label: 'Email', icon: <FaEnvelope size={12} /> },
+			{ link: 'https://codepen.io/JayRichh', label: 'CodePen', icon: <FaCodepen size={12} /> },
 		],
 	},
 ]
