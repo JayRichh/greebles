@@ -3,7 +3,8 @@ import { Container, Paper, Title, Text, Button, Grid } from '@mantine/core'
 import Link from 'next/link'
 import { PieChart, Pie, Tooltip, ResponsiveContainer, Cell, Legend } from 'recharts'
 import { useMediaQuery } from '@mantine/hooks'
-
+import Timeline from './components/timeline'
+import { FaGithub, FaCodepen } from'react-icons/fa'
 const data = [
 	{ name: 'TypeScript', value: 48.17 },
 	{ name: 'JavaScript', value: 31.26 },
@@ -21,12 +22,11 @@ interface AboutSectionProps {
 }
 
 const AboutSection: React.FC<AboutSectionProps> = ({ title, children }) => (
-	<div style={{ textAlign: 'center', marginBottom: '2rem' }}>
+	<div style={{ textAlign: 'center', marginBottom: '4rem' }}>
 		<Title
 			order={4}
 			style={{
 				marginTop: '2rem',
-				marginBottom: '1rem',
 				fontSize: '1.75rem',
 				fontWeight: 400,
 				color: '#333',
@@ -51,6 +51,7 @@ const About: React.FC = () => {
 				justifyContent: 'center',
 				alignItems: 'center',
 				padding: useMediaQuery('(min-width: 728px)') ? '2rem 2rem' : '4rem 0rem',
+				margin: '4rem auto',
 			}}
 		>
 			<Paper
@@ -61,7 +62,7 @@ const About: React.FC = () => {
 					padding: '2rem',
 					textAlign: 'center',
 					borderRadius: '10px',
-					marginBottom: '2rem',
+					margin: '4rem 0',
 				}}
 			>
 				<Title
@@ -85,6 +86,8 @@ const About: React.FC = () => {
 					Building on full stack knowledge | Kiwi based in the UK
 				</Text>
 			</Paper>
+
+
 			<Paper
 				style={{
 					padding: '2rem',
@@ -177,6 +180,19 @@ const About: React.FC = () => {
 					</Grid.Col>
 				</Grid>
 			</Paper>
+			<Paper
+				style={{
+					padding: '2rem',
+					borderRadius: '10px',
+					width: '100%',
+					backgroundColor: 'rgba(255, 255, 255, 0.6)',
+					backdropFilter: 'blur(10px)',
+				}}
+			>
+			<Timeline />
+
+			</Paper>
+
 			<Link href="/code" passHref>
 				<Button
 					variant="outline"

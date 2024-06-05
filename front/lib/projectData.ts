@@ -224,9 +224,9 @@ export const projectData: Project[] = [
 		title: 'Off The Floor',
 		description:
 			'A modern and dynamic business website created using Vue3 and TypeScript, featuring responsive design and tailored functionalities to promote aerial arts classes.',
-		imgUrl: '/otf1.png',
-		repoUrl: 'https://github.com/JayRichh/OffTheFloor',
-		liveUrl: '',
+		imgUrl: '/otf-vue1.png',
+		repoUrl: 'https://github.com/JayRichh/otf-vue',
+		liveUrl: 'http://otf-vue.vercel.app',
 		details: {
 			title: 'OffTheFloor',
 			description:
@@ -236,27 +236,22 @@ export const projectData: Project[] = [
 				{
 					title: 'Dynamic Routing with Vue Router',
 					text: 'Dynamic routing with Vue Router enabling seamless page transitions and state management without reloading the page.',
-					image: '/otf4.png',
+					image: '/otf-vue3.png',
 				},
 				{
 					title: 'Responsive Web Design',
 					text: 'Responsive web design implemented using Bootstrap for consistent user experience across various devices and screen sizes.',
-					image: '/otf2.png',
+					image: '/otf-vue4.png',
 				},
 				{
 					title: 'Vue3 Composition API',
 					text: 'Advanced use of Vue3 composition API for managing component logic and state in a more readable and maintainable way.',
-					image: '/otf1.png',
-				},
-				{
-					title: 'Custom Video Background',
-					text: 'Custom video background integration on the home page for engaging user experience.',
-					image: '/otf2.png',
+					image: '/otf-vue1.png',
 				},
 				{
 					title: 'Interactive Carousels',
 					text: 'Interactive elements like carousels for testimonials and classes, implemented with Vue3-carousel and customized with detailed CSS for a unique look.',
-					image: '/otf3.png',
+					image: '/otf-vue2.png',
 				},
 			],
 			challenges: [
@@ -329,12 +324,12 @@ export const projectData: Project[] = [
 						},
 						{
 							text: 'Optimized images and assets for different device resolutions to minimize load times and enhance performance on mobile devices.',
-							image: '/otf5.png',
+							image: '/otf-vue1.png',
 						},
 					],
 				},
 			],
-			additionalImages: ['/otf1.png', '/otf2.png', '/otf3.png'],
+			additionalImages: ['/otf-vue1.png', '/otf-vue2.png', '/otf-vue3.png'],
 		},
 	},
 	{

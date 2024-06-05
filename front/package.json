@@ -16,6 +16,7 @@
 		"@mantine/hooks": "^7.8.0",
 		"@mantine/notifications": "^7.8.0",
 		"@mantine/nprogress": "^7.8.0",
+		"@primer/octicons-react": "^19.9.0",
 		"@radix-ui/react-slot": "^1.0.2",
 		"@types/cannon": "^0.1.12",
 		"camera-controls": "^2.8.3",
