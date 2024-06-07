@@ -162,6 +162,7 @@ const About: React.FC = () => {
 								<a
 									href="https://www.theodinproject.com/"
 									target="_blank"
+									aria-label="The Odin Project"
 									rel="noopener noreferrer"
 									style={{ textDecoration: 'none', color: 'inherit' }}
 								>
@@ -184,13 +185,13 @@ const About: React.FC = () => {
 				style={{
 					padding: '2rem',
 					borderRadius: '10px',
+					margin: '4rem 0',
 					width: '100%',
 					backgroundColor: 'rgba(255, 255, 255, 0.6)',
 					backdropFilter: 'blur(10px)',
 				}}
 			>
-			<Timeline />
-
+				<Timeline />
 			</Paper>
 
 			<Link href="/code" passHref>
