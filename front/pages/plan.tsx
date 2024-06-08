@@ -285,8 +285,8 @@ const TodoApp: React.FC = () => {
 						styles={{ label: { opacity: 0.7 } }}
 					/>
 						<Text size="sm" mb="sm" >
-							This is a basic todo application that supports CRUD operations, nesting, and saves data to localStorage
-							using React and Mantine hooks.
+							This is a crude todo app that supports CRUD operations, nesting, and saves data to localStorage
+							using React and Mantine hooks. Made for me to remember stuff.
 						</Text>
 				<Grid gutter="xl">
 
