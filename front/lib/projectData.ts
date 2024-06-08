@@ -127,7 +127,7 @@ export const projectData: Project[] = [
 			'A collection of interactive and visually captivating sketches created with p5.js and three.js. These sketches explore mathematical patterns, physics simulations, and interactive elements.',
 		imgUrl: '/fib.png',
 		repoUrl: 'https://codepen.io/jayrichh',
-		liveUrl: 'https://codepen.io/yourusername/pen/example',
+		liveUrl: 'https://codepen.io/JayRichh/pen/QWRvEQd',
 		details: {
 			title: 'CodePen Visualizations',
 			description:
@@ -224,7 +224,7 @@ export const projectData: Project[] = [
 	{
     title: 'Encompass Travel',
     description: 'UNDER CONSTRUCTION - A dynamic travel business platform offering guided and self-guided motorcycle tours and holidays across Europe and the UK.',
-    imgUrl: '/logo.webp',
+    imgUrl: '/encompass.webp',
     repoUrl: 'https://github.com/JayRichh',
     liveUrl: '',
     details: {
