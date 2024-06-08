@@ -438,7 +438,7 @@ export const projectData: Project[] = [
 		title: 'AF Buddy',
 		description:
 			'AF Buddy is a feature-rich Chrome extension that provides developers with tools like geolocation spoofing, user agent emulation, and JSON editing, enhancing the web development process.',
-		imgUrl: '/afbuddy1.png',
+		imgUrl: '/afbuddy2.png',
 		repoUrl: 'https://github.com/JayRichh/afbuddy',
 		liveUrl: '',
 		details: {
@@ -553,7 +553,7 @@ export const projectData: Project[] = [
 					],
 				},
 			],
-			additionalImages: ['/afbuddy2.png', '/afbuddy3.png', '/afbuddy4.png', '/afbuddy5.png'],
+			additionalImages: ['/afbuddy1.png', '/afbuddy3.png', '/afbuddy4.png', '/afbuddy5.png'],
 		},
 	},
 	{
