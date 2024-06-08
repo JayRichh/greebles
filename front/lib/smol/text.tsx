@@ -93,64 +93,64 @@ export class ThreeCanvas {
 
 	public dispose(): void {
 		if (this.buttons) {
-			this.buttons.forEach(button => {
-				if (button) button.dispose();
-			});
+			this.buttons.forEach((button) => {
+				if (button) button.dispose()
+			})
 		}
-	
+
 		if (this.scene) {
-			this.scene.traverse(object => {
+			this.scene.traverse((object) => {
 				if (object instanceof THREE.Mesh) {
 					if (object.geometry) {
-						object.geometry.dispose();
+						object.geometry.dispose()
 					}
 					if (object.material) {
 						if (Array.isArray(object.material)) {
-							object.material.forEach(material => {
-								if (material) material.dispose();
-							});
+							object.material.forEach((material) => {
+								if (material) material.dispose()
+							})
 						} else {
-							object.material.dispose();
+							object.material.dispose()
 						}
 					}
 				}
-			});
-	
+			})
+
 			while (this.scene.children.length > 0) {
-				const object = this.scene.children[0];
+				const object = this.scene.children[0]
 				if (object instanceof THREE.Object3D) {
-					this.scene.remove(object);
+					this.scene.remove(object)
 				}
 			}
 		}
-	
+
 		if (this.renderer) {
-			this.renderer.dispose();
+			this.renderer.dispose()
 			if (this.renderer.domElement && this.renderer.domElement.parentNode) {
-				this.renderer.domElement.parentNode.removeChild(this.renderer.domElement);
+				this.renderer.domElement.parentNode.removeChild(this.renderer.domElement)
 			}
 		}
-	
+
 		if (this.gui) {
-			this.gui.destroy();
+			this.gui.destroy()
 		}
-	
+
 		if (this.world) {
-			this.world.bodies.forEach(body => {
-				if (body) this.world.removeBody(body);
-			});
+			this.world.bodies.forEach((body) => {
+				if (body) this.world.removeBody(body)
+			})
 		}
-	
-		window.removeEventListener('resize', this.onResize);
-		window.removeEventListener('click', this.onClick);
-		window.removeEventListener('mousemove', this.onMouseMove);
-	
+
+		window.removeEventListener('resize', this.onResize)
+		window.removeEventListener('click', this.onClick)
+		window.removeEventListener('mousemove', this.onMouseMove)
+
 		if (this.stats && this.stats.dom) {
 			if (this.stats.dom.parentNode) {
-				this.stats.dom.parentNode.removeChild(this.stats.dom);
+				this.stats.dom.parentNode.removeChild(this.stats.dom)
 			}
-			this.stats.end(); 
-			this.stats = null;
+			this.stats.end()
+			this.stats = null
 		}
 	}
 

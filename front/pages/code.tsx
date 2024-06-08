@@ -1,9 +1,9 @@
-import React from 'react';
-import { Container, Text, Paper, Button, Group, Title, ScrollArea } from '@mantine/core';
-import Link from 'next/link';
-import ProjectsGrid from './components/projectCards';
-import { FaGithub, FaCodepen } from 'react-icons/fa';
-import { useMediaQuery } from '@mantine/hooks';
+import React from 'react'
+import { Container, Text, Paper, Button, Group, Title, ScrollArea } from '@mantine/core'
+import Link from 'next/link'
+import ProjectsGrid from './components/projectCards'
+import { FaGithub, FaCodepen } from 'react-icons/fa'
+import { useMediaQuery } from '@mantine/hooks'
 
 const StyledText = (props: { children: React.ReactNode }) => (
 	<Text
@@ -17,7 +17,7 @@ const StyledText = (props: { children: React.ReactNode }) => (
 	>
 		{props.children}
 	</Text>
-);
+)
 
 const Projects = () => {
 	return (
@@ -63,11 +63,15 @@ const Projects = () => {
 						Projects
 					</Title>
 					<StyledText>
-					With a passion for full-stack web development, I enjoy creating dynamic and interactive web applications using technologies like TypeScript, Vue, React, and Node.js. My projects span a wide range, including business websites, creative visualizations, real-time chat applications, games and Chrome browser extensions.
+						With a passion for full-stack web development, I enjoy creating dynamic and interactive web applications
+						using technologies like TypeScript, Vue, React, and Node.js. My projects span a wide range, including
+						business websites, creative visualizations, real-time chat applications, games and Chrome browser
+						extensions.
 					</StyledText>
 
 					<StyledText>
-					Explore a selection of my projects below. Feel free to check out my GitHub and CodePen profiles for more details with live and interactive demos.
+						Explore a selection of my projects below. Feel free to check out my GitHub and CodePen profiles for more
+						details with live and interactive demos.
 					</StyledText>
 
 					<Group style={{ margin: '1rem 0', display: 'flex', justifyContent: 'flex-end' }}>
@@ -85,16 +89,16 @@ const Projects = () => {
 									border: '1px solid black',
 								}}
 								onMouseOver={(e) => {
-									e.currentTarget.style.backgroundColor = 'white';
-									e.currentTarget.style.color = 'black';
-									e.currentTarget.style.transform = 'translateY(-2px)';
-									e.currentTarget.style.boxShadow = '0 4px 6px rgba(0, 0, 0, 0.1)';
+									e.currentTarget.style.backgroundColor = 'white'
+									e.currentTarget.style.color = 'black'
+									e.currentTarget.style.transform = 'translateY(-2px)'
+									e.currentTarget.style.boxShadow = '0 4px 6px rgba(0, 0, 0, 0.1)'
 								}}
 								onMouseOut={(e) => {
-									e.currentTarget.style.backgroundColor = 'black';
-									e.currentTarget.style.color = 'white';
-									e.currentTarget.style.transform = 'translateY(0)';
-									e.currentTarget.style.boxShadow = 'none';
+									e.currentTarget.style.backgroundColor = 'black'
+									e.currentTarget.style.color = 'white'
+									e.currentTarget.style.transform = 'translateY(0)'
+									e.currentTarget.style.boxShadow = 'none'
 								}}
 							>
 								<FaGithub size={20} style={{ marginRight: '0.5rem' }} />
@@ -115,16 +119,16 @@ const Projects = () => {
 									border: '1px solid black',
 								}}
 								onMouseOver={(e) => {
-									e.currentTarget.style.backgroundColor = 'white';
-									e.currentTarget.style.color = 'black';
-									e.currentTarget.style.transform = 'translateY(-2px)';
-									e.currentTarget.style.boxShadow = '0 4px 6px rgba(0, 0, 0, 0.1)';
+									e.currentTarget.style.backgroundColor = 'white'
+									e.currentTarget.style.color = 'black'
+									e.currentTarget.style.transform = 'translateY(-2px)'
+									e.currentTarget.style.boxShadow = '0 4px 6px rgba(0, 0, 0, 0.1)'
 								}}
 								onMouseOut={(e) => {
-									e.currentTarget.style.backgroundColor = 'black';
-									e.currentTarget.style.color = 'white';
-									e.currentTarget.style.transform = 'translateY(0)';
-									e.currentTarget.style.boxShadow = 'none';
+									e.currentTarget.style.backgroundColor = 'black'
+									e.currentTarget.style.color = 'white'
+									e.currentTarget.style.transform = 'translateY(0)'
+									e.currentTarget.style.boxShadow = 'none'
 								}}
 							>
 								<FaCodepen size={20} style={{ marginRight: '0.5rem' }} />
@@ -139,4 +143,4 @@ const Projects = () => {
 	)
 }
 
-export default Projects;
+export default Projects

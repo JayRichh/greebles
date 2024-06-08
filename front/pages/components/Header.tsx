@@ -6,11 +6,12 @@ import Link from 'next/link'
 import classes from './Header.module.css'
 import { FaGithub, FaTwitter, FaDiscord, FaLinkedin, FaEnvelope, FaCodepen } from 'react-icons/fa'
 import { TbLink } from 'react-icons/tb'
-
+import { useMediaQuery } from '@mantine/hooks'
 const links = [
 	{ link: '/', label: 'Home' },
 	{ link: '/about', label: 'About' },
 	{ link: '/code', label: 'Code' },
+	{ link: '/plan', label: 'Plan' },
 	{
 		link: '#more',
 		label: (
@@ -30,9 +31,9 @@ const links = [
 ]
 
 export function Header() {
+	const isMobile = useMediaQuery('(max-width: 768px)')
 	const router = useRouter()
 	const isHome = router.pathname !== '/'
-
 	const items = links.map((link, index) => {
 		if (link.links) {
 			const menuItems = link.links.map((item, itemIndex) => (
@@ -55,6 +56,9 @@ export function Header() {
 				</Menu>
 			)
 		} else {
+			if (isMobile && link.link === '/plan') {
+				return null
+			}
 			return (
 				<Transition
 					key={`${link.label}-${index}`}

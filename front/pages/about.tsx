@@ -4,7 +4,7 @@ import Link from 'next/link'
 import { PieChart, Pie, Tooltip, ResponsiveContainer, Cell, Legend } from 'recharts'
 import { useMediaQuery } from '@mantine/hooks'
 import Timeline from './components/timeline'
-import { FaGithub, FaCodepen } from'react-icons/fa'
+import { FaGithub, FaCodepen } from 'react-icons/fa'
 const data = [
 	{ name: 'TypeScript', value: 48.17 },
 	{ name: 'JavaScript', value: 31.26 },
@@ -86,7 +86,6 @@ const About: React.FC = () => {
 					Building on full stack knowledge | Kiwi based in the UK
 				</Text>
 			</Paper>
-
 
 			<Paper
 				style={{
