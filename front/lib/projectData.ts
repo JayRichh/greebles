@@ -221,11 +221,111 @@ export const projectData: Project[] = [
 			],
 		},
 	},
+	{
+    title: 'Encompass Travel',
+    description: 'UNDER CONSTRUCTION - A dynamic travel business platform offering guided and self-guided motorcycle tours and holidays across Europe and the UK.',
+    imgUrl: '/encompass-travel.png',
+    repoUrl: 'https://github.com/JayRichh',
+    liveUrl: '',
+    details: {
+        title: 'Encompass Travel - RideWithUs',
+        description: 'Encompass Travel provides a unique travel experience through guided and self-guided motorcycle tours, highlighting the beauty and culture of different European destinations. The platform offers customizable tour options, comprehensive route details, and secure online bookings.',
+        technologies: ['Vue.js', 'Node.js', 'Express', 'MongoDB', 'Tailwind CSS', 'JavaScript'],
+        features: [
+            {
+                title: 'Tour Listings',
+                text: 'Explore various motorcycle tours and holidays with detailed descriptions, itineraries, and images.',
+                image: '/tour-listings.png',
+            },
+            {
+                title: 'Customizable Tours',
+                text: 'Create personalized motorcycle tours with options for self-guided, guided, or custom tour packages.',
+                image: '/customizable-tours.png',
+            },
+            {
+                title: 'Interactive Map',
+                text: 'Interactive map to view routes, tourist attractions, and accommodations along the way.',
+                image: '/interactive-map.png',
+            },
+            {
+                title: 'Motorcycle Rentals',
+                text: 'Rent high-quality motorcycles with detailed specifications, rental terms, and booking options.',
+                image: '/motorcycle-rentals.png',
+            },
+            {
+                title: 'Secure Payment Integration',
+                text: 'Integrated with Stripe for secure and seamless payment processing.',
+                image: '/payment-integration.png',
+            },
+            {
+                title: 'User Reviews and Ratings',
+                text: 'Read and write reviews for tours and rentals to share experiences and feedback.',
+                image: '/user-reviews.png',
+            },
+        ],
+        challenges: [
+            {
+                title: 'Route Optimization',
+                text: 'Developing an efficient algorithm to optimize routes and ensure the best travel experience for users.',
+            },
+            {
+                title: 'Real-Time Data Updates',
+                text: 'Implementing real-time updates for tour availability, booking status, and route changes.',
+            },
+            {
+                title: 'Scalability',
+                text: 'Ensuring the platform can handle increasing numbers of users and data without performance degradation.',
+            },
+        ],
+        learnings: [
+            {
+                title: 'Advanced Vue.js Techniques',
+                points: [
+                    {
+                        text: 'Leveraged Vue.js to create dynamic and responsive user interfaces with real-time data binding.',
+                    },
+                    {
+                        text: 'Gained experience with Vue Router for managing complex routing and navigation within the application.',
+                    },
+                ],
+            },
+            {
+                title: 'Backend Development with Node.js and Express',
+                points: [
+                    {
+                        text: 'Developed robust RESTful APIs to handle data fetching, user authentication, and payment processing.',
+                    },
+                    {
+                        text: 'Implemented efficient database operations using MongoDB and Mongoose for data modeling.',
+                    },
+                ],
+            },
+            {
+                title: 'Integration of Third-Party Services',
+                points: [
+                    {
+                        text: 'Integrated Stripe for secure payment processing and handling sensitive user information.',
+                    },
+                    {
+                        text: 'Used Mapbox API for interactive map features and real-time route visualization.',
+                    },
+                ],
+            },
+        ],
+        additionalImages: [
+            // '/tour-listings.png',
+            // '/customizable-tours.png',
+            // '/interactive-map.png',
+            // '/motorcycle-rentals.png',
+            // '/payment-integration.png',
+        ],
+    },
+},
 
 	{
 		title: 'Off The Floor',
 		description:
-			'A modern and dynamic business website created using Vue3 and TypeScript, featuring responsive design and tailored functionalities to promote aerial arts classes.',
+			'UNDER CONSTRUCTION - A modern and dynamic business website created using Vue3 and TypeScript, featuring responsive design and tailored functionalities to promote aerial arts classes.',
 		imgUrl: '/otf-vue1.png',
 		repoUrl: 'https://github.com/JayRichh/otf-vue',
 		liveUrl: 'http://otf-vue.vercel.app',
