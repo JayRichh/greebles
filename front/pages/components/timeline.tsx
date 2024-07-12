@@ -148,7 +148,7 @@ const Timeline = () => {
 										<Text size="sm">{item.description}</Text>
 									</Paper>
 									<Box
-											hidden={isSmall}
+										hidden={isSmall}
 										style={{
 											position: 'absolute',
 											top: 0,

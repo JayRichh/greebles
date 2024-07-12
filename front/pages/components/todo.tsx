@@ -246,7 +246,7 @@ const TodoApp: React.FC = () => {
 						</Box>
 					</Grid.Col>
 					<Grid.Col span={{ xs: 12, md: 8 }}>
-						<Progress value={progress} size="xl" mb="xl" />	
+						<Progress value={progress} size="xl" mb="xl" />
 						{renderTodos(todos)}
 					</Grid.Col>
 				</Grid>

@@ -276,20 +276,19 @@ const TodoApp: React.FC = () => {
 	return (
 		<MantineProvider>
 			<Container size="xl" style={{ minHeight: '100vh', padding: '2rem', margin: '0 auto' }}>
-					<Progress
-						value={progress}
-						size="xl"
-						mb="sm"
-						mt="5rem"
-						style={{ width: '100%' }}
-						styles={{ label: { opacity: 0.7 } }}
-					/>
-						<Text size="sm" mb="sm" >
-							This is a crude todo app that supports CRUD operations, nesting, and saves data to localStorage
-							using React and Mantine hooks. Made for me to remember stuff.
-						</Text>
+				<Progress
+					value={progress}
+					size="xl"
+					mb="sm"
+					mt="5rem"
+					style={{ width: '100%' }}
+					styles={{ label: { opacity: 0.7 } }}
+				/>
+				<Text size="sm" mb="sm">
+					This is a crude todo app that supports CRUD operations, nesting, and saves data to localStorage using React
+					and Mantine hooks. Made for me to remember stuff.
+				</Text>
 				<Grid gutter="xl">
-
 					<Grid.Col span={{ sm: 4, md: 3 }}>
 						<Paper p="md" mb="xl" withBorder>
 							<Stack align="stretch">

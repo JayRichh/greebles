@@ -222,105 +222,107 @@ export const projectData: Project[] = [
 		},
 	},
 	{
-    title: 'Encompass Travel',
-    description: 'UNDER CONSTRUCTION - A dynamic travel business platform offering guided and self-guided motorcycle tours and holidays across Europe and the UK.',
-    imgUrl: '/encompass.webp',
-    repoUrl: 'https://github.com/JayRichh',
-    liveUrl: '',
-    details: {
-        title: 'Encompass Travel - RideWithUs',
-        description: 'Encompass Travel provides a unique travel experience through guided and self-guided motorcycle tours, highlighting the beauty and culture of different European destinations. The platform offers customizable tour options, comprehensive route details, and secure online bookings.',
-        technologies: ['Vue.js', 'Node.js', 'Express', 'MongoDB', 'Tailwind CSS', 'JavaScript'],
-        features: [
-            {
-                title: 'Tour Listings',
-                text: 'Explore various motorcycle tours and holidays with detailed descriptions, itineraries, and images.',
-                image: '/tour-listings.png',
-            },
-            {
-                title: 'Customizable Tours',
-                text: 'Create personalized motorcycle tours with options for self-guided, guided, or custom tour packages.',
-                image: '/customizable-tours.png',
-            },
-            {
-                title: 'Interactive Map',
-                text: 'Interactive map to view routes, tourist attractions, and accommodations along the way.',
-                image: '/interactive-map.png',
-            },
-            {
-                title: 'Motorcycle Rentals',
-                text: 'Rent high-quality motorcycles with detailed specifications, rental terms, and booking options.',
-                image: '/motorcycle-rentals.png',
-            },
-            {
-                title: 'Secure Payment Integration',
-                text: 'Integrated with Stripe for secure and seamless payment processing.',
-                image: '/payment-integration.png',
-            },
-            {
-                title: 'User Reviews and Ratings',
-                text: 'Read and write reviews for tours and rentals to share experiences and feedback.',
-                image: '/user-reviews.png',
-            },
-        ],
-        challenges: [
-            {
-                title: 'Route Optimization',
-                text: 'Developing an efficient algorithm to optimize routes and ensure the best travel experience for users.',
-            },
-            {
-                title: 'Real-Time Data Updates',
-                text: 'Implementing real-time updates for tour availability, booking status, and route changes.',
-            },
-            {
-                title: 'Scalability',
-                text: 'Ensuring the platform can handle increasing numbers of users and data without performance degradation.',
-            },
-        ],
-        learnings: [
-            {
-                title: 'Advanced Vue.js Techniques',
-                points: [
-                    {
-                        text: 'Leveraged Vue.js to create dynamic and responsive user interfaces with real-time data binding.',
-                    },
-                    {
-                        text: 'Gained experience with Vue Router for managing complex routing and navigation within the application.',
-                    },
-                ],
-            },
-            {
-                title: 'Backend Development with Node.js and Express',
-                points: [
-                    {
-                        text: 'Developed robust RESTful APIs to handle data fetching, user authentication, and payment processing.',
-                    },
-                    {
-                        text: 'Implemented efficient database operations using MongoDB and Mongoose for data modeling.',
-                    },
-                ],
-            },
-            {
-                title: 'Integration of Third-Party Services',
-                points: [
-                    {
-                        text: 'Integrated Stripe for secure payment processing and handling sensitive user information.',
-                    },
-                    {
-                        text: 'Used Mapbox API for interactive map features and real-time route visualization.',
-                    },
-                ],
-            },
-        ],
-        additionalImages: [
-            // '/tour-listings.png',
-            // '/customizable-tours.png',
-            // '/interactive-map.png',
-            // '/motorcycle-rentals.png',
-            // '/payment-integration.png',
-        ],
-    },
-},
+		title: 'Encompass Travel',
+		description:
+			'UNDER CONSTRUCTION - A dynamic travel business platform offering guided and self-guided motorcycle tours and holidays across Europe and the UK.',
+		imgUrl: '/encompass.webp',
+		repoUrl: 'https://github.com/JayRichh',
+		liveUrl: '',
+		details: {
+			title: 'Encompass Travel - RideWithUs',
+			description:
+				'Encompass Travel provides a unique travel experience through guided and self-guided motorcycle tours, highlighting the beauty and culture of different European destinations. The platform offers customizable tour options, comprehensive route details, and secure online bookings.',
+			technologies: ['Vue.js', 'Node.js', 'Express', 'MongoDB', 'Tailwind CSS', 'JavaScript'],
+			features: [
+				{
+					title: 'Tour Listings',
+					text: 'Explore various motorcycle tours and holidays with detailed descriptions, itineraries, and images.',
+					image: '/tour-listings.png',
+				},
+				{
+					title: 'Customizable Tours',
+					text: 'Create personalized motorcycle tours with options for self-guided, guided, or custom tour packages.',
+					image: '/customizable-tours.png',
+				},
+				{
+					title: 'Interactive Map',
+					text: 'Interactive map to view routes, tourist attractions, and accommodations along the way.',
+					image: '/interactive-map.png',
+				},
+				{
+					title: 'Motorcycle Rentals',
+					text: 'Rent high-quality motorcycles with detailed specifications, rental terms, and booking options.',
+					image: '/motorcycle-rentals.png',
+				},
+				{
+					title: 'Secure Payment Integration',
+					text: 'Integrated with Stripe for secure and seamless payment processing.',
+					image: '/payment-integration.png',
+				},
+				{
+					title: 'User Reviews and Ratings',
+					text: 'Read and write reviews for tours and rentals to share experiences and feedback.',
+					image: '/user-reviews.png',
+				},
+			],
+			challenges: [
+				{
+					title: 'Route Optimization',
+					text: 'Developing an efficient algorithm to optimize routes and ensure the best travel experience for users.',
+				},
+				{
+					title: 'Real-Time Data Updates',
+					text: 'Implementing real-time updates for tour availability, booking status, and route changes.',
+				},
+				{
+					title: 'Scalability',
+					text: 'Ensuring the platform can handle increasing numbers of users and data without performance degradation.',
+				},
+			],
+			learnings: [
+				{
+					title: 'Advanced Vue.js Techniques',
+					points: [
+						{
+							text: 'Leveraged Vue.js to create dynamic and responsive user interfaces with real-time data binding.',
+						},
+						{
+							text: 'Gained experience with Vue Router for managing complex routing and navigation within the application.',
+						},
+					],
+				},
+				{
+					title: 'Backend Development with Node.js and Express',
+					points: [
+						{
+							text: 'Developed robust RESTful APIs to handle data fetching, user authentication, and payment processing.',
+						},
+						{
+							text: 'Implemented efficient database operations using MongoDB and Mongoose for data modeling.',
+						},
+					],
+				},
+				{
+					title: 'Integration of Third-Party Services',
+					points: [
+						{
+							text: 'Integrated Stripe for secure payment processing and handling sensitive user information.',
+						},
+						{
+							text: 'Used Mapbox API for interactive map features and real-time route visualization.',
+						},
+					],
+				},
+			],
+			additionalImages: [
+				// '/tour-listings.png',
+				// '/customizable-tours.png',
+				// '/interactive-map.png',
+				// '/motorcycle-rentals.png',
+				// '/payment-integration.png',
+			],
+		},
+	},
 
 	{
 		title: 'Off The Floor',
@@ -554,6 +556,189 @@ export const projectData: Project[] = [
 				},
 			],
 			additionalImages: ['/afbuddy1.png', '/afbuddy3.png', '/afbuddy4.png', '/afbuddy5.png'],
+		},
+	},
+	{
+		title: 'UI/UX Challenge',
+		description:
+			'Documenting learning journey through UI/UX design. This app encapsulates and details daily insights and challenges, leveraging Vue3 and Bootstrap to enhance my design skills. Its a personal exploration of both fundamental and complex UI/UX principles, culminating in practical, real-world applications.',
+		imgUrl: '/uiux-learners-platform.png',
+		repoUrl: 'https://github.com/JayRichh/uiux',
+		liveUrl: 'https://uiux.fly.io',
+		details: {
+			title: 'In-depth UI/UX Learning Platform',
+			description:
+				'Each component of the application aligns with a specific UI/UX concept, focusing on both design aesthetics and functional usability, ensuring learners gain comprehensive insights into the discipline.',
+			technologies: ['Vue3', 'Vuex', 'Vue Router', 'Bootstrap', 'JavaScript', 'HTML5', 'CSS3'],
+			features: [
+				{
+					title: 'Learnt Home - Introduction and Overview',
+					text: 'Provides a structured starting point for the learning journey, introducing users to the course layout and daily objectives.',
+					image: '/learnt-home.png',
+				},
+				{
+					title: 'Navigational Design - Learnt Nav',
+					text: 'Teaches best practices in navigation design, focusing on usability, accessibility, and the enhancement of user experience through intuitive interface layout.',
+					image: '/learnt-nav.png',
+				},
+				{
+					title: 'Interactive Cards - Learnt Cards',
+					text: 'Focuses on creating interactive cards that effectively use animation, depth, and user interaction to display information dynamically.',
+					image: '/learnt-cards.png',
+				},
+				{
+					title: 'Dashboard UI - Learnt Dashboards',
+					text: 'Covers the design and implementation of informative dashboards that effectively communicate data through visual elements like charts and graphs.',
+					image: '/learnt-dashboards.png',
+				},
+				{
+					title: 'Design Embellishments - Learnt Embellishments',
+					text: 'Explores the art of adding aesthetic elements to designs without overwhelming the functional aspects, enhancing visual appeal.',
+					image: '/learnt-embellishments.png',
+				},
+				{
+					title: 'Form Design - Learnt Forms',
+					text: 'Details the principles of designing effective and user-friendly forms, focusing on layout, element alignment, and interaction design.',
+					image: '/learnt-forms.png',
+				},
+				{
+					title: 'Generative AI in UI Design - Learnt Generative AI',
+					text: 'Introduces the use of generative AI tools to create and iterate design elements automatically, exploring the intersection of AI and creativity.',
+					image: '/learnt-generative-ai.png',
+				},
+				{
+					title: 'Hero Section Design - Learnt Hero',
+					text: 'Discusses strategies for crafting compelling hero sections that grab attention and drive user engagement right from the first interaction.',
+					image: '/learnt-hero.png',
+				},
+				{
+					title: 'Portfolio Techniques - Learnt Portfolio',
+					text: 'Guides users through the process of building an effective portfolio showcasing their work, with tips on layout, content selection, and storytelling.',
+					image: '/learnt-portfolio.png',
+				},
+				{
+					title: 'Prototyping Methods - Learnt Prototyping',
+					text: 'Examines various prototyping tools and techniques, allowing users to rapidly iterate on design concepts and test usability.',
+					image: '/learnt-prototyping.png',
+				},
+				{
+					title: 'Responsive Design - Learnt Responsive',
+					text: 'Emphasizes the importance of responsive design, teaching techniques to ensure websites look and function well on all devices.',
+					image: '/learnt-responsive.png',
+				},
+				{
+					title: 'Review and Feedback Techniques - Learnt Reviewing',
+					text: 'Focuses on the critical role of feedback in the design process, offering strategies for collecting and implementing design critiques effectively.',
+					image: '/learnt-reviewing.png',
+				},
+				{
+					title: 'Sub-Page Layout Design - Learnt Sub-Pages',
+					text: 'Teaches design consistency across sub-pages, ensuring a cohesive user experience throughout the application.',
+					image: '/learnt-sub-pages.png',
+				},
+				{
+					title: 'Tool Mastery - Learnt Tools',
+					text: 'Provides in-depth tutorials on the most useful tools in UI/UX design, from sketching to prototyping and user testing.',
+					image: '/learnt-tools.png',
+				},
+				{
+					title: 'Understanding UI Elements - Learnt UI Meaning',
+					text: 'Explores the theory behind UI components, helping users understand how and why certain elements affect user behavior.',
+					image: '/learnt-ui-meaning.png',
+				},
+			],
+			challenges: [
+				{
+					title: 'Navigational Design Solutions',
+					text: 'Focused on creating intuitive navigation systems that enhance user flow and accessibility. The challenge was to design navigation that users find instinctive and seamless across various platforms, requiring an understanding of hierarchical structure and user behavior patterns.',
+					image: '',
+				},
+				{
+					title: 'Adaptive Responsive Layouts',
+					text: 'Tasked with building layouts that adapt smoothly across devices. This involved using CSS flexbox and grid systems to ensure designs maintained their integrity and usability on different screen sizes, from mobile phones to large desktop displays.',
+					image: '',
+				},
+				{
+					title: 'Dynamic Content Interaction',
+					text: "Challenged to implement interactive elements like hover effects, animations, and transitions that engage users without detracting from the overall user experience. Required balancing performance with interactivity, ensuring the site's speed and responsiveness were not compromised.",
+					image: '',
+				},
+				{
+					title: 'Effective Form Design',
+					text: 'Designed user-friendly forms focusing on simplicity and ease of use, ensuring forms are approachable and accessible. Included challenges such as aligning labels, input fields, and effective use of whitespace to guide the user naturally through each form field.',
+					image: '',
+				},
+				{
+					title: 'Real-Time Feedback Implementation',
+					text: 'Developed the ability to quickly iterate on designs based on real-time feedback from users and stakeholders, enhancing flexibility and adaptability in the design process. This involved rapid prototyping and frequent user testing sessions.',
+					image: '',
+				},
+			],
+			learnings: [
+				{
+					title: 'Core UI/UX Design Fundamentals',
+					points: [
+						{
+							text: 'Mastered essential UI/UX design principles such as color theory, typography, and layout compositions, applying these to create aesthetically pleasing and functional designs.',
+							image: '',
+						},
+					],
+				},
+				{
+					title: 'Advanced Interactivity Techniques',
+					points: [
+						{
+							text: 'Gained proficiency in CSS and JavaScript for crafting dynamic interactions that enhance storytelling and user engagement on web pages.',
+							image: '',
+						},
+					],
+				},
+				{
+					title: 'Prototyping and Wireframing',
+					points: [
+						{
+							text: 'Learned to efficiently use tools like Adobe XD and Sketch to build quick prototypes and wireframes, which facilitated a faster iteration process and helped communicate design concepts clearly.',
+							image: '',
+						},
+					],
+				},
+				{
+					title: 'Accessibility and Inclusive Design',
+					points: [
+						{
+							text: 'Developed a deep understanding of accessibility standards such as WCAG, ensuring that designs are usable by people with a wide range of physical and cognitive abilities.',
+							image: '',
+						},
+					],
+				},
+				{
+					title: 'Feedback Integration and Adaptation',
+					points: [
+						{
+							text: 'Enhanced skills in incorporating feedback to refine user interfaces, learning the value of constructive criticism in creating user-centered designs.',
+							image: '',
+						},
+					],
+				},
+			],
+			additionalImages: [
+				'/uiux-learners-platform.png',
+				'/learnt-home.png',
+				'/learnt-nav.png',
+				'/learnt-cards.png',
+				'/learnt-dashboards.png',
+				'/learnt-embellishments.png',
+				'/learnt-forms.png',
+				'/learnt-generative-ai.png',
+				'/learnt-hero.png',
+				'/learnt-portfolio.png',
+				'/learnt-prototyping.png',
+				'/learnt-responsive.png',
+				'/learnt-reviewing.png',
+				'/learnt-sub-pages.png',
+				'/learnt-tools.png',
+				'/learnt-ui-meaning.png',
+			],
 		},
 	},
 	{
