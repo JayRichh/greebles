@@ -120,6 +120,7 @@ export default function Home() {
 				]}
 			/>
 			{CurrentComponent ? <CurrentComponent /> : <p>Loading...</p>}
+			<Analytics />
 		</div>
 	)
 }
