@@ -6,6 +6,7 @@ import About from './about'
 import NotFound from './404'
 import { ThreeCanvas } from '../lib/smol/text'
 import { NextSeo } from 'next-seo'
+import { Analytics } from "@vercel/analytics/react"
 
 type RouteComponents = {
 	[key: string]: React.ComponentType<any>

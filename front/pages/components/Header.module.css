@@ -1,71 +1,93 @@
 .header {
-	background-color: #fff;
-	position: fixed;
-	top: 0;
-	left: 0;
-	right: 0;
-	padding: 0 20px;
-	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-	z-index: 100;
+  background-color: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 0 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 100;
 }
 
 .chevronIcon {
-	display: none;
+  display: none;
 }
 
 .inner {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
 }
 
 .group {
-	display: flex;
-	align-items: center;
-	cursor: pointer;
-	gap: 20px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  gap: 20px;
 }
 
 .logo {
-	flex-shrink: 0;
-	cursor: pointer;
-	transition: transform 0.05s ease-in-out;
+  flex-shrink: 0;
+  cursor: pointer;
+  transition: transform 0.05s ease-in-out;
 }
 
 .link,
 .button {
-	text-decoration: none;
-	color: #333;
-	cursor: pointer;
-	background: none;
-	border: none;
-	display: flex;
-	align-items: center;
+  text-decoration: none;
+  color: #333;
+  cursor: pointer;
+  background: none;
+  border: none;
+  display: flex;
+  align-items: center;
+  padding: 10px 15px;
+  border-radius: 4px;
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
 }
 
 .link:hover,
 .button:hover {
-	color: #000;
+  color: #000;
+  background-color: #f0f0f0;
 }
 
 .link:hover {
-	border-bottom: 2px solid #000;
-	transition: border-bottom 0.2s ease-in-out;
+  border-bottom: none;
 }
 
 .dropdownLink {
-	display: flex;
-	align-items: center;
-	gap: 8px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 8px 16px;
+  width: 100%;
+  margin: 0 auto;
+  box-sizing: border-box;
+  border-radius: 4px;
+  transition: background-color 0.2s ease-in-out;
 }
 
 .chevronIcon {
-	margin-left: 8px;
+  margin-left: 8px;
 }
 
 .dropdown {
-	background-color: #f9f9f9;
-	border-radius: 4px;
-	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  border-radius: 4px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 0 0;
+  min-width: 150px;
+}
+
+.dropdownItem {
+  padding: 0;
+  width: 100%;
+}
+
+.dropdownItem a {
+  display: flex;
+  align-items: center;
+  padding: 8px 16px;
 }

@@ -62,7 +62,7 @@
 }
 
 .description {
-	font-size: 1.125rem; /* Slightly larger for better readability */
+	font-size: 1.125rem;
 }
 
 @media (max-width: 600px) {
@@ -76,14 +76,14 @@
 	padding: 0;
 	margin: 0;
 	display: flex;
-	justify-content: right; /* Aligns buttons to the right */
+	justify-content: right;
 	pointer-events: auto;
 }
 
 @media (max-width: 600px) {
 	.controls {
 		flex-direction: column;
-		align-items: flex-end; /* Keeps buttons right-aligned on mobile */
+		align-items: flex-end; 
 	}
 }
 
