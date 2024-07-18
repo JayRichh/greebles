@@ -20,7 +20,7 @@ const links: LinkItem[] = [
   { link: '/', label: 'Home' },
   { link: '/about', label: 'About' },
   { link: '/code', label: 'Code' },
-  { link: '/plan', label: 'Plan' },
+  // { link: '/plan', label: 'Plan' },
   {
     link: '#more',
     label: (
