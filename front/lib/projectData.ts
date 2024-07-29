@@ -1,30 +1,15 @@
 import { StaticImageData } from 'next/image'
 import { IconType } from 'react-icons'
 import {
-	DiMongodb,
-	DiHtml5,
-	DiCss3,
-	DiReact,
-	DiSass,
-	DiJavascript1,
-	DiGit,
-	DiVisualstudio,
-	DiChrome,
-	DiFirebase,
-} from 'react-icons/di'
-import { FaRobot } from 'react-icons/fa'
-import {
-	SiVuedotjs,
-	SiTypescript,
-	SiNodedotjs,
-	SiExpress,
-	SiNextdotjs,
-	SiTailwindcss,
-	SiThreedotjs,
-	SiSocketdotio,
-	SiStyledcomponents,
-	SiMongodb,
-} from 'react-icons/si'
+  SiVuedotjs, SiTypescript, SiNodedotjs, SiExpress, SiNextdotjs, SiTailwindcss,
+  SiThreedotjs, SiSocketdotio, SiStyledcomponents, SiMongodb, SiSupabase,
+  SiStripe, SiOpenaigym, SiJest, SiWebpack, SiFigma, SiAdobe, SiWebgl,
+  SiBootstrap, SiOpenai
+} from 'react-icons/si';
+import { DiMongodb, DiHtml5, DiCss3, DiReact, DiSass, DiJavascript1, DiGit,
+  DiVisualstudio, DiChrome, DiFirebase } from 'react-icons/di';
+import { FaLemon } from 'react-icons/fa'; 
+
 
 export interface FeatureDetail {
 	title: string
@@ -78,47 +63,48 @@ export interface TechIcons {
 }
 
 export const techIcons: TechIcons = {
-	'Vue.js': { icon: SiVuedotjs, color: '#4FC08D', docLink: 'https://vuejs.org' },
-	Vue3: { icon: SiVuedotjs, color: '#4FC08D', docLink: 'https://vuejs.org' },
-	TypeScript: { icon: SiTypescript, color: '#3178C6', docLink: 'https://www.typescriptlang.org' },
-	'Node.js': { icon: SiNodedotjs, color: '#339933', docLink: 'https://nodejs.org' },
-	Express: { icon: SiExpress, color: '#000000', docLink: 'https://expressjs.com' },
-	MongoDB: { icon: DiMongodb, color: '#47A248', docLink: 'https://www.mongodb.com' },
-	HTML5: { icon: DiHtml5, color: '#E34F26', docLink: 'https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5' },
-	CSS3: { icon: DiCss3, color: '#1572B6', docLink: 'https://developer.mozilla.org/en-US/docs/Web/CSS' },
-	'Next.js': { icon: SiNextdotjs, color: '#000000', docLink: 'https://nextjs.org' },
-	React: { icon: DiReact, color: '#61DAFB', docLink: 'https://reactjs.org' },
-	'Tailwind CSS': { icon: SiTailwindcss, color: '#38B2AC', docLink: 'https://tailwindcss.com' },
-	Sass: { icon: DiSass, color: '#CC6699', docLink: 'https://sass-lang.com' },
-	JavaScript: {
-		icon: DiJavascript1,
-		color: '#F7DF1E',
-		docLink: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript',
-	},
-	Git: { icon: DiGit, color: '#F05032', docLink: 'https://git-scm.com' },
-	'VS Code': { icon: DiVisualstudio, color: '#007ACC', docLink: 'https://code.visualstudio.com' },
-	'Chrome DevTools': { icon: DiChrome, color: '#4285F4', docLink: 'https://developer.chrome.com/docs/devtools/' },
-	Firebase: { icon: DiFirebase, color: '#FFCA28', docLink: 'https://firebase.google.com' },
-	CSS: { icon: DiCss3, color: '#1572B6', docLink: 'https://developer.mozilla.org/en-US/docs/Web/CSS' },
-	Vuex: { icon: SiVuedotjs, color: '#4FC08D', docLink: 'https://vuex.vuejs.org/' },
-	Bootstrap: { icon: DiCss3, color: '#1572B6', docLink: 'https://getbootstrap.com' },
-	GSAP: { icon: DiJavascript1, color: '#F0DB4F', docLink: 'https://greensock.com/gsap/' },
-	'Vue Router': { icon: SiVuedotjs, color: '#4FC08D', docLink: 'https://router.vuejs.org/' },
-	HTML: { icon: DiHtml5, color: '#E34F26', docLink: 'https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5' },
-	'Three.js': { icon: SiThreedotjs, color: '#000000', docLink: 'https://threejs.org/' },
-	WebSockets: {
-		icon: SiSocketdotio,
-		color: '#010101',
-		docLink: 'https://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API',
-	},
-	'Rapier Physics Engine': { icon: DiJavascript1, color: '#7B7B7B', docLink: 'https://rapier.rs/' },
-	'CANNON.js': { icon: DiJavascript1, color: '#7B7B7B', docLink: 'https://schteppe.github.io/cannon.js/' },
-	OpenAI: { icon: FaRobot, color: '#7B7B7B', docLink: 'https://openai.com' },
-	'Styled-Components': { icon: SiStyledcomponents, color: '#DB7093', docLink: 'https://styled-components.com' },
-	Mongoose: { icon: SiMongodb, color: '#47A248', docLink: 'https://mongoosejs.com' },
-	'p5.js': { icon: DiJavascript1, color: '#F7DF1E', docLink: 'https://p5js.org' },
-	'WebGL Earth': { icon: SiThreedotjs, color: '#000000', docLink: 'http://www.webglearth.com' },
-}
+  'Vue.js': { icon: SiVuedotjs, color: '#4FC08D', docLink: 'https://vuejs.org' },
+  Vue3: { icon: SiVuedotjs, color: '#4FC08D', docLink: 'https://vuejs.org' },
+  TypeScript: { icon: SiTypescript, color: '#3178C6', docLink: 'https://www.typescriptlang.org' },
+  'Node.js': { icon: SiNodedotjs, color: '#339933', docLink: 'https://nodejs.org' },
+  Express: { icon: SiExpress, color: '#000000', docLink: 'https://expressjs.com' },
+  MongoDB: { icon: DiMongodb, color: '#47A248', docLink: 'https://www.mongodb.com' },
+  HTML5: { icon: DiHtml5, color: '#E34F26', docLink: 'https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5' },
+  CSS3: { icon: DiCss3, color: '#1572B6', docLink: 'https://developer.mozilla.org/en-US/docs/Web/CSS' },
+  'Next.js': { icon: SiNextdotjs, color: '#000000', docLink: 'https://nextjs.org' },
+  React: { icon: DiReact, color: '#61DAFB', docLink: 'https://reactjs.org' },
+  'Tailwind CSS': { icon: SiTailwindcss, color: '#38B2AC', docLink: 'https://tailwindcss.com' },
+  Sass: { icon: DiSass, color: '#CC6699', docLink: 'https://sass-lang.com' },
+  JavaScript: { icon: DiJavascript1, color: '#F7DF1E', docLink: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript' },
+  Git: { icon: DiGit, color: '#F05032', docLink: 'https://git-scm.com' },
+  'VS Code': { icon: DiVisualstudio, color: '#007ACC', docLink: 'https://code.visualstudio.com' },
+  'Chrome DevTools': { icon: DiChrome, color: '#4285F4', docLink: 'https://developer.chrome.com/docs/devtools/' },
+  Firebase: { icon: DiFirebase, color: '#FFCA28', docLink: 'https://firebase.google.com' },
+  CSS: { icon: DiCss3, color: '#1572B6', docLink: 'https://developer.mozilla.org/en-US/docs/Web/CSS' },
+  Vuex: { icon: SiVuedotjs, color: '#4FC08D', docLink: 'https://vuex.vuejs.org/' },
+  Bootstrap: { icon: SiBootstrap, color: '#7952B3', docLink: 'https://getbootstrap.com' },
+  GSAP: { icon: DiJavascript1, color: '#88CE02', docLink: 'https://greensock.com/gsap/' },
+  'Vue Router': { icon: SiVuedotjs, color: '#4FC08D', docLink: 'https://router.vuejs.org/' },
+  HTML: { icon: DiHtml5, color: '#E34F26', docLink: 'https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5' },
+  'Three.js': { icon: SiThreedotjs, color: '#000000', docLink: 'https://threejs.org/' },
+  WebSockets: { icon: SiSocketdotio, color: '#010101', docLink: 'https://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API' },
+  'Rapier Physics Engine': { icon: DiJavascript1, color: '#7B7B7B', docLink: 'https://rapier.rs/' },
+  'CANNON.js': { icon: DiJavascript1, color: '#7B7B7B', docLink: 'https://schteppe.github.io/cannon.js/' },
+  OpenAI: { icon: SiOpenai, color: '#412991', docLink: 'https://openai.com' },
+  'Styled-Components': { icon: SiStyledcomponents, color: '#DB7093', docLink: 'https://styled-components.com' },
+  Mongoose: { icon: SiMongodb, color: '#47A248', docLink: 'https://mongoosejs.com' },
+  'p5.js': { icon: DiJavascript1, color: '#ED225D', docLink: 'https://p5js.org' },
+  'WebGL Earth': { icon: SiThreedotjs, color: '#000000', docLink: 'http://www.webglearth.com' },
+  Supabase: { icon: SiSupabase, color: '#3ECF8E', docLink: 'https://supabase.io/' },
+	'Lemon Squeezy': { icon: FaLemon, color: '#FFA800', docLink: 'https://www.lemonsqueezy.com/' },
+  Stripe: { icon: SiStripe, color: '#008CDD', docLink: 'https://stripe.com/' },
+  'Stable Diffusion': { icon: SiOpenaigym, color: '#0000FF', docLink: 'https://stability.ai/' },
+  Jest: { icon: SiJest, color: '#C21325', docLink: 'https://jestjs.io/' },
+  Webpack: { icon: SiWebpack, color: '#8DD6F9', docLink: 'https://webpack.js.org/' },
+  Figma: { icon: SiFigma, color: '#F24E1E', docLink: 'https://www.figma.com/' },
+  'Adobe Creative Suite': { icon: SiAdobe, color: '#FF0000', docLink: 'https://www.adobe.com/creativecloud.html' },
+  WebGL: { icon: SiWebgl, color: '#990000', docLink: 'https://www.khronos.org/webgl/' },
+};
 
 export const projectData: Project[] = [
 	{
@@ -224,8 +210,8 @@ export const projectData: Project[] = [
 	{
 		title: 'Encompass Travel',
 		description:
-			'A comprehensive digital transformation project for Encompass Travel, a premier motorcycle tour company operating across New Zealand. Our agency delivered a full-stack solution, focusing on stunning design, responsive development, and brand identity.',
-		imgUrl: '/encompass.webp',
+			'Delivered a comprehensive digital transformation for Encompass Travel, a premier motorcycle tour company in New Zealand, with a focus on stunning design, responsive development, and brand identity.',
+		imgUrl: '/encompass-hero.png',
 		repoUrl: 'https://github.com/JayRichh',
 		liveUrl: 'https://encompasstours.co.nz',
 		details: {
@@ -340,14 +326,14 @@ export const projectData: Project[] = [
 	},
 	{
 		title: 'Restyled 2.0',
-		description: 'A cutting-edge, AI-enhanced wardrobe management and style inspiration platform built with Next.js, Supabase, and Lemon Squeezy. Restyled 2.0 offers a comprehensive suite of features for personal and organizational style management, integrating advanced AI capabilities for a unique and personalized fashion experience.',
-		imgUrl: '/restyled2.0.png',
-		repoUrl: 'https://github.com/JayRichh/restyled2.0',
-		liveUrl: 'https://restyled.io',
+		description: 'An AI-enhanced wardrobe platform built with Next.js, Supabase, and Lemon Squeezy. Focused on advanced AI integration, streamlined digital exploration, branding, and user experience for a personalized fashion experience.',
+		imgUrl: '/restyled-logo.png',
+		repoUrl: 'https://github.com/JayRichh/',
+		liveUrl: 'https://restyled.app',
 		details: {
 			title: 'Restyled 2.0 - AI-Powered Style Management',
 			description: 'Restyled 2.0 reimagines wardrobe management and style inspiration by leveraging cutting-edge technologies and AI integration. This platform offers a seamless, secure, and highly personalized experience for individuals and organizations in the fashion industry.',
-			technologies: ['Next.js', 'Supabase', 'Lemon Squeezy', 'Stripe', 'Paddle', 'TypeScript', 'Tailwind CSS', 'Stable Diffusion', 'OpenAI'],
+			technologies: ['Next.js', 'Supabase', 'Lemon Squeezy', 'Stripe', 'TypeScript', 'Tailwind CSS', 'Stable Diffusion', 'OpenAI'],
 			features: [
 				{
 					title: 'Advanced Authentication',
@@ -470,7 +456,7 @@ export const projectData: Project[] = [
 	{
 		title: 'Off The Floor',
 		description:
-			'UNDER CONSTRUCTION - A modern and dynamic business website created using Vue3 and TypeScript, featuring responsive design and tailored functionalities to promote aerial arts classes.',
+			'A modern and dynamic business website created using Vue3 and TypeScript, featuring responsive design and tailored functionalities to promote aerial arts classes.',
 		imgUrl: '/otf-vue1.png',
 		repoUrl: 'https://github.com/JayRichh/otf-vue',
 		liveUrl: 'http://otf-vue.vercel.app',
