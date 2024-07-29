@@ -14,7 +14,7 @@ const StyledText = (props: { children: React.ReactNode }) => (
 			lineHeight: '1.6',
 			marginBottom: '1.5rem',
 		}}
-	>
+	>	
 		{props.children}
 	</Text>
 )

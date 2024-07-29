@@ -224,106 +224,249 @@ export const projectData: Project[] = [
 	{
 		title: 'Encompass Travel',
 		description:
-			'UNDER CONSTRUCTION - A dynamic travel business platform offering guided and self-guided motorcycle tours and holidays across Europe and the UK.',
+			'A comprehensive digital transformation project for Encompass Travel, a premier motorcycle tour company operating across New Zealand. Our agency delivered a full-stack solution, focusing on stunning design, responsive development, and brand identity.',
 		imgUrl: '/encompass.webp',
 		repoUrl: 'https://github.com/JayRichh',
-		liveUrl: '',
+		liveUrl: 'https://encompasstours.co.nz',
 		details: {
-			title: 'Encompass Travel - RideWithUs',
+			title: 'Encompass Tours - RideWithUs',
 			description:
-				'Encompass Travel provides a unique travel experience through guided and self-guided motorcycle tours, highlighting the beauty and culture of different European destinations. The platform offers customizable tour options, comprehensive route details, and secure online bookings.',
-			technologies: ['Vue.js', 'Node.js', 'Express', 'MongoDB', 'Tailwind CSS', 'JavaScript'],
+				'Encompass Tours required a complete digital overhaul to showcase their New Zealand motorcycle tours. Our agency provided end-to-end services, including rebranding, UX/UI design, and full-stack development to create an immersive and informative web experience.',
+			technologies: ['Vue.js', 'Node.js', 'Express', 'MongoDB', 'Tailwind CSS', 'JavaScript', 'Figma', 'Adobe Creative Suite'],
 			features: [
 				{
-					title: 'Tour Listings',
-					text: 'Explore various motorcycle tours and holidays with detailed descriptions, itineraries, and images.',
-					image: '/tour-listings.png',
+					title: 'Responsive Design',
+					text: 'Implemented a mobile-first, fully responsive design ensuring seamless user experience across all devices, from smartphones to large desktop screens, crucial for on-the-go travelers.',
+					image: '/encompass-responsive.png',
 				},
 				{
-					title: 'Customizable Tours',
-					text: 'Create personalized motorcycle tours with options for self-guided, guided, or custom tour packages.',
-					image: '/customizable-tours.png',
+					title: 'Dynamic Tour Showcase',
+					text: 'Developed an interactive tour showcase allowing users to explore different routes, view high-quality images, and get detailed information about each tour option.',
+					image: '/encompass-tour-showcase.png',
 				},
 				{
-					title: 'Interactive Map',
-					text: 'Interactive map to view routes, tourist attractions, and accommodations along the way.',
-					image: '/interactive-map.png',
+					title: 'Brand Identity Redesign',
+					text: 'Created a new visual identity including logo, color palette, and typography that captures the spirit of motorcycle adventure in New Zealand.',
+					image: '/encompass-branding.png',
 				},
 				{
-					title: 'Motorcycle Rentals',
-					text: 'Rent high-quality motorcycles with detailed specifications, rental terms, and booking options.',
-					image: '/motorcycle-rentals.png',
+					title: 'Content Management System (CMS)',
+					text: 'Implemented a user-friendly CMS allowing Encompass staff to easily update tour information, blog posts, and dynamic content without technical expertise.',
+					image: '/encompass-cms.png',
 				},
 				{
-					title: 'Secure Payment Integration',
-					text: 'Integrated with Stripe for secure and seamless payment processing.',
-					image: '/payment-integration.png',
+					title: 'Immersive Imagery Integration',
+					text: 'Integrated high-quality, immersive imagery and videos showcasing New Zealand\'s breathtaking landscapes, optimized for fast loading without compromising visual impact.',
+					image: '/encompass-imagery.png',
 				},
 				{
-					title: 'User Reviews and Ratings',
-					text: 'Read and write reviews for tours and rentals to share experiences and feedback.',
-					image: '/user-reviews.png',
+					title: 'SEO Optimization',
+					text: 'Implemented comprehensive SEO strategies, including schema markup, optimized meta tags, and a content strategy to improve organic search rankings for New Zealand tourism-related keywords.',
+					image: '/encompass-seo.png',
 				},
 			],
 			challenges: [
 				{
-					title: 'Route Optimization',
-					text: 'Developing an efficient algorithm to optimize routes and ensure the best travel experience for users.',
+					title: 'Performance with Rich Media',
+					text: 'Balancing the use of high-quality images and videos to showcase New Zealand\'s beauty while ensuring fast loading times and smooth performance across devices.',
 				},
 				{
-					title: 'Real-Time Data Updates',
-					text: 'Implementing real-time updates for tour availability, booking status, and route changes.',
+					title: 'Intuitive Information Architecture',
+					text: 'Designing an intuitive navigation and information structure to help users easily find tour information, destinations, and company details without overwhelming them.',
 				},
 				{
-					title: 'Scalability',
-					text: 'Ensuring the platform can handle increasing numbers of users and data without performance degradation.',
+					title: 'Capturing Brand Essence',
+					text: 'Translating the excitement and freedom of motorcycle touring in New Zealand into a cohesive digital brand identity that resonates with the target audience.',
+				},
+				{
+					title: 'Responsive Interactive Elements',
+					text: 'Creating interactive elements like the tour showcase that remain engaging and functional across all device sizes and orientations.',
 				},
 			],
 			learnings: [
 				{
-					title: 'Advanced Vue.js Techniques',
+					title: 'Brand Identity Development',
 					points: [
 						{
-							text: 'Leveraged Vue.js to create dynamic and responsive user interfaces with real-time data binding.',
+							text: 'Created a cohesive visual language that captures the spirit of New Zealand motorcycle tours, balancing ruggedness with sophistication.',
 						},
 						{
-							text: 'Gained experience with Vue Router for managing complex routing and navigation within the application.',
+							text: 'Developed a flexible design system that extends from digital to print materials, ensuring brand consistency across all touchpoints.',
 						},
 					],
 				},
 				{
-					title: 'Backend Development with Node.js and Express',
+					title: 'Performance Optimization Techniques',
 					points: [
 						{
-							text: 'Developed robust RESTful APIs to handle data fetching, user authentication, and payment processing.',
+							text: 'Mastered advanced image optimization techniques to deliver high-quality visuals with minimal load times.',
 						},
 						{
-							text: 'Implemented efficient database operations using MongoDB and Mongoose for data modeling.',
+							text: 'Implemented lazy loading and code splitting to improve initial page load performance and user experience.',
 						},
 					],
 				},
 				{
-					title: 'Integration of Third-Party Services',
+					title: 'Responsive Design Best Practices',
 					points: [
 						{
-							text: 'Integrated Stripe for secure payment processing and handling sensitive user information.',
+							text: 'Refined our approach to mobile-first design, ensuring a seamless experience from small screens to large displays.',
 						},
 						{
-							text: 'Used Mapbox API for interactive map features and real-time route visualization.',
+							text: 'Developed custom responsive components that adapt not just in size, but in functionality to suit different device capabilities.',
+						},
+					],
+				},
+				{
+					title: 'Content Strategy for Tourism',
+					points: [
+						{
+							text: 'Crafted a content strategy that balances inspirational imagery with practical tour information to drive user engagement and conversions.',
+						},
+						{
+							text: 'Integrated SEO best practices specific to the tourism industry, improving visibility for location-based searches.',
 						},
 					],
 				},
 			],
 			additionalImages: [
-				// '/tour-listings.png',
-				// '/customizable-tours.png',
-				// '/interactive-map.png',
-				// '/motorcycle-rentals.png',
-				// '/payment-integration.png',
+				'/encompass-home.png',
+				'/encompass-tours.png',
+				'/encompass-about.png',
+				'/encompass-blog.png',
+				'/encompass-contact.png',
 			],
 		},
 	},
-
+	{
+		title: 'Restyled 2.0',
+		description: 'A cutting-edge, AI-enhanced wardrobe management and style inspiration platform built with Next.js, Supabase, and Lemon Squeezy. Restyled 2.0 offers a comprehensive suite of features for personal and organizational style management, integrating advanced AI capabilities for a unique and personalized fashion experience.',
+		imgUrl: '/restyled2.0.png',
+		repoUrl: 'https://github.com/JayRichh/restyled2.0',
+		liveUrl: 'https://restyled.io',
+		details: {
+			title: 'Restyled 2.0 - AI-Powered Style Management',
+			description: 'Restyled 2.0 reimagines wardrobe management and style inspiration by leveraging cutting-edge technologies and AI integration. This platform offers a seamless, secure, and highly personalized experience for individuals and organizations in the fashion industry.',
+			technologies: ['Next.js', 'Supabase', 'Lemon Squeezy', 'Stripe', 'Paddle', 'TypeScript', 'Tailwind CSS', 'Stable Diffusion', 'OpenAI'],
+			features: [
+				{
+					title: 'Advanced Authentication',
+					text: 'Secure sign-up, sign-in, and sign-out processes with forgot password functionality and Multi-Factor Authentication (MFA) for enhanced security.',
+					image: '/restyled-auth.png',
+				},
+				{
+					title: 'Flexible Account Management',
+					text: 'Support for both personal and organization accounts with role-based access control and invitation system for seamless collaboration.',
+					image: '/restyled-accounts.png',
+				},
+				{
+					title: 'Comprehensive Billing System',
+					text: 'Robust billing management for personal and organization accounts, supporting various subscription models and multiple payment providers including Stripe, Lemon Squeezy, and Paddle.',
+					image: '/restyled-billing.png',
+				},
+				{
+					title: 'AI-Powered Style Recommendations',
+					text: 'Integration of advanced AI models to provide personalized style recommendations based on user preferences, body type, and current fashion trends.',
+					image: '/restyled-ai-recommendations.png',
+				},
+				{
+					title: 'Virtual Try-On with Stable Diffusion',
+					text: 'Utilizes Stable Diffusion to generate images of users wearing recommended outfits, providing a virtual try-on experience for inspiration.',
+					image: '/restyled-virtual-tryon.png',
+				},
+				{
+					title: 'Mood and Context-Based Styling',
+					text: 'AI-driven outfit suggestions based on mood, color preferences, seasons, and weather conditions, ensuring users always have the perfect outfit for any occasion.',
+					image: '/restyled-context-styling.png',
+				},
+				{
+					title: 'Wardrobe Digitization and Management',
+					text: 'Tools for users to easily digitize and categorize their existing wardrobe, with AI assistance for automatic item recognition and categorization.',
+					image: '/restyled-wardrobe-management.png',
+				},
+				{
+					title: 'Social Sharing and Inspiration',
+					text: 'A platform for users to share their outfits, get feedback from the community, and find inspiration from other users and fashion influencers.',
+					image: '/restyled-social.png',
+				},
+				{
+					title: 'Sustainability Insights',
+					text: 'AI-powered analysis of wardrobe usage patterns and suggestions for more sustainable fashion choices and outfit combinations.',
+					image: '/restyled-sustainability.png',
+				},
+			],
+			challenges: [
+				{
+					title: 'AI Model Integration and Training',
+					text: 'Integrating and fine-tuning AI models for accurate style recommendations and virtual try-on functionality, ensuring high-quality and realistic results.',
+				},
+				{
+					title: 'Data Privacy and Security',
+					text: 'Implementing robust security measures to protect user data, especially with the integration of AI and image processing technologies.',
+				},
+				{
+					title: 'Scalability and Performance',
+					text: 'Ensuring the platform remains responsive and fast, even with complex AI operations and a growing user base.',
+				},
+				{
+					title: 'User Experience Design',
+					text: 'Creating an intuitive and engaging user interface that seamlessly integrates advanced features without overwhelming users.',
+				},
+			],
+			learnings: [
+				{
+					title: 'AI and Machine Learning in Fashion Tech',
+					points: [
+						{
+							text: 'Gained expertise in applying AI and machine learning technologies specifically to fashion and style recommendations.',
+						},
+						{
+							text: 'Developed skills in training and fine-tuning AI models on fashion-related datasets for improved accuracy and relevance.',
+						},
+					],
+				},
+				{
+					title: 'Advanced Next.js and Supabase Integration',
+					points: [
+						{
+							text: 'Mastered complex state management and server-side rendering techniques in Next.js for optimal performance.',
+						},
+						{
+							text: 'Leveraged Supabase\'s real-time capabilities for dynamic content updates and collaborative features.',
+						},
+					],
+				},
+				{
+					title: 'Multi-Tenant Architecture',
+					points: [
+						{
+							text: 'Implemented a sophisticated multi-tenant system supporting both individual users and organizations with varying permission levels.',
+						},
+						{
+							text: 'Developed strategies for efficient data isolation and sharing within the multi-tenant environment.',
+						},
+					],
+				},
+				{
+					title: 'Integration of Multiple Payment Systems',
+					points: [
+						{
+							text: 'Gained experience in integrating and managing multiple payment providers, ensuring a smooth and flexible billing experience for users.',
+						},
+						{
+							text: 'Implemented complex subscription models including tiered and per-seat pricing structures.',
+						},
+					],
+				},
+			],
+			additionalImages: [
+				'/restyled-dashboard.png',
+				'/restyled-ai-engine.png',
+				'/restyled-organization-view.png',
+				'/restyled-mobile-app.png',
+			],
+		},
+	},
 	{
 		title: 'Off The Floor',
 		description:
@@ -558,189 +701,7 @@ export const projectData: Project[] = [
 			additionalImages: ['/afbuddy1.png', '/afbuddy3.png', '/afbuddy4.png', '/afbuddy5.png'],
 		},
 	},
-	{
-		title: 'UI/UX Challenge',
-		description:
-			'Documenting learning journey through UI/UX design. This app encapsulates and details daily insights and challenges, leveraging Vue3 and Bootstrap to enhance my design skills. Its a personal exploration of both fundamental and complex UI/UX principles, culminating in practical, real-world applications.',
-		imgUrl: '/uiux-learners-platform.png',
-		repoUrl: 'https://github.com/JayRichh/uiux',
-		liveUrl: 'https://uiux.fly.io',
-		details: {
-			title: 'In-depth UI/UX Learning Platform',
-			description:
-				'Each component of the application aligns with a specific UI/UX concept, focusing on both design aesthetics and functional usability, ensuring learners gain comprehensive insights into the discipline.',
-			technologies: ['Vue3', 'Vuex', 'Vue Router', 'Bootstrap', 'JavaScript', 'HTML5', 'CSS3'],
-			features: [
-				{
-					title: 'Learnt Home - Introduction and Overview',
-					text: 'Provides a structured starting point for the learning journey, introducing users to the course layout and daily objectives.',
-					image: '/learnt-home.png',
-				},
-				{
-					title: 'Navigational Design - Learnt Nav',
-					text: 'Teaches best practices in navigation design, focusing on usability, accessibility, and the enhancement of user experience through intuitive interface layout.',
-					image: '/learnt-nav.png',
-				},
-				{
-					title: 'Interactive Cards - Learnt Cards',
-					text: 'Focuses on creating interactive cards that effectively use animation, depth, and user interaction to display information dynamically.',
-					image: '/learnt-cards.png',
-				},
-				{
-					title: 'Dashboard UI - Learnt Dashboards',
-					text: 'Covers the design and implementation of informative dashboards that effectively communicate data through visual elements like charts and graphs.',
-					image: '/learnt-dashboards.png',
-				},
-				{
-					title: 'Design Embellishments - Learnt Embellishments',
-					text: 'Explores the art of adding aesthetic elements to designs without overwhelming the functional aspects, enhancing visual appeal.',
-					image: '/learnt-embellishments.png',
-				},
-				{
-					title: 'Form Design - Learnt Forms',
-					text: 'Details the principles of designing effective and user-friendly forms, focusing on layout, element alignment, and interaction design.',
-					image: '/learnt-forms.png',
-				},
-				{
-					title: 'Generative AI in UI Design - Learnt Generative AI',
-					text: 'Introduces the use of generative AI tools to create and iterate design elements automatically, exploring the intersection of AI and creativity.',
-					image: '/learnt-generative-ai.png',
-				},
-				{
-					title: 'Hero Section Design - Learnt Hero',
-					text: 'Discusses strategies for crafting compelling hero sections that grab attention and drive user engagement right from the first interaction.',
-					image: '/learnt-hero.png',
-				},
-				{
-					title: 'Portfolio Techniques - Learnt Portfolio',
-					text: 'Guides users through the process of building an effective portfolio showcasing their work, with tips on layout, content selection, and storytelling.',
-					image: '/learnt-portfolio.png',
-				},
-				{
-					title: 'Prototyping Methods - Learnt Prototyping',
-					text: 'Examines various prototyping tools and techniques, allowing users to rapidly iterate on design concepts and test usability.',
-					image: '/learnt-prototyping.png',
-				},
-				{
-					title: 'Responsive Design - Learnt Responsive',
-					text: 'Emphasizes the importance of responsive design, teaching techniques to ensure websites look and function well on all devices.',
-					image: '/learnt-responsive.png',
-				},
-				{
-					title: 'Review and Feedback Techniques - Learnt Reviewing',
-					text: 'Focuses on the critical role of feedback in the design process, offering strategies for collecting and implementing design critiques effectively.',
-					image: '/learnt-reviewing.png',
-				},
-				{
-					title: 'Sub-Page Layout Design - Learnt Sub-Pages',
-					text: 'Teaches design consistency across sub-pages, ensuring a cohesive user experience throughout the application.',
-					image: '/learnt-sub-pages.png',
-				},
-				{
-					title: 'Tool Mastery - Learnt Tools',
-					text: 'Provides in-depth tutorials on the most useful tools in UI/UX design, from sketching to prototyping and user testing.',
-					image: '/learnt-tools.png',
-				},
-				{
-					title: 'Understanding UI Elements - Learnt UI Meaning',
-					text: 'Explores the theory behind UI components, helping users understand how and why certain elements affect user behavior.',
-					image: '/learnt-ui-meaning.png',
-				},
-			],
-			challenges: [
-				{
-					title: 'Navigational Design Solutions',
-					text: 'Focused on creating intuitive navigation systems that enhance user flow and accessibility. The challenge was to design navigation that users find instinctive and seamless across various platforms, requiring an understanding of hierarchical structure and user behavior patterns.',
-					image: '',
-				},
-				{
-					title: 'Adaptive Responsive Layouts',
-					text: 'Tasked with building layouts that adapt smoothly across devices. This involved using CSS flexbox and grid systems to ensure designs maintained their integrity and usability on different screen sizes, from mobile phones to large desktop displays.',
-					image: '',
-				},
-				{
-					title: 'Dynamic Content Interaction',
-					text: "Challenged to implement interactive elements like hover effects, animations, and transitions that engage users without detracting from the overall user experience. Required balancing performance with interactivity, ensuring the site's speed and responsiveness were not compromised.",
-					image: '',
-				},
-				{
-					title: 'Effective Form Design',
-					text: 'Designed user-friendly forms focusing on simplicity and ease of use, ensuring forms are approachable and accessible. Included challenges such as aligning labels, input fields, and effective use of whitespace to guide the user naturally through each form field.',
-					image: '',
-				},
-				{
-					title: 'Real-Time Feedback Implementation',
-					text: 'Developed the ability to quickly iterate on designs based on real-time feedback from users and stakeholders, enhancing flexibility and adaptability in the design process. This involved rapid prototyping and frequent user testing sessions.',
-					image: '',
-				},
-			],
-			learnings: [
-				{
-					title: 'Core UI/UX Design Fundamentals',
-					points: [
-						{
-							text: 'Mastered essential UI/UX design principles such as color theory, typography, and layout compositions, applying these to create aesthetically pleasing and functional designs.',
-							image: '',
-						},
-					],
-				},
-				{
-					title: 'Advanced Interactivity Techniques',
-					points: [
-						{
-							text: 'Gained proficiency in CSS and JavaScript for crafting dynamic interactions that enhance storytelling and user engagement on web pages.',
-							image: '',
-						},
-					],
-				},
-				{
-					title: 'Prototyping and Wireframing',
-					points: [
-						{
-							text: 'Learned to efficiently use tools like Adobe XD and Sketch to build quick prototypes and wireframes, which facilitated a faster iteration process and helped communicate design concepts clearly.',
-							image: '',
-						},
-					],
-				},
-				{
-					title: 'Accessibility and Inclusive Design',
-					points: [
-						{
-							text: 'Developed a deep understanding of accessibility standards such as WCAG, ensuring that designs are usable by people with a wide range of physical and cognitive abilities.',
-							image: '',
-						},
-					],
-				},
-				{
-					title: 'Feedback Integration and Adaptation',
-					points: [
-						{
-							text: 'Enhanced skills in incorporating feedback to refine user interfaces, learning the value of constructive criticism in creating user-centered designs.',
-							image: '',
-						},
-					],
-				},
-			],
-			additionalImages: [
-				'/uiux-learners-platform.png',
-				'/learnt-home.png',
-				'/learnt-nav.png',
-				'/learnt-cards.png',
-				'/learnt-dashboards.png',
-				'/learnt-embellishments.png',
-				'/learnt-forms.png',
-				'/learnt-generative-ai.png',
-				'/learnt-hero.png',
-				'/learnt-portfolio.png',
-				'/learnt-prototyping.png',
-				'/learnt-responsive.png',
-				'/learnt-reviewing.png',
-				'/learnt-sub-pages.png',
-				'/learnt-tools.png',
-				'/learnt-ui-meaning.png',
-			],
-		},
-	},
+
 	{
 		title: 'Chat with DALL-E Integration',
 		description:
