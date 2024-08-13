@@ -357,7 +357,7 @@ export const projectData: Project[] = [
 	{
   title: 'DevMap',
   description: 'A comprehensive project management and personal growth tracking application designed to help developers improve their time estimation skills, track learning progress, and gain insights into their development process.',
-  imgUrl: '/devmap-logo.png',
+  imgUrl: '/devmap-logo.webp',
   repoUrl: '',
   liveUrl: 'https://devmap.me',
   details: {
