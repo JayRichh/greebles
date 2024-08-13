@@ -107,106 +107,7 @@ export const techIcons: TechIcons = {
 };
 
 export const projectData: Project[] = [
-	{
-		title: 'CodePens',
-		description:
-			'A collection of interactive and visually captivating sketches created with p5.js and three.js. These sketches explore mathematical patterns, physics simulations, and interactive elements.',
-		imgUrl: '/fib.png',
-		repoUrl: 'https://codepen.io/jayrichh',
-		liveUrl: 'https://codepen.io/JayRichh/pen/QWRvEQd',
-		details: {
-			title: 'CodePen Visualizations',
-			description:
-				'A series of CodePen projects showcasing interactive visualizations and animations using p5.js and three.js.',
-			technologies: ['p5.js', 'three.js', 'JavaScript', 'WebGL'],
-			features: [
-				{
-					title: 'Fibonacci Spiral',
-					text: 'A mesmerizing visual representation of a Fibonacci spiral in a galaxy-like formation. Includes adjustable parameters for node size, distance, color, and zoom speed.',
-					image: '/path/to/fib_spiral_image.png',
-				},
-				{
-					title: 'Matrix Rainfall Effect',
-					text: 'An animated Matrix-style rainfall effect with customizable parameters including character density, replacement probability, color, and font.',
-					image: '/path/to/matrix_rainfall_image.png',
-				},
-				{
-					title: 'Plane Curves Visualization',
-					text: 'Interactive visualization of various plane curves including Hypotrochoid, Epitrochoid, Lissajous, Rose Curve, and Spirograph. Customize parameters like radii, frequencies, and number of circles, with real-time updates through a GUI.',
-					image: '/path/to/plane_curves_image.png',
-				},
-				{
-					title: 'Third Person Controls',
-					text: 'An example of third-person controls in the three.js JavaScript library, featuring a 3D model that can be controlled interactively.',
-					image: '/path/to/third_person_controls_image.png',
-				},
-				{
-					title: 'Interactive Map Visualization',
-					text: 'An interactive map visualization of Omega 365 Advantage holiday house locations worldwide, using jQuery, Bootstrap, and WebGL Earth.',
-					image: '/path/to/interactive_map_image.png',
-				},
-				{
-					title: 'Coulomb’s Law Simulation',
-					text: 'A Coulomb’s law simulation that visualizes the forces between charged particles. Includes features like teleportation, bounds enforcement, and various physics principles.',
-					image: '/path/to/coulombs_law_image.png',
-				},
-			],
-			challenges: [
-				{
-					title: 'Performance Optimization',
-					text: 'Ensuring smooth performance for interactive and computationally intensive sketches, particularly when rendering large numbers of particles or complex animations.',
-				},
-				{
-					title: 'Cross-Browser Compatibility',
-					text: 'Ensuring that all visualizations work consistently across different browsers and devices.',
-				},
-				{
-					title: 'Dynamic Parameter Adjustments',
-					text: 'Implementing real-time parameter adjustments via GUI without causing performance degradation or crashes.',
-				},
-			],
-			learnings: [
-				{
-					title: 'Advanced p5.js Techniques',
-					points: [
-						{
-							text: 'Learned to create complex and interactive visualizations using p5.js, leveraging its capabilities for real-time graphics and animations.',
-						},
-						{
-							text: 'Gained expertise in handling user inputs and dynamically adjusting visualization parameters.',
-						},
-					],
-				},
-				{
-					title: 'Three.js and 3D Graphics',
-					points: [
-						{
-							text: 'Developed skills in three.js for creating 3D graphics and animations, including implementing controls and physics simulations.',
-						},
-						{
-							text: 'Learned to optimize 3D scenes for performance and responsiveness.',
-						},
-					],
-				},
-				{
-					title: 'Interactive GUI Implementation',
-					points: [
-						{
-							text: 'Gained experience in integrating interactive GUI elements for real-time parameter adjustments using libraries like dat.GUI.',
-						},
-					],
-				},
-			],
-			additionalImages: [
-				'/path/to/fib_spiral_image.png',
-				'/path/to/matrix_rainfall_image.png',
-				'/path/to/plane_curves_image.png',
-				'/path/to/third_person_controls_image.png',
-				'/path/to/interactive_map_image.png',
-				'/path/to/coulombs_law_image.png',
-			],
-		},
-	},
+	
 	{
 		title: 'Encompass Travel',
 		description:
@@ -453,6 +354,148 @@ export const projectData: Project[] = [
 			],
 		},
 	},
+	{
+  title: 'DevMap',
+  description: 'A comprehensive project management and personal growth tracking application designed to help developers improve their time estimation skills, track learning progress, and gain insights into their development process.',
+  imgUrl: '/devmap-logo.png',
+  repoUrl: '',
+  liveUrl: 'https://devmap.me',
+  details: {
+    title: 'DevMap - Developer Growth Tracker',
+    description: 'DevMap is an all-in-one solution for developers to manage projects, track time, visualize learning progress, and gain insights into their development process. It focuses on improving estimation accuracy, identifying skill growth, and providing meaningful analytics to enhance productivity and personal development.',
+    technologies: [
+      'Next.js',
+      'React',
+      'TypeScript',
+      'Node.js',
+      'Express',
+      'PostgreSQL',
+      'Tailwind CSS',
+      'Redis',
+      'Recharts',
+      'WebSockets'
+    ],
+    features: [
+      {
+        title: 'Comprehensive Time Tracking',
+        text: 'Real-time and manual time tracking for tasks and projects, with comparison between estimated and actual time spent.',
+        image: '/devmap-time-tracking.png'
+      },
+      {
+        title: 'Project and Task Management',
+        text: 'Hierarchical project structure with tasks and subtasks, featuring drag-and-drop reordering and component tagging.',
+        image: '/devmap-project-management.png'
+      },
+      {
+        title: 'Learning Progress Visualization',
+        text: 'Track and visualize time spent on different skills, with customizable categories and progress charts using Recharts.',
+        image: '/devmap-learning-progress.png'
+      },
+      {
+        title: 'Estimation Accuracy Insights',
+        text: 'Advanced analytics on estimation accuracy, including historical trends and pattern recognition for improved future estimates.',
+        image: '/devmap-estimation-insights.png'
+      },
+      {
+        title: 'Personal Growth Tracking',
+        text: 'Self-assessment tools for skill levels, efficiency metrics, and visualization of improvements over time.',
+        image: '/devmap-growth-tracking.png'
+      },
+      {
+        title: 'Customizable Dashboard',
+        text: 'A clean, user-friendly interface built with Tailwind CSS, featuring customizable widgets for at-a-glance information on current projects, tasks, and personal growth.',
+        image: '/devmap-dashboard.png'
+      }
+    ],
+    challenges: [
+      {
+        title: 'Real-time Data Synchronization',
+        text: 'Implementing efficient real-time updates using WebSockets across multiple clients while maintaining data consistency and minimizing server load.',
+        image: ''
+      },
+      {
+        title: 'Complex Data Relationships',
+        text: 'Designing and managing intricate data relationships between projects, tasks, time entries, and learning activities in PostgreSQL while ensuring optimal query performance.',
+        image: ''
+      },
+      {
+        title: 'Scalable Analytics Processing',
+        text: 'Developing a system to process and analyze large volumes of time and project data in real-time without impacting application performance, utilizing Redis for caching frequently accessed data.',
+        image: ''
+      },
+      {
+        title: 'Intuitive UI for Complex Features',
+        text: 'Creating a simple and intuitive user interface with Tailwind CSS that effectively presents complex data and features without overwhelming the user.',
+        image: ''
+      },
+      {
+        title: 'TypeScript Integration',
+        text: 'Ensuring type safety and improved developer experience across the full stack by integrating TypeScript with React, Next.js, and Node.js/Express backend.',
+        image: ''
+      }
+    ],
+    learnings: [
+      {
+        title: 'Full-Stack TypeScript Development',
+        points: [
+          {
+            text: 'Mastered end-to-end TypeScript development, creating type-safe interfaces between frontend and backend, improving code quality and reducing runtime errors.',
+            image: ''
+          },
+          {
+            text: 'Leveraged TypeScript\'s advanced features to create robust data models and type-safe API interactions.',
+            image: ''
+          }
+        ]
+      },
+      {
+        title: 'Real-time Data Visualization with Recharts',
+        points: [
+          {
+            text: 'Utilized Recharts to create dynamic, real-time data visualizations that update seamlessly as new data becomes available.',
+            image: ''
+          },
+          {
+            text: 'Optimized rendering performance for large datasets through efficient use of Recharts components and data aggregation techniques.',
+            image: ''
+          }
+        ]
+      },
+      {
+        title: 'Scalable Backend Architecture',
+        points: [
+          {
+            text: 'Designed and implemented a scalable backend architecture using Node.js, Express, and PostgreSQL, with Redis for caching to handle high-volume data processing and real-time updates.',
+            image: ''
+          },
+          {
+            text: 'Implemented advanced database optimization techniques in PostgreSQL, including indexing strategies and query optimization, to ensure fast data retrieval for complex analytics.',
+            image: ''
+          }
+        ]
+      },
+      {
+        title: 'Next.js and React Optimization',
+        points: [
+          {
+            text: 'Leveraged Next.js features like Static Site Generation (SSG) and Incremental Static Regeneration (ISR) to optimize page load times and improve SEO.',
+            image: ''
+          },
+          {
+            text: 'Implemented efficient state management and data fetching strategies in React, utilizing hooks and context for a more maintainable and performant application structure.',
+            image: ''
+          }
+        ]
+      }
+    ],
+    additionalImages: [
+      '/devmap-dashboard.png',
+      '/devmap-project-view.png',
+      '/devmap-analytics.png',
+      '/devmap-learning-tracker.png'
+    ]
+  }
+},
 	{
 		title: 'Off The Floor',
 		description:
@@ -1003,6 +1046,106 @@ export const projectData: Project[] = [
 				},
 			],
 			additionalImages: ['/top8.png', '/afbuddy7.png', '/project-img4.png'],
+		},
+	},
+	{
+		title: 'CodePens',
+		description:
+			'A collection of interactive and visually captivating sketches created with p5.js and three.js. These sketches explore mathematical patterns, physics simulations, and interactive elements.',
+		imgUrl: '/fib.png',
+		repoUrl: 'https://codepen.io/jayrichh',
+		liveUrl: 'https://codepen.io/JayRichh/pen/QWRvEQd',
+		details: {
+			title: 'CodePen Visualizations',
+			description:
+				'A series of CodePen projects showcasing interactive visualizations and animations using p5.js and three.js.',
+			technologies: ['p5.js', 'three.js', 'JavaScript', 'WebGL'],
+			features: [
+				{
+					title: 'Fibonacci Spiral',
+					text: 'A mesmerizing visual representation of a Fibonacci spiral in a galaxy-like formation. Includes adjustable parameters for node size, distance, color, and zoom speed.',
+					image: '/path/to/fib_spiral_image.png',
+				},
+				{
+					title: 'Matrix Rainfall Effect',
+					text: 'An animated Matrix-style rainfall effect with customizable parameters including character density, replacement probability, color, and font.',
+					image: '/path/to/matrix_rainfall_image.png',
+				},
+				{
+					title: 'Plane Curves Visualization',
+					text: 'Interactive visualization of various plane curves including Hypotrochoid, Epitrochoid, Lissajous, Rose Curve, and Spirograph. Customize parameters like radii, frequencies, and number of circles, with real-time updates through a GUI.',
+					image: '/path/to/plane_curves_image.png',
+				},
+				{
+					title: 'Third Person Controls',
+					text: 'An example of third-person controls in the three.js JavaScript library, featuring a 3D model that can be controlled interactively.',
+					image: '/path/to/third_person_controls_image.png',
+				},
+				{
+					title: 'Interactive Map Visualization',
+					text: 'An interactive map visualization of Omega 365 Advantage holiday house locations worldwide, using jQuery, Bootstrap, and WebGL Earth.',
+					image: '/path/to/interactive_map_image.png',
+				},
+				{
+					title: 'Coulomb’s Law Simulation',
+					text: 'A Coulomb’s law simulation that visualizes the forces between charged particles. Includes features like teleportation, bounds enforcement, and various physics principles.',
+					image: '/path/to/coulombs_law_image.png',
+				},
+			],
+			challenges: [
+				{
+					title: 'Performance Optimization',
+					text: 'Ensuring smooth performance for interactive and computationally intensive sketches, particularly when rendering large numbers of particles or complex animations.',
+				},
+				{
+					title: 'Cross-Browser Compatibility',
+					text: 'Ensuring that all visualizations work consistently across different browsers and devices.',
+				},
+				{
+					title: 'Dynamic Parameter Adjustments',
+					text: 'Implementing real-time parameter adjustments via GUI without causing performance degradation or crashes.',
+				},
+			],
+			learnings: [
+				{
+					title: 'Advanced p5.js Techniques',
+					points: [
+						{
+							text: 'Learned to create complex and interactive visualizations using p5.js, leveraging its capabilities for real-time graphics and animations.',
+						},
+						{
+							text: 'Gained expertise in handling user inputs and dynamically adjusting visualization parameters.',
+						},
+					],
+				},
+				{
+					title: 'Three.js and 3D Graphics',
+					points: [
+						{
+							text: 'Developed skills in three.js for creating 3D graphics and animations, including implementing controls and physics simulations.',
+						},
+						{
+							text: 'Learned to optimize 3D scenes for performance and responsiveness.',
+						},
+					],
+				},
+				{
+					title: 'Interactive GUI Implementation',
+					points: [
+						{
+							text: 'Gained experience in integrating interactive GUI elements for real-time parameter adjustments using libraries like dat.GUI.',
+						},
+					],
+				},
+			],
+			additionalImages: [
+				'/path/to/fib_spiral_image.png',
+				'/path/to/matrix_rainfall_image.png',
+				'/path/to/plane_curves_image.png',
+				'/path/to/third_person_controls_image.png',
+				'/path/to/interactive_map_image.png',
+				'/path/to/coulombs_law_image.png',
+			],
 		},
 	},
 	{
