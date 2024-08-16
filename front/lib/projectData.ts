@@ -497,6 +497,94 @@ export const projectData: Project[] = [
   }
 },
 	{
+  title: 'PomoDev',
+  description: 'A Pomodoro Timer Chrome Extension built with React, TypeScript, and Vite to help manage time effectively. Featuring customizable timers, task management, and theme options.',
+  imgUrl: '/pomodev-logo.png',
+  repoUrl: 'https://github.com/JayRichh/pomodev',
+  liveUrl: '', 
+  details: {
+    title: 'PomoDev - Pomodoro Timer Extension',
+    description: 'PomoDev is a Chrome extension designed to boost productivity using the Pomodoro Technique. It offers a customizable timer, task management, and theme customization, all built with modern web technologies.',
+    technologies: ['React', 'TypeScript', 'Vite', 'TailwindCSS', 'Chrome Extension API', 'Firefox Add-on API'],
+    features: [
+      {
+        title: 'Customizable Pomodoro Timer',
+        text: 'Allows users to start, stop, and reset the timer. Time can be customized by clicking on the display.',
+        image: '/pomodev-timer.png', 
+      },
+      {
+        title: 'Task Management',
+        text: 'Users can add, complete, and delete tasks. All tasks persist in local storage for continuity across sessions.',
+        image: '/pomodev-tasks.png',
+      },
+      {
+        title: 'Theme Customization',
+        text: 'Offers both light and dark themes to suit user preferences and reduce eye strain.',
+        image: '/pomodev-themes.png',
+      },
+      {
+        title: 'Cross-Browser Compatibility',
+        text: 'Designed to work seamlessly on both Chrome and Firefox browsers.',
+        image: '/pomodev-browsers.png',
+      },
+    ],
+    challenges: [
+      {
+        title: 'Browser Extension Development',
+        text: 'Adapting to the specific requirements and limitations of browser extension development, including manifest v3 for Chrome.',
+      },
+      {
+        title: 'Cross-Browser Compatibility',
+        text: 'Ensuring the extension works consistently across different browsers, particularly Chrome and Firefox.',
+      },
+      {
+        title: 'State Persistence',
+        text: 'Implementing persistent storage to maintain timer state and tasks across browser sessions.',
+      },
+    ],
+    learnings: [
+      {
+        title: 'Modern Web Development Stack',
+        points: [
+          {
+            text: 'Gained hands-on experience with React 18, TypeScript, and Vite for building efficient and type-safe applications.',
+          },
+          {
+            text: 'Learned to leverage TailwindCSS for rapid UI development and consistent styling.',
+          },
+        ],
+      },
+      {
+        title: 'Browser Extension Development',
+        points: [
+          {
+            text: 'Mastered the intricacies of developing extensions for Chrome and Firefox, including manifest differences and API usage.',
+          },
+          {
+            text: 'Implemented persistent storage solutions specific to browser extensions.',
+          },
+        ],
+      },
+      {
+        title: 'Project Structure and Build Process',
+        points: [
+          {
+            text: 'Developed a clean and maintainable project structure suitable for browser extension development.',
+          },
+          {
+            text: 'Set up an efficient build process using Vite, including custom plugins for Hot Module Replacement in extension context.',
+          },
+        ],
+      },
+    ],
+    additionalImages: [
+      '/pomodev-overview.png',
+      '/pomodev-settings.png',
+      '/pomodev-mobile.png',
+    ],
+  },
+},
+	{
 		title: 'Off The Floor',
 		description:
 			'A modern and dynamic business website created using Vue3 and TypeScript, featuring responsive design and tailored functionalities to promote aerial arts classes.',
